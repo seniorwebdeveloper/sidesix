@@ -1,0 +1,14 @@
+                <article class="copy-main">
+                         <h2>Let's Stand Out!</h2>
+                              <p>Ever noticed  the scads of <em>identical</em> web sites for businesses and people who <strong><em>want</em></strong> to stand out?</p>
+                         
+                              <p> All of those identical website are the result of a couple of things.</p>
+                         <ol>
+                                <li>Trying to create a web page for "a couple of bucks";</li>
+                                <li>Trying to make the site look exactly the same in every browser.</li>
+                         </ol> 
+                               <p>Next time you're out in public take a good look around. Go somewhere like a coffee house, or a park, the steps of an art museum, your doctor's office &ndash; someplace people are killing time. Notice how many people there are staring down at an electronic screen.</p>
+                               <p>Change the way you think about the web. Everyone shouldn't have the same experience on the web because the devices are so different. Let's embarce diversity!. </p>
+
+                         <h3><span class="color-stress">Don't dilute the magic!</span></h3>
+                               <p>This web site responds to the device someone uses to view it. If you're on a desktop or a laptop, go ahead and resize your browser window. Make it the size of your phone. <span class="color-stress">Cool huh?</span> Get in touch to talk about the possibilities. </p>
