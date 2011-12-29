@@ -1,0 +1,176 @@
+@import "compass/css3";
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+
+body, select, input, textarea {
+  color: $font-color;  
+}
+
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
+
+strong, th {
+  font-weight: bold;
+}
+
+// Add the 'required' attribute on your
+// inputs if you want to use these
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid {
+  @include border-radius(1px);
+  @include single-box-shadow(red, 0, 0, 5px, 0);
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+ul {list-style: none;}
+
+img {
+    max-width: 100%;
+}
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child+html .clearfix {
+    zoom: 1;
+}
+
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+/* Classes ---------------------------------------*/
+
+.highlight {
+  color: $highlighted-text;
+}
+
+.page-left {
+    width: $content-width;
+    margin-left: percentage(45/1200);
+    @media only screen and (max-width: 768px) {
+      margin-left: percentage(8/768);
+      margin-right: percentage(8/768);
+    }
+}
+
+/* Page Structure -------------------------------- */
+
+body {
+    background-image: url(../images/exclusive_paper.png);
+    background-repeat: repeat;
+}
+
+#container {
+    width: $full-width;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#page-content {
+    width: $content-width;
+    margin: 0 auto;
+    // @include grid-background;
+    overflow:hidden;
+    @media only screen and (max-width: 768px) {
+      width: 98%;
+      margin: 0;
+    }
+}
+
+#logo {
+    background: url(../images/bg-gradient.png) repeat-x;
+}
+
+#logo figure {
+  width: $full-width;
+    @media only screen and (max-width: 768px)
+      {width: percentage(100/768);}
+}
+
+#logo img {
+  padding: 4px 0;
+  padding-left: percentage(10/1200);
+}
+
+header.styled {
+    background: $header-bg;
+    padding: 2px;
+    text-align: center;
+    @include border-radius;
+    @include box-shadow-inset;
+    text-shadow: $header-text-shadow;
+    margin-bottom: 20px;
+    color: $header-font-color;
+}
+
+#page-title {
+    margin: 0;
+    margin-left: percentage(45/1200);
+    @media only screen and (max-width: 768px) {
+      margin-left: percentage(12/768);
+    }
+}
+
+#page-copy-top {
+    width: percentage( 600/1200);
+    float: right;
+    margin: 0;
+    padding-right: percentage(20/1200);
+    @media only screen and (max-width: 768px) {
+      width: percentage(400/768);
+      padding-right: 0;
+      padding-left: percentage(10/768);
+    }
+}
+
+#copy-top {
+    margin: 35px 0;
+}
+
+#page-copy-bottom {
+    width: percentage(400/1200);
+    float: left;
+    margin: 45px 0;
+    margin-left: percentage(45/1200);
+    @media only screen and (max-width: 768px) {
+      width: percentage(325/768);
+      margin-left: percentage(8/768);
+    }
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding-bottom: 25px;
+}

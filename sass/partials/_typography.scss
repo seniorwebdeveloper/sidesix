@@ -1,0 +1,176 @@
+// All the typographyy happens here
+
+
+.allcaps {
+  @extend .caps;
+  text-transform: uppercase; }
+
+.amp {
+  font-family: $font-amp; }
+
+.smallcaps {
+  @extend .caps;
+  font-variant: small-caps; }
+
+.dquo {
+  margin-left: -0.5em;
+  font-family: $font-amp; }
+
+/* Only use the fancy ampersand in <h#> tags */
+h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
+  font-size: 1em;
+  font-family: $font-amp;
+  font-style: italic; }
+  
+
+body {
+	font-size: 100%;
+	line-height: 1.2;
+	font-family: $font-serifs;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-sans;
+	font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {text-shadow: $text-shadow;}
+
+h1 {
+	font-size: 2.5em;
+	line-height: 1.125;
+	margin-bottom: 0.3em;
+	color: #444;
+}
+
+h2 {
+	font-size: 1.65em;
+	line-height: 1.5;
+  padding: .5em 0;
+	color: $font-color;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.4em;
+    line-height: 1.4;
+  }
+}
+
+h3 {
+	font-size: 1.425em;
+	line-height: 1.4;
+	padding-top: 1em;
+	margin-bottom: 0.7em;
+	color: #666;
+	border-bottom: 0.1em solid #693;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.5;
+	padding-top: 1em;
+	margin-bottom: 1em;
+	color: #777;
+}
+
+h5 {
+	font-size: 1.125em;
+	line-height: 1.6667;
+	padding-top: 1.1111em;
+	color: #888;
+}
+
+h6 {
+	padding-top: 1em;
+	color: #999;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+hr {
+	border: none;
+	height: 0.1em;
+	background: #ccc;
+	background-color: rgba(0,0,0,0.2);
+}
+
+p, ul, ol, hr, table, form, fieldset {
+	margin: 1.25em 0;
+}
+
+li {
+	list-style-position: inside;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+blockquote {
+	margin: 1em .4em;
+	border-top: 0.1em solid;
+	border-bottom: 0.1em solid;
+	padding: 0 1em;
+	font-family: $font-serifs;
+	font-style: italic;
+	font-size: 1.25em;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	color: #444;
+	border-color: #ccc;
+	border-color: rgba(0,0,0,0.2);
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	-o-border-radius: 0.25em;
+	border-radius: 0.25em;
+}
+
+cite {
+	font-family: $font-serifs;
+	font-style: normal;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 200;
+}
+
+blockquote em {
+	font-style: normal;
+}
+
+figcaption {
+	font-family: $font-serifs;
+	font-style: italic;
+	font-size: 0.857em;
+	line-height: 1.4286;
+	color: #666;
+}
+
+article > p,
+article section > p {
+	font-size: $font-size;
+	line-height: 1.5;
+	word-spacing: 0.1em;
+	margin: 1.1111em 0;
+}
+
+
+time {
+	display: block;
+	text-align: right;
+	font-weight: normal;
+	font-family: $font-serifs;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	line-height: 1.6667;
+	letter-spacing: 0.2em;
+	color: #888;
+}
+
+time:before {
+	content: '—';
+}

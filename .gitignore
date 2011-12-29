@@ -1,3 +1,7 @@
 sidesix.esproj/
 .swp
 .DS_Store
+sidesix.bbprojectd
+.tm_properties
+.sass-cache/*
+.sass-cache

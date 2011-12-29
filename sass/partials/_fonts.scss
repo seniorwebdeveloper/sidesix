@@ -1,0 +1,13 @@
+// This file establishes simple clean default font stacks
+
+$font-sans: proxima-nova-condensed-1,proxima-nova-condensed-2, sans-serif;
+$font-serifs: linden-hill-1,linden-hill-2, Georgia, serif;
+$font-mono: Consolas, Menlo, 'Courier New', monospace;
+
+$font-body: $font-serifs;
+$font-headline: $font-sans;
+$font-logo: $font-sans;
+$font-size: 1em;
+// special use font stacks
+// ampersands
+$font-amp: bookman-1,bookman-2, serif;

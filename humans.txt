@@ -3,41 +3,27 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  Author: Daniel Avery
+  Site: Side Six http://sidesix.org
+  Twitter: side_six
+  Location: Mission Viejo, CA
 
 /* THANKS */
-  Names (& URL): 
-
+  HTML5 Boilerplate folks at http://html5boilerplate.com;
+	The good folks over at Modernizr - http://modernizr.com
+	The fine people over at Selectivizr - http://selectivizr.com
+	Andy Clarke - enough said - http://stuffandnonsense.co.uk/
+	Ethan Marcotte - http://unstoppablerobotninja.com/
+	Tom Waits
+	Bob Dylan
+	George Thorogood and the Destroyers
+	Crosby, Stills, Nash & Young
+	Firesign Theater - for the name "Side Six"
+	Norman Oppegard for being there
+	Victoria Avery for being so fucking amazing!
+	
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
+  Components: Modernizr, jQuery, Selectivizr, Normalize, SASS, Compass, Fancy-Buttons...
+  Software: Made on a Mac using Sass and Compass for the CSS; it was written with programs like Textmate, Espresso, Sublime Text 2, Chocolat!, Color Schemer, Xscope; aw hell, folks, if you're not coding on a Mac you should be.  
   
-
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        

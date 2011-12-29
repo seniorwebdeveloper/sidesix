@@ -1,0 +1,79 @@
+// This file must be imported before loading html5-boilerplate
+
+$font-color: #3A2F2F;
+$text-shadow: 2px 2px 3px rgba(0,0,0, 0.5);
+$highlighted-text: #DF1316;
+$base-font-size: 13px;
+// Link Styles
+$link-color: #F68025;
+$link-hover-color: #D2C72D;
+$link-active-color: #FAFA30;
+$link-visited-color: #DF1316;
+
+// colors 
+$header-bg: #F68025;
+$header-font-color: $font-color;
+$header-text-shadow: 0 1px1px #dedede;
+$header-bar: #F68025;
+$menu-bar-hover: #FAFA30;
+$high-light: #FAFA30;
+
+// page structure
+$drop-shadow: 1px 1px 5px rgba(0,0,0, 0.6);
+$full-width: 100%;
+$content-width: 90%;
+$main-border: 1px solid rgba(0,0,0, 0.4);
+
+
+// iOS Selection Styles
+$selected-font-color: #fff; 
+$selected-background-color: #F68025;  
+// grid settings 
+
+$total: 1200px;
+$grid-background-column-width: 100px;
+$grid-background-gutter-width: 20px;
+$grid-background-baseline-color: rgba(0, 0, 0, 0.5);
+$grid-background-baseline-height: 1.5em;
+$grid-background-offset: 20px;
+$grid-background-total-columns: 12;
+$show-column-grid-backgrounds: true;
+$show-baseline-grid-backgrounds: true;
+
+// mixins
+
+@mixin grid-background($total: $grid-background-total-columns, $column: $grid-background-column-width, $gutter: $grid-background-gutter-width, $baseline: $grid-background-baseline-height, $offset: $grid-background-offset, $column-color: $grid-background-column-color, $gutter-color: $grid-background-gutter-color, $baseline-color: $grid-background-baseline-color, $force-fluid: $grid-background-force-fluid) {
+  @if $show-grid-backgrounds {
+    @if $show-baseline-grid-backgrounds and $show-column-grid-backgrounds {
+      @include background-image(get-baseline-gradient($baseline-color), get-column-gradient($total, $column, $gutter, $offset, $column-color, $gutter-color, $force-fluid));
+      @include background-size(100% $baseline, auto);
+      background-position: left top; }
+    @else {
+      @include baseline-grid-background($baseline, $baseline-color);
+      @include column-grid-background($total, $column, $gutter, $offset, $column-color, $gutter-color, $force-fluid); } } }
+
+@mixin border-radius {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.6);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.6);
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.6);
+}
+
+@mixin box-shadow-color {
+  -webkit-box-shadow: 0 0 20px #f8984e;
+}
+
+@mixin box-shadow-inset {
+  -moz-box-shadow:inset 0 0 7px rgba(0,0,0,.7);
+  -webkit-box-shadow:inset 0 0 7px rgba(0,0,0,.7);
+  box-shadow:inset 0 0 7px rgba(0,0,0,.7);
+}
+
+@mixin header-gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(#df1316), to(#f9d2d3));
+}

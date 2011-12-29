@@ -1,0 +1,29 @@
+// The styles for the main navigation menu
+
+nav {
+	margin:0;
+	margin-right: percentage(25/1200);
+	margin-bottom: 15px;
+	font: 1.4em/1.4 $font-sans;
+	text-align: right;
+	padding-right: percentage(10/1200);
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+  }
+	li {
+		display: inline;
+    padding: .25em;
+	}
+	li a {
+		//padding: .25em;
+		text-decoration: none;
+    border-bottom: 1px solid #df1316;
+	}
+  li a:last-of-type {
+    padding-right: 0;
+  }
+	li a:hover {
+		background:  $menu-bar-hover;
+		color: $font-color;
+	}
+}
