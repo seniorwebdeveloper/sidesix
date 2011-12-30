@@ -18,6 +18,10 @@
     <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon' />
     <!-- CSS -->
     <link href='/css/style.css?v=1' rel='stylesheet' />
+    <!--[if lt IE 7]>
+         <link href="/css/ie6.css" media="screen, projection" rel="stylesheet" type="text/css" />
+     <![endif]-->
+    
     <!-- All JavaScript at the bottom, except for Modernizr and Respond. -->
     <script src='/js/libs/modernizr.custom.57602.js'></script>
 
@@ -38,7 +42,7 @@
    </div> 
      </div> <!-- end logo -->
        <div id="page-content">  
-          <nav>
+          <nav id="top-full-menu">
                 <ul>
                    <li class="current"><a href="/">Side Six</a></li>
                    <li class="phone"><a href="portfolio.html">Portfolio</a></li> 
@@ -47,9 +51,14 @@
                 </ul>
             </nav><!-- end navbar -->
             
-                 <header id="page-title">
+        <header id="page-title">
           <h1>Welcome To Side Six</h1>
-       </header>         
+        </header>
+        
+          <div id="alt-top-nav" class="four-eighty">
+            <a href="#menu-bottom">Menu</a>
+          </div>
+        
                   <section id="page-copy-top">
                         <article id="copy-top">
                             <header class="styled">
@@ -82,6 +91,14 @@
                 <div class="clear"></div>
            </div> <!-- end page content -->    
     <footer id="page-bottom">
+      <nav id="menu-bottom" class="four-eighty">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="aside.html">Aside</a></li>
+        </ul>
+      </nav>
 			<article id="footer-info">
 							<div>
 										<p>&copy; 2011 Side Six, All Rights Reserved<br>

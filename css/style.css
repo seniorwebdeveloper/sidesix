@@ -496,10 +496,16 @@ h1 {
   font-size: 2.5em;
   line-height: 1.125;
   margin-bottom: 0.3em;
-  color: #444;
+  color: #3a2f2f;
+}
+@media only screen and (max-width: 480px) {
+  /* line 42, ../sass/partials/_typography.scss */
+  h1 {
+    font-size: 1.8em;
+  }
 }
 
-/* line 49, ../sass/partials/_typography.scss */
+/* line 51, ../sass/partials/_typography.scss */
 h2 {
   font-size: 1.65em;
   line-height: 1.5;
@@ -507,14 +513,14 @@ h2 {
   color: #3a2f2f;
 }
 @media only screen and (max-width: 768px) {
-  /* line 49, ../sass/partials/_typography.scss */
+  /* line 51, ../sass/partials/_typography.scss */
   h2 {
     font-size: 1.4em;
     line-height: 1.4;
   }
 }
 
-/* line 60, ../sass/partials/_typography.scss */
+/* line 62, ../sass/partials/_typography.scss */
 h3 {
   font-size: 1.425em;
   line-height: 1.4;
@@ -524,7 +530,7 @@ h3 {
   border-bottom: 0.1em solid #693;
 }
 
-/* line 69, ../sass/partials/_typography.scss */
+/* line 71, ../sass/partials/_typography.scss */
 h4 {
   font-size: 1.25em;
   line-height: 1.5;
@@ -533,7 +539,7 @@ h4 {
   color: #777;
 }
 
-/* line 77, ../sass/partials/_typography.scss */
+/* line 79, ../sass/partials/_typography.scss */
 h5 {
   font-size: 1.125em;
   line-height: 1.6667;
@@ -541,23 +547,23 @@ h5 {
   color: #888;
 }
 
-/* line 84, ../sass/partials/_typography.scss */
+/* line 86, ../sass/partials/_typography.scss */
 h6 {
   padding-top: 1em;
   color: #999;
 }
 
-/* line 89, ../sass/partials/_typography.scss */
+/* line 91, ../sass/partials/_typography.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 93, ../sass/partials/_typography.scss */
+/* line 95, ../sass/partials/_typography.scss */
 i, em {
   font-style: italic;
 }
 
-/* line 97, ../sass/partials/_typography.scss */
+/* line 99, ../sass/partials/_typography.scss */
 hr {
   border: none;
   height: 0.1em;
@@ -565,19 +571,19 @@ hr {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 104, ../sass/partials/_typography.scss */
+/* line 106, ../sass/partials/_typography.scss */
 p, ul, ol, hr, table, form, fieldset {
   margin: 1.25em 0;
 }
 
-/* line 108, ../sass/partials/_typography.scss */
+/* line 110, ../sass/partials/_typography.scss */
 li {
   list-style-position: inside;
   margin-left: 1em;
   text-indent: -1em;
 }
 
-/* line 114, ../sass/partials/_typography.scss */
+/* line 116, ../sass/partials/_typography.scss */
 blockquote {
   margin: 1em .4em;
   border-top: 0.1em solid;
@@ -597,7 +603,7 @@ blockquote {
   border-radius: 0.25em;
 }
 
-/* line 133, ../sass/partials/_typography.scss */
+/* line 135, ../sass/partials/_typography.scss */
 cite {
   font-family: linden-hill-1, linden-hill-2, Georgia, serif;
   font-style: normal;
@@ -606,12 +612,12 @@ cite {
   font-weight: 200;
 }
 
-/* line 141, ../sass/partials/_typography.scss */
+/* line 143, ../sass/partials/_typography.scss */
 blockquote em {
   font-style: normal;
 }
 
-/* line 145, ../sass/partials/_typography.scss */
+/* line 147, ../sass/partials/_typography.scss */
 figcaption {
   font-family: linden-hill-1, linden-hill-2, Georgia, serif;
   font-style: italic;
@@ -620,7 +626,7 @@ figcaption {
   color: #666;
 }
 
-/* line 154, ../sass/partials/_typography.scss */
+/* line 156, ../sass/partials/_typography.scss */
 article > p,
 article section > p {
   font-size: 1em;
@@ -629,7 +635,7 @@ article section > p {
   margin: 1.1111em 0;
 }
 
-/* line 162, ../sass/partials/_typography.scss */
+/* line 164, ../sass/partials/_typography.scss */
 time {
   display: block;
   text-align: right;
@@ -642,13 +648,13 @@ time {
   color: #888;
 }
 
-/* line 174, ../sass/partials/_typography.scss */
+/* line 176, ../sass/partials/_typography.scss */
 time:before {
   content: '—';
 }
 
 /* line 3, ../sass/partials/_nav.scss */
-nav {
+nav#top-full-menu {
   margin: 0;
   margin-right: 2.083%;
   margin-bottom: 15px;
@@ -658,51 +664,103 @@ nav {
 }
 @media only screen and (max-width: 768px) {
   /* line 3, ../sass/partials/_nav.scss */
-  nav {
+  nav#top-full-menu {
     margin-right: 0;
   }
 }
-/* line 13, ../sass/partials/_nav.scss */
-nav li {
+@media only screen and (max-width: 600px) {
+  /* line 3, ../sass/partials/_nav.scss */
+  nav#top-full-menu {
+    font-size: 1.2em;
+    margin-top: -25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 3, ../sass/partials/_nav.scss */
+  nav#top-full-menu {
+    margin-top: -25px;
+    line-height: 1.2;
+  }
+}
+/* line 19, ../sass/partials/_nav.scss */
+nav#top-full-menu li {
   display: inline;
   padding: .25em;
 }
-/* line 17, ../sass/partials/_nav.scss */
-nav li a {
+/* line 23, ../sass/partials/_nav.scss */
+nav#top-full-menu li a {
+  margin: 0;
   text-decoration: none;
   border-bottom: 1px solid #df1316;
 }
-/* line 22, ../sass/partials/_nav.scss */
-nav li a:last-of-type {
+/* line 28, ../sass/partials/_nav.scss */
+nav#top-full-menu li a:last-of-type {
   padding-right: 0;
 }
-/* line 25, ../sass/partials/_nav.scss */
-nav li a:hover {
+/* line 31, ../sass/partials/_nav.scss */
+nav#top-full-menu li a:hover {
   background: #fafa30;
   color: #3a2f2f;
 }
 
-/* line 8, ../sass/partials/_page.scss */
+@media only screen and (max-width: 480px) {
+  /* line 37, ../sass/partials/_nav.scss */
+  #top-full-menu {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* line 44, ../sass/partials/_nav.scss */
+nav#menu-bottom li {
+  padding-bottom: 14px;
+}
+
+/* incase an inverted custom gradient isn't specified */
+/* line 177, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, #alt-top-nav {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1325196149') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, #alt-top-nav::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, #alt-top-nav:focus {
+  outline: none;
+}
+
+/* line 9, ../sass/partials/_page.scss */
 body, select, input, textarea {
   color: #3a2f2f;
 }
 
-/* line 12, ../sass/partials/_page.scss */
+/* line 13, ../sass/partials/_page.scss */
 a, a:active, a:visited {
   color: #f68025;
 }
 
-/* line 13, ../sass/partials/_page.scss */
+/* line 14, ../sass/partials/_page.scss */
 a:hover {
   color: #d2c72d;
 }
 
-/* line 15, ../sass/partials/_page.scss */
+/* line 16, ../sass/partials/_page.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 22, ../sass/partials/_page.scss */
+/* line 23, ../sass/partials/_page.scss */
 input:invalid, textarea:invalid {
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
@@ -716,24 +774,24 @@ input:invalid, textarea:invalid {
   box-shadow: 0 0 5px 0 red;
 }
 
-/* line 27, ../sass/partials/_page.scss */
+/* line 28, ../sass/partials/_page.scss */
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 29, ../sass/partials/_page.scss */
+/* line 30, ../sass/partials/_page.scss */
 ul {
   list-style: none;
 }
 
-/* line 31, ../sass/partials/_page.scss */
+/* line 32, ../sass/partials/_page.scss */
 img {
   max-width: 100%;
 }
 
 /* http://sonspring.com/journal/clearing-floats */
-/* line 36, ../sass/partials/_page.scss */
+/* line 37, ../sass/partials/_page.scss */
 .clear {
   clear: both;
   display: block;
@@ -744,7 +802,7 @@ img {
 }
 
 /* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
-/* line 47, ../sass/partials/_page.scss */
+/* line 48, ../sass/partials/_page.scss */
 .clearfix:after {
   clear: both;
   content: ' ';
@@ -760,82 +818,180 @@ img {
   The following zoom:1 rule is specifically for IE6 + IE7.
   Move to separate stylesheet if invalid CSS is a problem.
 */
-/* line 63, ../sass/partials/_page.scss */
+/* line 64, ../sass/partials/_page.scss */
 * html .clearfix,
 *:first-child + html .clearfix {
   zoom: 1;
 }
 
 /* Classes ---------------------------------------*/
-/* line 74, ../sass/partials/_page.scss */
+/* line 75, ../sass/partials/_page.scss */
 .highlight {
   color: #df1316;
 }
 
-/* line 78, ../sass/partials/_page.scss */
+/* line 79, ../sass/partials/_page.scss */
 .page-left {
   width: 90%;
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 78, ../sass/partials/_page.scss */
+  /* line 79, ../sass/partials/_page.scss */
   .page-left {
     margin-left: 1.042%;
     margin-right: 1.042%;
   }
 }
 
+/* line 88, ../sass/partials/_page.scss */
+.four-eighty {
+  display: none;
+  visibility: hidden;
+}
+@media only screen and (max-width: 480px) {
+  /* line 88, ../sass/partials/_page.scss */
+  .four-eighty {
+    display: block;
+    visibility: visible;
+  }
+}
+
 /* Page Structure -------------------------------- */
-/* line 89, ../sass/partials/_page.scss */
+/* line 98, ../sass/partials/_page.scss */
 body {
   background-image: url(../images/exclusive_paper.png);
   background-repeat: repeat;
 }
 
-/* line 94, ../sass/partials/_page.scss */
+/* line 103, ../sass/partials/_page.scss */
 #container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 100, ../sass/partials/_page.scss */
+/* line 109, ../sass/partials/_page.scss */
 #page-content {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  /* line 100, ../sass/partials/_page.scss */
+  /* line 109, ../sass/partials/_page.scss */
   #page-content {
     width: 98%;
     margin: 0;
   }
 }
 
-/* line 111, ../sass/partials/_page.scss */
+/* line 120, ../sass/partials/_page.scss */
 #logo {
   background: url(../images/bg-gradient.png) repeat-x;
 }
 
-/* line 115, ../sass/partials/_page.scss */
-#logo figure {
-  width: 100%;
+/* line 124, ../sass/partials/_page.scss */
+#logo-img {
+  width: 25%;
+  margin: 0;
+  z-index: 60;
 }
 @media only screen and (max-width: 768px) {
-  /* line 115, ../sass/partials/_page.scss */
-  #logo figure {
+  /* line 124, ../sass/partials/_page.scss */
+  #logo-img {
     width: 13.021%;
   }
 }
+@media only screen and (max-width: 600px) {
+  /* line 124, ../sass/partials/_page.scss */
+  #logo-img {
+    width: 15%;
+  }
+}
 
-/* line 121, ../sass/partials/_page.scss */
+/* line 135, ../sass/partials/_page.scss */
 #logo img {
   padding: 4px 0;
   padding-left: 0.833%;
 }
 
-/* line 126, ../sass/partials/_page.scss */
+/* line 140, ../sass/partials/_page.scss */
+#alt-top-nav {
+  width: 80px;
+  text-align: center;
+  margin: 12px 0;
+  margin-left: 20.833%;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3c3c3c), color-stop(50%, #353535), color-stop(100%, #4e4e4e));
+  background-image: -webkit-linear-gradient(#989898, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e);
+  background-image: -moz-linear-gradient(#989898, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e);
+  background-image: -o-linear-gradient(#989898, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e);
+  background-image: -ms-linear-gradient(#989898, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e);
+  background-image: linear-gradient(#989898, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e);
+  border-color: #1e1e1e;
+  text-shadow: #040404 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+#alt-top-nav, #alt-top-nav:visited {
+  color: white;
+}
+/* line 31, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+#alt-top-nav:hover, #alt-top-nav:focus {
+  background-color: #3c3c3c;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #919191), color-stop(10%, #636363), color-stop(50%, #353535), color-stop(50%, #2d2d2d), color-stop(100%, #474747));
+  background-image: -webkit-linear-gradient(#919191, #636363 10%, #353535 50%, #2d2d2d 50%, #474747);
+  background-image: -moz-linear-gradient(#919191, #636363 10%, #353535 50%, #2d2d2d 50%, #474747);
+  background-image: -o-linear-gradient(#919191, #636363 10%, #353535 50%, #2d2d2d 50%, #474747);
+  background-image: -ms-linear-gradient(#919191, #636363 10%, #353535 50%, #2d2d2d 50%, #474747);
+  background-image: linear-gradient(#919191, #636363 10%, #353535 50%, #2d2d2d 50%, #474747);
+  border-color: #161616;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+#alt-top-nav:hover, #alt-top-nav:hover:visited, #alt-top-nav:focus, #alt-top-nav:focus:visited {
+  color: white;
+}
+/* line 36, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+#alt-top-nav:active {
+  background-color: #353535;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #353535), color-stop(30%, #3a3a3a), color-stop(50%, #303030), color-stop(50%, #282828), color-stop(100%, #494949));
+  background-image: -webkit-linear-gradient(#353535, #3a3a3a 30%, #303030 50%, #282828 50%, #494949);
+  background-image: -moz-linear-gradient(#353535, #3a3a3a 30%, #303030 50%, #282828 50%, #494949);
+  background-image: -o-linear-gradient(#353535, #3a3a3a 30%, #303030 50%, #282828 50%, #494949);
+  background-image: -ms-linear-gradient(#353535, #3a3a3a 30%, #303030 50%, #282828 50%, #494949);
+  background-image: linear-gradient(#353535, #3a3a3a 30%, #303030 50%, #282828 50%, #494949);
+  border-color: #0e0e0e;
+  text-shadow: black 0px -1px -1px;
+  -moz-box-shadow: #1e1e1e 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #1e1e1e 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #1e1e1e 0 0.08em 0.2em 1px inset;
+  box-shadow: #1e1e1e 0 0.08em 0.2em 1px inset;
+}
+/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+#alt-top-nav:active, #alt-top-nav:active:visited {
+  color: white;
+}
+
+/* line 148, ../sass/partials/_page.scss */
 header.styled {
   background: #f68025;
   padding: 2px;
@@ -854,19 +1010,27 @@ header.styled {
   color: #3a2f2f;
 }
 
-/* line 137, ../sass/partials/_page.scss */
+/* line 159, ../sass/partials/_page.scss */
 #page-title {
   margin: 0;
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 137, ../sass/partials/_page.scss */
+  /* line 159, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 1.563%;
   }
 }
+@media only screen and (max-width: 600px) {
+  /* line 159, ../sass/partials/_page.scss */
+  #page-title {
+    width: 90%;
+    margin: 0;
+    text-align: center;
+  }
+}
 
-/* line 145, ../sass/partials/_page.scss */
+/* line 172, ../sass/partials/_page.scss */
 #page-copy-top {
   width: 50%;
   float: right;
@@ -874,7 +1038,7 @@ header.styled {
   padding-right: 1.667%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 145, ../sass/partials/_page.scss */
+  /* line 172, ../sass/partials/_page.scss */
   #page-copy-top {
     width: 52.083%;
     padding-right: 0;
@@ -882,12 +1046,12 @@ header.styled {
   }
 }
 
-/* line 157, ../sass/partials/_page.scss */
+/* line 184, ../sass/partials/_page.scss */
 #copy-top {
   margin: 35px 0;
 }
 
-/* line 161, ../sass/partials/_page.scss */
+/* line 188, ../sass/partials/_page.scss */
 #page-copy-bottom {
   width: 33.333%;
   float: left;
@@ -895,14 +1059,14 @@ header.styled {
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 161, ../sass/partials/_page.scss */
+  /* line 188, ../sass/partials/_page.scss */
   #page-copy-bottom {
     width: 42.318%;
     margin-left: 1.042%;
   }
 }
 
-/* line 172, ../sass/partials/_page.scss */
+/* line 199, ../sass/partials/_page.scss */
 footer {
   margin-top: 60px;
   text-align: center;

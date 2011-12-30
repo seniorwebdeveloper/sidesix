@@ -1,6 +1,6 @@
 // The styles for the main navigation menu
 
-nav {
+nav#top-full-menu {
 	margin:0;
 	margin-right: percentage(25/1200);
 	margin-bottom: 15px;
@@ -10,12 +10,18 @@ nav {
   @media only screen and (max-width: 768px) {
     margin-right: 0;
   }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.2em;
+    margin-top: -25px;}
+    @media only screen and (max-width: 480px) {
+      margin-top: -25px;
+      line-height: 1.2;}
 	li {
 		display: inline;
     padding: .25em;
 	}
 	li a {
-		//padding: .25em;
+    margin: 0;
 		text-decoration: none;
     border-bottom: 1px solid #df1316;
 	}
@@ -27,3 +33,15 @@ nav {
 		color: $font-color;
 	}
 }
+
+#top-full-menu {
+  @media only screen and (max-width: 480px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+nav#menu-bottom li {
+  padding-bottom: 14px;
+}
+
