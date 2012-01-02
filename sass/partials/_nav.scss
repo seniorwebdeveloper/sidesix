@@ -41,7 +41,25 @@ nav#top-full-menu {
   }
 }
 
+nav#menu-bottom {
+  width: 95%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+
 nav#menu-bottom li {
-  padding-bottom: 14px;
+  padding: 12px 0;
+}
+
+nav#menu-bottom li a {
+  text-decoration: none;
+  padding: 12px;
+  border-bottom: 2px solid $header-bg;
+}
+
+nav#menu-bottom li a:hover {
+  background-color:$menu-bar-hover;
+  color: $font-color;
 }
 

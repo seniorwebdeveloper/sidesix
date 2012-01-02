@@ -16,6 +16,13 @@
   margin-left: -0.5em;
   font-family: $font-amp; }
 
+  a.url,
+  a.fn,
+  a.email {
+  	text-decoration: none;
+  	color: #DF2C2F;
+  }
+
 /* Only use the fancy ampersand in <h#> tags */
 h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
   font-size: 1em;
@@ -25,7 +32,7 @@ h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
 
 body {
 	font-size: 100%;
-	line-height: 1.2;
+	line-height: 1.6;
 	font-family: $font-serifs;
 	color: #333;
 }
@@ -46,6 +53,8 @@ h1 {
 	color: $font-color;
   @media only screen and (max-width: 480px) {
     font-size: 1.8em;}
+    @media only screen and (max-width: 320px) {
+      font-size: 1.6em;}
 }
 
 h2 {
@@ -84,8 +93,9 @@ h5 {
 }
 
 h6 {
-	padding-top: 1em;
-	color: #999;
+	font-size: 1em;
+	padding-bottom: 1em;
+	color: $light-font-color;
 }
 
 b, strong {
@@ -145,11 +155,13 @@ blockquote em {
 }
 
 figcaption {
-	font-family: $font-serifs;
+	font-family: $font-sans;
 	font-style: italic;
 	font-size: 0.857em;
 	line-height: 1.4286;
-	color: #666;
+	color: $font-color;
+	margin-top:  1em;
+	text-align: center;
 }
 
 article > p,
@@ -158,6 +170,10 @@ article section > p {
 	line-height: 1.5;
 	word-spacing: 0.1em;
 	margin: 1.1111em 0;
+}
+
+footer {
+	color: $light-font-color;
 }
 
 

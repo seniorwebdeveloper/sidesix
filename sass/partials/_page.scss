@@ -76,6 +76,12 @@ img {
   color: $highlighted-text;
 }
 
+.attention {
+  color: $attention-text;
+  text-decoration: underline;
+  font-size: 115%;
+}
+
 .page-left {
     width: $content-width;
     margin-left: percentage(45/1200);
@@ -93,6 +99,24 @@ img {
     visibility: visible;
   }
 }
+
+.framed {
+  border: $main-border;
+  background: white;
+  @include box-shadow-color;
+}
+
+/* Buttons -------------------------------------------- */
+
+#forrst {
+  @include fancy-button(#d2c72d);
+  margin-right: 8px;
+}
+
+#twitter {
+  @include fancy-button(#797272);
+}
+
 /* Page Structure -------------------------------- */
 
 body {
@@ -114,35 +138,54 @@ body {
     @media only screen and (max-width: 768px) {
       width: 98%;
       margin: 0;
+      position: relative;
     }
 }
 
 #logo {
     background: url(../images/bg-gradient.png) repeat-x;
+    position: relative;
+    display: block;
+    z-index: 2;
 }
 
 #logo-img {
   width: 25%;
   margin: 0;
-  z-index: 60;
+  position: relative;
+  display: block;
     @media only screen and (max-width: 768px)
       {width: percentage(100/768);}
       @media only screen and (max-width: 600px) {
         width: percentage(90/600);
+      }
+      @media only screen and (max-width: 480px) {
+        width: percentage(90/480);
+      }
+      @media only screen and (max-width: 320px) {
+        width: percentage(90/320);
       }
 }
 
 #logo img {
   padding: 4px 0;
   padding-left: percentage(10/1200);
+  @media only screen and (max-width: 480px) {
+    padding-left: percentage(20/480);}
 }
 
 #alt-top-nav {
 	width: 80px;
 	text-align: center;
-	margin: 12px 0;
-	margin-left: percentage(100/480);
-	@include fancy-button;
+	margin: 12px auto 6px;
+	margin-left: percentage(200/480);
+	@include fancy-button (#e02426, 1.4em, 1em, 4px);
+        a {
+          color: $font-color;;
+          text-decoration: none;}
+          @media only screen and (max-width: 320px) {
+            margin-left: percentage(100/320);
+          }
 }
 
 header.styled {
@@ -159,6 +202,7 @@ header.styled {
 #page-title {
     margin: 0;
     margin-left: percentage(45/1200);
+    position: relative;
     @media only screen and (max-width: 768px) {
       margin-left: percentage(12/768);
     }
@@ -166,6 +210,12 @@ header.styled {
       width: $content-width;
       margin: 0;
       text-align: center;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-left: percentage(40/480);
+    }
+    @media only screen and (max-width: 320px) {
+      margin-left: percentage(24/320);
     }
 }
 
@@ -179,10 +229,19 @@ header.styled {
       padding-right: 0;
       padding-left: percentage(10/768);
     }
+    @media only screen and (max-width: 480px) {
+      float: none;
+      width: 95%;
+      margin: 0 auto;
+      padding-right: 0;
+      padding-left: percentage(15/480);
+    }
 }
 
 #copy-top {
     margin: 35px 0;
+    @media only screen and (max-width: 480px) {
+      marging: 15px 0}
 }
 
 #page-copy-bottom {
@@ -194,10 +253,31 @@ header.styled {
       width: percentage(325/768);
       margin-left: percentage(8/768);
     }
+    @media only screen and (max-width: 480px) {
+      float: none;
+      width: 95%;
+      margin: 0 auto; 
+      padding-right: 0;
+      margin-right: 0;
+      margin-left: percentage(15/480);
+    }
+}
+
+#hcard {
+    width: 60%;
+    padding: 10px 20px;
+    margin: 1em auto;
+    border: $main-border;
+    background: white;
+    @include box-shadow-color;
+    font-family: $font-sans;
 }
 
 footer {
     margin-top: 60px;
     text-align: center;
     padding-bottom: 25px;
+    @media only screen and (max-width: 480px) {
+      margin-top: 15px;
+    }
 }

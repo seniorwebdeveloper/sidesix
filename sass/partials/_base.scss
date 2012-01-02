@@ -1,9 +1,12 @@
 // This file must be imported before loading html5-boilerplate
 
 $font-color: #3A2F2F;
-$text-shadow: 2px 2px 3px rgba(0,0,0, 0.5);
+$light-font-color: #666;
+$attention-text: #df1316;
 $highlighted-text: #DF1316;
 $base-font-size: 13px;
+$text-shadow: 2px 2px 3px rgba(0,0,0, 0.5);
+
 // Link Styles
 $link-color: #F68025;
 $link-hover-color: #D2C72D;
@@ -22,14 +25,14 @@ $high-light: #FAFA30;
 $drop-shadow: 1px 1px 5px rgba(0,0,0, 0.6);
 $full-width: 100%;
 $content-width: 90%;
-$main-border: 1px solid rgba(0,0,0, 0.4);
+$main-border: 1px solid rgba(0,0,0, 0.3);
 
 
 // iOS Selection Styles
 $selected-font-color: #fff; 
 $selected-background-color: #F68025;  
-// grid settings 
 
+// grid settings 
 $total: 1200px;
 $grid-background-column-width: 100px;
 $grid-background-gutter-width: 20px;
@@ -66,6 +69,8 @@ $show-baseline-grid-backgrounds: true;
 
 @mixin box-shadow-color {
   -webkit-box-shadow: 0 0 20px #f8984e;
+  -moz-box-shadow: 0 0 20px #f8984e;
+  box-shadow: 0 0 20px #f8984e;
 }
 
 @mixin box-shadow-inset {
