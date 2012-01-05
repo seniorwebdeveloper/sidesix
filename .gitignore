@@ -7,3 +7,5 @@ sidesix.bbprojectd
 .sass-cache
 */.DS_Store
 */*/.DS_Store
+resources/sidesix-icons/.DS_Store
+resources/sidesix-icons/png/.DS_Store
