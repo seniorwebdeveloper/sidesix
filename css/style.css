@@ -834,8 +834,39 @@ nav#menu-bottom li a:hover {
   color: #3a2f2f;
 }
 
+/* line 2, ../sass/partials/_lightbox.scss */
+.lbTrigger {
+  /* width: 100%*/
+}
+
+/* line 7, ../sass/partials/_lightbox.scss */
+.lbOverlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background-image: url("../images/overlay.png");
+}
+
+/* line 18, ../sass/partials/_lightbox.scss */
+.lbContent {
+  position: relative;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* line 28, ../sass/partials/_lightbox.scss */
+.hidden {
+  display: none;
+}
+
 /* incase an inverted custom gradient isn't specified */
-/* line 177, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 177, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class, #forrst, #twitter, #alt-top-nav {
   font-family: "Lucida Grande", Lucida, Arial, sans-serif;
   background: url('/images/button_bg.png?1325196149') repeat-x bottom left;
@@ -848,12 +879,12 @@ nav#menu-bottom li a:hover {
   border-style: solid;
   font-weight: bold;
 }
-/* line 165, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 165, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class::-moz-focus-inner, #forrst::-moz-focus-inner, #twitter::-moz-focus-inner, #alt-top-nav::-moz-focus-inner {
   border: none;
   padding: 0;
 }
-/* line 168, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 168, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class:focus, #forrst:focus, #twitter:focus, #alt-top-nav:focus {
   outline: none;
 }
@@ -990,8 +1021,30 @@ img {
   box-shadow: 0 0 20px #f8984e;
 }
 
+/* line 110, ../sass/partials/_page.scss */
+.thumb-left,
+.thumb-right {
+  padding: 10px;
+  background: #3a2f2f;
+  margin-bottom: 1em;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* line 117, ../sass/partials/_page.scss */
+.thumb-left {
+  float: left;
+}
+
+/* line 121, ../sass/partials/_page.scss */
+.thumb-right {
+  float: right;
+}
+
 /* Buttons -------------------------------------------- */
-/* line 111, ../sass/partials/_page.scss */
+/* line 127, ../sass/partials/_page.scss */
 #forrst {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1024,11 +1077,11 @@ img {
   background-clip: padding-box;
   margin-right: 8px;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #forrst, #forrst:visited {
   color: white;
 }
-/* line 31, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #forrst:hover, #forrst:focus {
   background-color: #f0e000;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ede9ab), color-stop(10%, #ddd45f), color-stop(50%, #b9af28), color-stop(50%, #aca325), color-stop(100%, #d3c831));
@@ -1040,11 +1093,11 @@ img {
   border-color: #867f1d;
   text-shadow: #706900 0px 1px 1px;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #forrst:hover, #forrst:hover:visited, #forrst:focus, #forrst:focus:visited {
   color: white;
 }
-/* line 36, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #forrst:active {
   background-color: #e0d100;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b9af28), color-stop(30%, #c1b729), color-stop(50%, #b0a726), color-stop(50%, #a49b23), color-stop(100%, #d4c935));
@@ -1060,12 +1113,12 @@ img {
   -o-box-shadow: #938b20 0 0.08em 0.2em 1px inset;
   box-shadow: #938b20 0 0.08em 0.2em 1px inset;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #forrst:active, #forrst:active:visited {
   color: white;
 }
 
-/* line 116, ../sass/partials/_page.scss */
+/* line 132, ../sass/partials/_page.scss */
 #twitter {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1097,11 +1150,11 @@ img {
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #twitter, #twitter:visited {
   color: white;
 }
-/* line 31, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #twitter:hover, #twitter:focus {
   background-color: #9d3f3f;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4c0c0), color-stop(10%, #979191), color-stop(50%, #696363), color-stop(50%, #615c5c), color-stop(100%, #7c7474));
@@ -1113,11 +1166,11 @@ img {
   border-color: #4a4545;
   text-shadow: #421a1a 0px 1px 1px;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #twitter:hover, #twitter:hover:visited, #twitter:focus, #twitter:focus:visited {
   color: white;
 }
-/* line 36, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #twitter:active {
   background-color: #923a3a;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #696363), color-stop(30%, #6e6868), color-stop(50%, #645e5e), color-stop(50%, #5c5757), color-stop(100%, #7e7777));
@@ -1133,33 +1186,33 @@ img {
   -o-box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
   box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #twitter:active, #twitter:active:visited {
   color: white;
 }
 
 /* Page Structure -------------------------------- */
-/* line 122, ../sass/partials/_page.scss */
+/* line 138, ../sass/partials/_page.scss */
 body {
   background-image: url(../images/exclusive_paper.png);
   background-repeat: repeat;
 }
 
-/* line 127, ../sass/partials/_page.scss */
+/* line 143, ../sass/partials/_page.scss */
 #container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 133, ../sass/partials/_page.scss */
+/* line 149, ../sass/partials/_page.scss */
 #page-content {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  /* line 133, ../sass/partials/_page.scss */
+  /* line 149, ../sass/partials/_page.scss */
   #page-content {
     width: 98%;
     margin: 0;
@@ -1167,7 +1220,7 @@ body {
   }
 }
 
-/* line 145, ../sass/partials/_page.scss */
+/* line 161, ../sass/partials/_page.scss */
 #logo {
   background: url(../images/bg-gradient.png) repeat-x;
   position: relative;
@@ -1175,7 +1228,7 @@ body {
   z-index: 2;
 }
 
-/* line 152, ../sass/partials/_page.scss */
+/* line 168, ../sass/partials/_page.scss */
 #logo-img {
   width: 25%;
   margin: 0;
@@ -1183,43 +1236,43 @@ body {
   display: block;
 }
 @media only screen and (max-width: 768px) {
-  /* line 152, ../sass/partials/_page.scss */
+  /* line 168, ../sass/partials/_page.scss */
   #logo-img {
     width: 13.021%;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 152, ../sass/partials/_page.scss */
+  /* line 168, ../sass/partials/_page.scss */
   #logo-img {
     width: 15%;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 152, ../sass/partials/_page.scss */
+  /* line 168, ../sass/partials/_page.scss */
   #logo-img {
     width: 18.75%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 152, ../sass/partials/_page.scss */
+  /* line 168, ../sass/partials/_page.scss */
   #logo-img {
     width: 28.125%;
   }
 }
 
-/* line 170, ../sass/partials/_page.scss */
+/* line 186, ../sass/partials/_page.scss */
 #logo img {
   padding: 4px 0;
   padding-left: 0.833%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 170, ../sass/partials/_page.scss */
+  /* line 186, ../sass/partials/_page.scss */
   #logo img {
     padding-left: 4.167%;
   }
 }
 
-/* line 177, ../sass/partials/_page.scss */
+/* line 193, ../sass/partials/_page.scss */
 #alt-top-nav {
   width: 80px;
   text-align: center;
@@ -1255,11 +1308,11 @@ body {
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #alt-top-nav, #alt-top-nav:visited {
   color: white;
 }
-/* line 31, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #alt-top-nav:hover, #alt-top-nav:focus {
   background-color: #f50003;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3aaab), color-stop(10%, #e85a5b), color-stop(50%, #c91c1e), color-stop(50%, #bc1b1c), color-stop(100%, #e1282a));
@@ -1271,11 +1324,11 @@ body {
   border-color: #931516;
   text-shadow: #750001 0px 1px 1px;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #alt-top-nav:hover, #alt-top-nav:hover:visited, #alt-top-nav:focus, #alt-top-nav:focus:visited {
   color: white;
 }
-/* line 36, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #alt-top-nav:active {
   background-color: #e50002;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c91c1e), color-stop(30%, #d21e20), color-stop(50%, #c01b1d), color-stop(50%, #b3191b), color-stop(100%, #e12d2f));
@@ -1291,23 +1344,23 @@ body {
   -o-box-shadow: #a11718 0 0.08em 0.2em 1px inset;
   box-shadow: #a11718 0 0.08em 0.2em 1px inset;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
 #alt-top-nav:active, #alt-top-nav:active:visited {
   color: white;
 }
-/* line 183, ../sass/partials/_page.scss */
+/* line 199, ../sass/partials/_page.scss */
 #alt-top-nav a {
   color: #3a2f2f;
   text-decoration: none;
 }
 @media only screen and (max-width: 320px) {
-  /* line 177, ../sass/partials/_page.scss */
+  /* line 193, ../sass/partials/_page.scss */
   #alt-top-nav {
     margin-left: 31.25%;
   }
 }
 
-/* line 191, ../sass/partials/_page.scss */
+/* line 207, ../sass/partials/_page.scss */
 header.styled {
   background: #f68025;
   padding: 2px;
@@ -1326,20 +1379,20 @@ header.styled {
   color: #3a2f2f;
 }
 
-/* line 202, ../sass/partials/_page.scss */
+/* line 218, ../sass/partials/_page.scss */
 #page-title {
   margin: 0;
   margin-left: 3.75%;
   position: relative;
 }
 @media only screen and (max-width: 768px) {
-  /* line 202, ../sass/partials/_page.scss */
+  /* line 218, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 1.563%;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 202, ../sass/partials/_page.scss */
+  /* line 218, ../sass/partials/_page.scss */
   #page-title {
     width: 90%;
     margin: 0;
@@ -1347,19 +1400,19 @@ header.styled {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 202, ../sass/partials/_page.scss */
+  /* line 218, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 8.333%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 202, ../sass/partials/_page.scss */
+  /* line 218, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 7.5%;
   }
 }
 
-/* line 222, ../sass/partials/_page.scss */
+/* line 238, ../sass/partials/_page.scss */
 #page-copy-top {
   width: 50%;
   float: right;
@@ -1367,7 +1420,7 @@ header.styled {
   padding-right: 1.667%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 222, ../sass/partials/_page.scss */
+  /* line 238, ../sass/partials/_page.scss */
   #page-copy-top {
     width: 52.083%;
     padding-right: 0;
@@ -1375,7 +1428,7 @@ header.styled {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 222, ../sass/partials/_page.scss */
+  /* line 238, ../sass/partials/_page.scss */
   #page-copy-top {
     float: none;
     width: 95%;
@@ -1385,18 +1438,18 @@ header.styled {
   }
 }
 
-/* line 241, ../sass/partials/_page.scss */
+/* line 257, ../sass/partials/_page.scss */
 #copy-top {
   margin: 35px 0;
 }
 @media only screen and (max-width: 480px) {
-  /* line 241, ../sass/partials/_page.scss */
+  /* line 257, ../sass/partials/_page.scss */
   #copy-top {
     marging: 15px 0;
   }
 }
 
-/* line 247, ../sass/partials/_page.scss */
+/* line 263, ../sass/partials/_page.scss */
 #page-copy-bottom {
   width: 33.333%;
   float: left;
@@ -1404,14 +1457,14 @@ header.styled {
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 247, ../sass/partials/_page.scss */
+  /* line 263, ../sass/partials/_page.scss */
   #page-copy-bottom {
     width: 42.318%;
     margin-left: 1.042%;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 247, ../sass/partials/_page.scss */
+  /* line 263, ../sass/partials/_page.scss */
   #page-copy-bottom {
     float: none;
     width: 95%;
@@ -1422,7 +1475,7 @@ header.styled {
   }
 }
 
-/* line 266, ../sass/partials/_page.scss */
+/* line 282, ../sass/partials/_page.scss */
 #hcard {
   width: 60%;
   padding: 10px 20px;
@@ -1435,14 +1488,14 @@ header.styled {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
 
-/* line 276, ../sass/partials/_page.scss */
+/* line 292, ../sass/partials/_page.scss */
 footer {
   margin-top: 60px;
   text-align: center;
   padding-bottom: 25px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 276, ../sass/partials/_page.scss */
+  /* line 292, ../sass/partials/_page.scss */
   footer {
     margin-top: 15px;
   }

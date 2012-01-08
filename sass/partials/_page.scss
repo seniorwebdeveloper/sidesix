@@ -106,6 +106,22 @@ img {
   @include box-shadow-color;
 }
 
+.thumb-left,
+.thumb-right {
+  padding: 10px;
+  background: $font-color;
+  margin-bottom: 1em;
+  @include box-shadow;
+}
+
+.thumb-left {
+  float: left;
+}
+
+.thumb-right {
+  float: right;
+}
+
 /* Buttons -------------------------------------------- */
 
 #forrst {
