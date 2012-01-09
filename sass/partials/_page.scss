@@ -89,14 +89,27 @@ img {
       margin-left: percentage(8/768);
       margin-right: percentage(8/768);
     }
+    @media only screen and (max-width: 600px) {
+     width: 55%;
+     margin: 0 auto; 
+    }
+    @media only screen and (max-width: 480px) {
+      width: 80%;
+    }
+    @media only screen and (max-width: 320px) {
+      width: 98%;
+    }
 }
 
 .four-eighty {
   display: none;
   visibility: hidden;
+  ul {margin:0; padding:0;}
   @media only screen and (max-width: 480px) {
     display: block;
     visibility: visible;
+    width: auto;
+    margin: 0 auto;
   }
 }
 
@@ -120,6 +133,15 @@ img {
 
 .thumb-right {
   float: right;
+}
+
+.no-show {
+  display: inline;
+  visibility: visible;
+  @media only screen and (max-width: 600px) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 /* Buttons -------------------------------------------- */
@@ -245,19 +267,25 @@ header.styled {
       padding-right: 0;
       padding-left: percentage(10/768);
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
+      padding-left: percentage(2/600);
       float: none;
       width: 95%;
       margin: 0 auto;
       padding-right: 0;
+    }
+    @media only screen and (max-width: 480px) {
       padding-left: percentage(15/480);
     }
 }
 
 #copy-top {
     margin: 35px 0;
+    @media only screen and (max-width: 600px) {
+      margin: 20px 0;
+    }
     @media only screen and (max-width: 480px) {
-      marging: 15px 0}
+      margin: 15px 0}
 }
 
 #page-copy-bottom {
@@ -269,12 +297,14 @@ header.styled {
       width: percentage(325/768);
       margin-left: percentage(8/768);
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       float: none;
       width: 95%;
       margin: 0 auto; 
       padding-right: 0;
       margin-right: 0;
+    }
+      @media only screen and (max-width: 480px) {
       margin-left: percentage(15/480);
     }
 }

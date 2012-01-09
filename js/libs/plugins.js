@@ -14,22 +14,3 @@ window.log = function(){
 
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
-
-// lightbox script
-var lightbox = function()
-  {
-    $('div.lbTrigger').click
-    (
-      function()
-      {
-	$('div.lbOverlay', this).toggleClass('hidden');
-      }
-    );
-    $('div.lbTrigger').click
-    (
-      function(event)
-      {
-	event.preventDefault();
-      }
-    );
-  };

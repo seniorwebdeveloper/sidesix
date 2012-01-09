@@ -811,7 +811,7 @@ nav#top-full-menu li a:hover {
 /* line 44, ../sass/partials/_nav.scss */
 nav#menu-bottom {
   width: 95%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 1.2em;
 }
@@ -824,11 +824,12 @@ nav#menu-bottom li {
 /* line 55, ../sass/partials/_nav.scss */
 nav#menu-bottom li a {
   text-decoration: none;
-  padding: 12px;
+  text-align: center;
+  padding: 12px 0;
   border-bottom: 2px solid #f68025;
 }
 
-/* line 61, ../sass/partials/_nav.scss */
+/* line 62, ../sass/partials/_nav.scss */
 nav#menu-bottom li a:hover {
   background-color: #fafa30;
   color: #3a2f2f;
@@ -998,21 +999,47 @@ img {
     margin-right: 1.042%;
   }
 }
+@media only screen and (max-width: 600px) {
+  /* line 85, ../sass/partials/_page.scss */
+  .page-left {
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 85, ../sass/partials/_page.scss */
+  .page-left {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 85, ../sass/partials/_page.scss */
+  .page-left {
+    width: 98%;
+  }
+}
 
-/* line 94, ../sass/partials/_page.scss */
+/* line 104, ../sass/partials/_page.scss */
 .four-eighty {
   display: none;
   visibility: hidden;
 }
+/* line 107, ../sass/partials/_page.scss */
+.four-eighty ul {
+  margin: 0;
+  padding: 0;
+}
 @media only screen and (max-width: 480px) {
-  /* line 94, ../sass/partials/_page.scss */
+  /* line 104, ../sass/partials/_page.scss */
   .four-eighty {
     display: block;
     visibility: visible;
+    width: auto;
+    margin: 0 auto;
   }
 }
 
-/* line 103, ../sass/partials/_page.scss */
+/* line 116, ../sass/partials/_page.scss */
 .framed {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: white;
@@ -1021,7 +1048,7 @@ img {
   box-shadow: 0 0 20px #f8984e;
 }
 
-/* line 110, ../sass/partials/_page.scss */
+/* line 123, ../sass/partials/_page.scss */
 .thumb-left,
 .thumb-right {
   padding: 10px;
@@ -1033,18 +1060,31 @@ img {
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 117, ../sass/partials/_page.scss */
+/* line 130, ../sass/partials/_page.scss */
 .thumb-left {
   float: left;
 }
 
-/* line 121, ../sass/partials/_page.scss */
+/* line 134, ../sass/partials/_page.scss */
 .thumb-right {
   float: right;
 }
 
+/* line 138, ../sass/partials/_page.scss */
+.no-show {
+  display: inline;
+  visibility: visible;
+}
+@media only screen and (max-width: 600px) {
+  /* line 138, ../sass/partials/_page.scss */
+  .no-show {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 /* Buttons -------------------------------------------- */
-/* line 127, ../sass/partials/_page.scss */
+/* line 149, ../sass/partials/_page.scss */
 #forrst {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1118,7 +1158,7 @@ img {
   color: white;
 }
 
-/* line 132, ../sass/partials/_page.scss */
+/* line 154, ../sass/partials/_page.scss */
 #twitter {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1192,27 +1232,27 @@ img {
 }
 
 /* Page Structure -------------------------------- */
-/* line 138, ../sass/partials/_page.scss */
+/* line 160, ../sass/partials/_page.scss */
 body {
   background-image: url(../images/exclusive_paper.png);
   background-repeat: repeat;
 }
 
-/* line 143, ../sass/partials/_page.scss */
+/* line 165, ../sass/partials/_page.scss */
 #container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 149, ../sass/partials/_page.scss */
+/* line 171, ../sass/partials/_page.scss */
 #page-content {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  /* line 149, ../sass/partials/_page.scss */
+  /* line 171, ../sass/partials/_page.scss */
   #page-content {
     width: 98%;
     margin: 0;
@@ -1220,7 +1260,7 @@ body {
   }
 }
 
-/* line 161, ../sass/partials/_page.scss */
+/* line 183, ../sass/partials/_page.scss */
 #logo {
   background: url(../images/bg-gradient.png) repeat-x;
   position: relative;
@@ -1228,7 +1268,7 @@ body {
   z-index: 2;
 }
 
-/* line 168, ../sass/partials/_page.scss */
+/* line 190, ../sass/partials/_page.scss */
 #logo-img {
   width: 25%;
   margin: 0;
@@ -1236,43 +1276,43 @@ body {
   display: block;
 }
 @media only screen and (max-width: 768px) {
-  /* line 168, ../sass/partials/_page.scss */
+  /* line 190, ../sass/partials/_page.scss */
   #logo-img {
     width: 13.021%;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 168, ../sass/partials/_page.scss */
+  /* line 190, ../sass/partials/_page.scss */
   #logo-img {
     width: 15%;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 168, ../sass/partials/_page.scss */
+  /* line 190, ../sass/partials/_page.scss */
   #logo-img {
     width: 18.75%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 168, ../sass/partials/_page.scss */
+  /* line 190, ../sass/partials/_page.scss */
   #logo-img {
     width: 28.125%;
   }
 }
 
-/* line 186, ../sass/partials/_page.scss */
+/* line 208, ../sass/partials/_page.scss */
 #logo img {
   padding: 4px 0;
   padding-left: 0.833%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 186, ../sass/partials/_page.scss */
+  /* line 208, ../sass/partials/_page.scss */
   #logo img {
     padding-left: 4.167%;
   }
 }
 
-/* line 193, ../sass/partials/_page.scss */
+/* line 215, ../sass/partials/_page.scss */
 #alt-top-nav {
   width: 80px;
   text-align: center;
@@ -1348,19 +1388,19 @@ body {
 #alt-top-nav:active, #alt-top-nav:active:visited {
   color: white;
 }
-/* line 199, ../sass/partials/_page.scss */
+/* line 221, ../sass/partials/_page.scss */
 #alt-top-nav a {
   color: #3a2f2f;
   text-decoration: none;
 }
 @media only screen and (max-width: 320px) {
-  /* line 193, ../sass/partials/_page.scss */
+  /* line 215, ../sass/partials/_page.scss */
   #alt-top-nav {
     margin-left: 31.25%;
   }
 }
 
-/* line 207, ../sass/partials/_page.scss */
+/* line 229, ../sass/partials/_page.scss */
 header.styled {
   background: #f68025;
   padding: 2px;
@@ -1379,20 +1419,20 @@ header.styled {
   color: #3a2f2f;
 }
 
-/* line 218, ../sass/partials/_page.scss */
+/* line 240, ../sass/partials/_page.scss */
 #page-title {
   margin: 0;
   margin-left: 3.75%;
   position: relative;
 }
 @media only screen and (max-width: 768px) {
-  /* line 218, ../sass/partials/_page.scss */
+  /* line 240, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 1.563%;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 218, ../sass/partials/_page.scss */
+  /* line 240, ../sass/partials/_page.scss */
   #page-title {
     width: 90%;
     margin: 0;
@@ -1400,19 +1440,19 @@ header.styled {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 218, ../sass/partials/_page.scss */
+  /* line 240, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 8.333%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 218, ../sass/partials/_page.scss */
+  /* line 240, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 7.5%;
   }
 }
 
-/* line 238, ../sass/partials/_page.scss */
+/* line 260, ../sass/partials/_page.scss */
 #page-copy-top {
   width: 50%;
   float: right;
@@ -1420,36 +1460,48 @@ header.styled {
   padding-right: 1.667%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 238, ../sass/partials/_page.scss */
+  /* line 260, ../sass/partials/_page.scss */
   #page-copy-top {
     width: 52.083%;
     padding-right: 0;
     padding-left: 1.302%;
   }
 }
-@media only screen and (max-width: 480px) {
-  /* line 238, ../sass/partials/_page.scss */
+@media only screen and (max-width: 600px) {
+  /* line 260, ../sass/partials/_page.scss */
   #page-copy-top {
+    padding-left: 0.333%;
     float: none;
     width: 95%;
     margin: 0 auto;
     padding-right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 260, ../sass/partials/_page.scss */
+  #page-copy-top {
     padding-left: 3.125%;
   }
 }
 
-/* line 257, ../sass/partials/_page.scss */
+/* line 282, ../sass/partials/_page.scss */
 #copy-top {
   margin: 35px 0;
 }
-@media only screen and (max-width: 480px) {
-  /* line 257, ../sass/partials/_page.scss */
+@media only screen and (max-width: 600px) {
+  /* line 282, ../sass/partials/_page.scss */
   #copy-top {
-    marging: 15px 0;
+    margin: 20px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 282, ../sass/partials/_page.scss */
+  #copy-top {
+    margin: 15px 0;
   }
 }
 
-/* line 263, ../sass/partials/_page.scss */
+/* line 291, ../sass/partials/_page.scss */
 #page-copy-bottom {
   width: 33.333%;
   float: left;
@@ -1457,25 +1509,30 @@ header.styled {
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 263, ../sass/partials/_page.scss */
+  /* line 291, ../sass/partials/_page.scss */
   #page-copy-bottom {
     width: 42.318%;
     margin-left: 1.042%;
   }
 }
-@media only screen and (max-width: 480px) {
-  /* line 263, ../sass/partials/_page.scss */
+@media only screen and (max-width: 600px) {
+  /* line 291, ../sass/partials/_page.scss */
   #page-copy-bottom {
     float: none;
     width: 95%;
     margin: 0 auto;
     padding-right: 0;
     margin-right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 291, ../sass/partials/_page.scss */
+  #page-copy-bottom {
     margin-left: 3.125%;
   }
 }
 
-/* line 282, ../sass/partials/_page.scss */
+/* line 312, ../sass/partials/_page.scss */
 #hcard {
   width: 60%;
   padding: 10px 20px;
@@ -1488,14 +1545,14 @@ header.styled {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
 
-/* line 292, ../sass/partials/_page.scss */
+/* line 322, ../sass/partials/_page.scss */
 footer {
   margin-top: 60px;
   text-align: center;
   padding-bottom: 25px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 292, ../sass/partials/_page.scss */
+  /* line 322, ../sass/partials/_page.scss */
   footer {
     margin-top: 15px;
   }
