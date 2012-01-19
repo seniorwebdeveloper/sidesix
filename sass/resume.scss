@@ -1,0 +1,169 @@
+// Here's where we define some default constants
+@import "partials/normalize";
+@import "partials/base";
+@import "compass/layout/grid-background";
+
+
+// Or, you can import the "overrides" partial if
+// you want more control over individual mixins
+//@import "partials/overrides";
+
+// Finally, put your own styles in these partials
+// and add more as needed (i.e. forms, tables, nav)
+@import "partials/fonts";
+@import "partials/typography";
+
+h1, h2, h3, h4 {
+	font-family: $font-sans;
+	font-weight: 300;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+	color: #700C88;	
+}
+
+h2 {
+	font-size: 1.3em; 
+	@media only screen and (max-width: 768px) {
+		font-size: 1.2em;
+	}
+}
+
+h3 {
+	font-size: 1.2em;
+	@media only screen and (max-width: 768px) {
+		font-size: 1.1em;
+	}
+}
+
+a, a:visited {color: #700C88; text-decoration: none;}
+a:hover, a:active {color: #21880A; text-decoration: underline;}
+
+body {
+	font-size: 1.25em;
+	font-family: $font-sans;
+	font-style: normal;
+  background: url(../images/texturetastic_gray.png);
+}
+
+#container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#hcard {
+	margin: 1.4em;
+	padding-bottom: 1em;
+	width: percentage(268/1200);
+	float:left;
+	@media only screen and (max-width: 600px) {
+		width: percentage(300/600);
+	}
+	@media only screen and (max-width: 320px) {
+		margin: percentage(15/320);
+		width: percentage(120/320);
+		h1 {font-size: 1.1em;}
+		h2 {font-size: 1.1em;}
+		h3 {font-size: .9em;}
+	}
+}
+
+img {max-width: 100%;}
+
+#portrait {
+	float: right;
+	width: percentage(250/1200);
+	margin-right: percentage(45/1200);
+	@media only screen and (max-width: 768px) {
+		width: percentage(225/768);
+	}
+	@media only screen and (max-width: 320px) {
+		width: 40%;
+		margin-right: 2px;
+		padding:0;
+	}
+}
+
+figcaption {
+	text-align: center;
+  margin: 0;
+  padding: 5px;
+  background: #fefefe;
+  border: 1px solid #bbb;
+  @include border-radius;
+  @include box-shadow;
+}
+
+#masthead {
+	width: 100%;
+	float: left;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid #bebebe;
+}
+
+#experience {
+	clear: both;
+	padding-top: 45px;
+	margin-left: percentage(200/1200);
+	width: 100%;
+	@media only screen and (max-width: 768px) {
+		margin-left: percentage(30/768);
+	}
+	article {
+		@media only screen and (max-width: 600px) {
+	padding-right: percentage(45/600);
+	}	
+	}
+}
+
+article h2, article h3 {
+	margin-bottom: .5em;
+}
+
+p.summary { 
+	font-family: $font-sans;
+	font-style: normal;
+	text-align: left;
+	margin: 0 ;
+	margin-bottom: 1.5em;
+	padding: 0;
+	width: percentage(650/1200);
+	@media only screen and (max-width: 768px) {
+		width: percentage(600/768);
+	}
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
+}
+
+article ul {
+	margin-bottom: 1.5em;
+	padding: 0;
+	list-style: none;
+	li {
+		padding: 0;
+		margin: 0;
+		margin-left: 2em;
+		text-align: left;
+		font-style: normal;
+	}
+}
+
+header {
+	text-align: left;
+}
+
+footer {
+	text-align: left;
+	color: #333;
+}
+
+#page-bottom {
+	margin: 50px 0;
+	text-align: center;
+	border-top: 1px solid #dedede 
+}

@@ -1,0 +1,901 @@
+@charset "UTF-8";
+/* normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 20, ../sass/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 30, ../sass/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+/* line 40, ../sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 49, ../sass/partials/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 66, ../sass/partials/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 77, ../sass/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* 
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 89, ../sass/partials/_normalize.scss */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 102, ../sass/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 112, ../sass/partials/_normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 125, ../sass/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 133, ../sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 142, ../sass/partials/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 146, ../sass/partials/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 154, ../sass/partials/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 162, ../sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 175, ../sass/partials/_normalize.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 185, ../sass/partials/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 198, ../sass/partials/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* 2 */
+/* line 205, ../sass/partials/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 210, ../sass/partials/_normalize.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 220, ../sass/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 227, ../sass/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 231, ../sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* line 241, ../sass/partials/_normalize.scss */
+ul,
+ol {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 246, ../sass/partials/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 251, ../sass/partials/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 267, ../sass/partials/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9 
+ */
+/* line 276, ../sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 289, ../sass/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 302, ../sass/partials/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 310, ../sass/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 321, ../sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  *margin-left: -7px;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 335, ../sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 347, ../sass/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 361, ../sass/partials/_normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ */
+/* line 373, ../sass/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 383, ../sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding that is displayed in S5, Chrome on OS X
+ */
+/* line 394, ../sass/partials/_normalize.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 404, ../sass/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 414, ../sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* 
+ * Remove most spacing between table cells
+ */
+/* line 428, ../sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 3, ../sass/partials/_typography.scss */
+.allcaps {
+  text-transform: uppercase;
+}
+
+/* line 7, ../sass/partials/_typography.scss */
+.amp {
+  font-family: bookman-1, bookman-2, serif;
+}
+
+/* line 10, ../sass/partials/_typography.scss */
+.smallcaps {
+  font-variant: small-caps;
+}
+
+/* line 14, ../sass/partials/_typography.scss */
+.dquo {
+  margin-left: -0.5em;
+  font-family: bookman-1, bookman-2, serif;
+}
+
+/* line 20, ../sass/partials/_typography.scss */
+a.url,
+a.fn,
+a.email {
+  text-decoration: none;
+  color: #DF2C2F;
+}
+
+/* Only use the fancy ampersand in <h#> tags */
+/* line 26, ../sass/partials/_typography.scss */
+h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
+  font-size: 1em;
+  font-family: bookman-1, bookman-2, serif;
+  font-style: italic;
+}
+
+/* line 32, ../sass/partials/_typography.scss */
+body {
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: linden-hill-1, linden-hill-2, Georgia, serif;
+  color: #333;
+}
+
+/* line 39, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, ../sass/partials/_typography.scss */
+h1, h2, h3 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 48, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 2.5em;
+  line-height: 1.125;
+  margin-bottom: 0.3em;
+  color: #3a2f2f;
+}
+@media only screen and (max-width: 480px) {
+  /* line 48, ../sass/partials/_typography.scss */
+  h1 {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 48, ../sass/partials/_typography.scss */
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+/* line 59, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 1.65em;
+  line-height: 1.5;
+  padding: .5em 0;
+  color: #3a2f2f;
+}
+@media only screen and (max-width: 768px) {
+  /* line 59, ../sass/partials/_typography.scss */
+  h2 {
+    font-size: 1.4em;
+    line-height: 1.4;
+  }
+}
+
+/* line 70, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 1.425em;
+  line-height: 1.4;
+  padding-top: 1em;
+  margin-bottom: 0.7em;
+  color: #666;
+}
+
+/* line 78, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 1.25em;
+  line-height: 1.5;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  color: #777;
+}
+
+/* line 86, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 1.125em;
+  line-height: 1.6667;
+  padding-top: 1.1111em;
+  color: #888;
+}
+
+/* line 93, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 1em;
+  padding-bottom: 1em;
+  color: #666666;
+}
+
+/* line 99, ../sass/partials/_typography.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 103, ../sass/partials/_typography.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 107, ../sass/partials/_typography.scss */
+hr {
+  border: none;
+  height: 0.1em;
+  background: #ccc;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 114, ../sass/partials/_typography.scss */
+p, ul, ol, hr, table, form, fieldset {
+  margin: 1.25em 0;
+}
+
+/* line 118, ../sass/partials/_typography.scss */
+li {
+  list-style-position: inside;
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+/* line 124, ../sass/partials/_typography.scss */
+blockquote {
+  margin: 1em .4em;
+  border-top: 0.1em solid;
+  border-bottom: 0.1em solid;
+  padding: 0 1em;
+  font-family: linden-hill-1, linden-hill-2, Georgia, serif;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #444;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+
+/* line 143, ../sass/partials/_typography.scss */
+cite {
+  font-family: linden-hill-1, linden-hill-2, Georgia, serif;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 200;
+}
+
+/* line 151, ../sass/partials/_typography.scss */
+blockquote em {
+  font-style: normal;
+}
+
+/* line 155, ../sass/partials/_typography.scss */
+figcaption {
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-style: italic;
+  font-size: 0.857em;
+  line-height: 1.4286;
+  color: #3a2f2f;
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* line 166, ../sass/partials/_typography.scss */
+article > p,
+article section > p {
+  font-size: 1em;
+  line-height: 1.5;
+  word-spacing: 0.1em;
+  margin: 1.1111em 0;
+}
+
+/* line 173, ../sass/partials/_typography.scss */
+footer {
+  color: #666666;
+}
+
+/* line 178, ../sass/partials/_typography.scss */
+time {
+  display: block;
+  text-align: right;
+  font-weight: normal;
+  font-family: linden-hill-1, linden-hill-2, Georgia, serif;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  line-height: 1.6667;
+  letter-spacing: 0.2em;
+  color: #888;
+}
+
+/* line 190, ../sass/partials/_typography.scss */
+time:before {
+  content: '—';
+}
+
+/* line 16, ../sass/resume.scss */
+h1, h2, h3, h4 {
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../sass/resume.scss */
+h1 {
+  font-size: 1.5em;
+  color: #700C88;
+}
+
+/* line 29, ../sass/resume.scss */
+h2 {
+  font-size: 1.3em;
+}
+@media only screen and (max-width: 768px) {
+  /* line 29, ../sass/resume.scss */
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* line 36, ../sass/resume.scss */
+h3 {
+  font-size: 1.2em;
+}
+@media only screen and (max-width: 768px) {
+  /* line 36, ../sass/resume.scss */
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
+/* line 43, ../sass/resume.scss */
+a, a:visited {
+  color: #700C88;
+  text-decoration: none;
+}
+
+/* line 44, ../sass/resume.scss */
+a:hover, a:active {
+  color: #21880A;
+  text-decoration: underline;
+}
+
+/* line 46, ../sass/resume.scss */
+body {
+  font-size: 1.25em;
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-style: normal;
+  background: url(../images/texturetastic_gray.png);
+}
+
+/* line 53, ../sass/resume.scss */
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 58, ../sass/resume.scss */
+#hcard {
+  margin: 1.4em;
+  padding-bottom: 1em;
+  width: 22.333%;
+  float: left;
+}
+@media only screen and (max-width: 600px) {
+  /* line 58, ../sass/resume.scss */
+  #hcard {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 58, ../sass/resume.scss */
+  #hcard {
+    margin: 4.688%;
+    width: 37.5%;
+  }
+  /* line 69, ../sass/resume.scss */
+  #hcard h1 {
+    font-size: 1.1em;
+  }
+  /* line 70, ../sass/resume.scss */
+  #hcard h2 {
+    font-size: 1.1em;
+  }
+  /* line 71, ../sass/resume.scss */
+  #hcard h3 {
+    font-size: .9em;
+  }
+}
+
+/* line 75, ../sass/resume.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 77, ../sass/resume.scss */
+#portrait {
+  float: right;
+  width: 20.833%;
+  margin-right: 3.75%;
+}
+@media only screen and (max-width: 768px) {
+  /* line 77, ../sass/resume.scss */
+  #portrait {
+    width: 29.297%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 77, ../sass/resume.scss */
+  #portrait {
+    width: 40%;
+    margin-right: 2px;
+    padding: 0;
+  }
+}
+
+/* line 91, ../sass/resume.scss */
+figcaption {
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  background: #fefefe;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* line 101, ../sass/resume.scss */
+#masthead {
+  width: 100%;
+  float: left;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #bebebe;
+}
+
+/* line 108, ../sass/resume.scss */
+#experience {
+  clear: both;
+  padding-top: 45px;
+  margin-left: 16.667%;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  /* line 108, ../sass/resume.scss */
+  #experience {
+    margin-left: 3.906%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 116, ../sass/resume.scss */
+  #experience article {
+    padding-right: 7.5%;
+  }
+}
+
+/* line 123, ../sass/resume.scss */
+article h2, article h3 {
+  margin-bottom: .5em;
+}
+
+/* line 127, ../sass/resume.scss */
+p.summary {
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-style: normal;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 1.5em;
+  padding: 0;
+  width: 54.167%;
+}
+@media only screen and (max-width: 768px) {
+  /* line 127, ../sass/resume.scss */
+  p.summary {
+    width: 78.125%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 127, ../sass/resume.scss */
+  p.summary {
+    width: 100%;
+  }
+}
+
+/* line 143, ../sass/resume.scss */
+article ul {
+  margin-bottom: 1.5em;
+  padding: 0;
+  list-style: none;
+}
+/* line 147, ../sass/resume.scss */
+article ul li {
+  padding: 0;
+  margin: 0;
+  margin-left: 2em;
+  text-align: left;
+  font-style: normal;
+}
+
+/* line 156, ../sass/resume.scss */
+header {
+  text-align: left;
+}
+
+/* line 160, ../sass/resume.scss */
+footer {
+  text-align: left;
+  color: #333;
+}
+
+/* line 165, ../sass/resume.scss */
+#page-bottom {
+  margin: 50px 0;
+  text-align: center;
+  border-top: 1px solid #dedede  ;
+}
