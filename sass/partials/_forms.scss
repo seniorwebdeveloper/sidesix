@@ -1,7 +1,7 @@
 // form styles are here
 
 form {
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 input,
@@ -46,6 +46,7 @@ input {
 textarea {
     padding: 0.45em;
     width: 96%;
+    height: 150px;
 }
 input[type="submit"] {
     background: #E66C6D;
@@ -59,4 +60,32 @@ input[type="submit"] {
 input[type="submit"]:focus,
 input[type="submit"]:hover {
     background: #d2c72d;
+}
+
+#contact-form .required {
+	font-weight:bold;
+	color:#F00;	
+}
+
+
+#mc-embedded-subscribe {margin: 1em 0;}
+
+/* Normalize placeholder styles */
+
+/* chrome, safari */
+::-webkit-input-placeholder {
+	color:#CCC;
+	font-style:italic;
+}
+
+/* mozilla */
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color:#CCC;
+	font-style:italic;
+}
+
+/* ie (faux placeholder) */
+input.placeholder-text, textarea.placeholder-text  { 
+	color:#CCC;
+	font-style:italic;
 }

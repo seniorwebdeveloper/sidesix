@@ -6,7 +6,13 @@
 // probably be customized for each site
 //-----------------------------------------------
 
+html {
+	background: #252525;
+}
+
 body, select, input, textarea {
+  max-width: 1200px;
+  margin: 0 auto;
   color: $font-color;  
 }
 
@@ -163,7 +169,7 @@ body {
 }
 
 #container {
-    width: $full-width;
+    max-width: $full-width;
     margin: 0 auto;
     overflow: hidden;
 }
