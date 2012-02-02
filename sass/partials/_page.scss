@@ -91,6 +91,10 @@ img {
 .page-left {
     width: $content-width;
     margin-left: percentage(45/1200);
+    @media only screen and (max-width: 1024px) {
+      width: 98%;
+      margin-left: percentage(10/1024);
+    }
     @media only screen and (max-width: 768px) {
       margin-left: percentage(8/768);
       margin-right: percentage(8/768);
