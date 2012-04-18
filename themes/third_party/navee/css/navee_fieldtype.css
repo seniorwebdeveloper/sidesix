@@ -1,0 +1,118 @@
+.pill li.selected {
+	color: pink;
+}
+.naveeFieldtype ol{
+	margin-top: 10px;	
+}
+.naveeFieldtype ol li{
+	border: 1px solid #B6C0C2;
+	border-bottom: none;
+	list-style: none;
+	padding: 8px 0;
+}
+.naveeFieldtype ol li.last{
+	border-bottom: 1px solid #B6C0C2;
+}
+.naveeFieldtype ol li input{
+	width: 86%;
+}
+.naveeFieldtype ol li label{
+	float: left;
+	width: 10%;
+	padding-left: 1%;
+	padding-right: 1%;
+	color: #5F6C74;
+	font-weight: bold;
+	text-align: right;
+}
+.naveeFieldtype dl{
+	background: #E1E8ED;
+	border: 1px solid #d0d7df;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding: 1%;
+}
+.naveeFieldtype dl:after{
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.naveeFieldtype dl dt, .naveeFieldtype dl dd{
+	float: left;
+}
+.naveeFieldtype dl dd{
+	-webkit-margin-start: 0;
+	padding-left: 1%;
+}
+.naveeFieldtype dl dd a{
+	display: block;
+	float: left;
+	padding: 4px 8px;
+	background: #6d818e;
+	border: 1px solid #d0d7df;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	text-decoration: none;
+	
+}
+.publish_field .naveeFieldtype dl dd a, .publish_field .naveeFieldtype dl dd a:visited{
+	text-decoration: none;
+	color: #fff;
+}
+.publish_field .naveeFieldtype dl dd a:hover{
+	background: #9aacb8;
+}
+.naveeFieldtype dl dt{
+	color: #5F6C74;
+	font-weight: bold;
+	padding: 4px 0;
+}
+.naveeExistingElements{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.naveeFieldtype h4{
+	font-weight: normal;
+}
+
+.navee_alert {
+	background: #a1adb4;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 15px 15px 10px 15px;
+	width: 200px;
+	border: 3px solid #fff;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	z-index: 99999;
+	-webkit-box-shadow: 5px 5px 20px rgba(0,0,0,.4);
+	-moz-box-shadow: 5px 5px 20px rgba(0,0,0,.4);
+	box-shadow: 5px 5px 20px rgba(0,0,0,.4);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display:none;
+}
+
+.navee_alert a.x {
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 10px;
+	float: right;
+	font-size: 12px;
+	padding: 0 6px;
+	color: #fff;
+	border: 2px solid #fff;
+	background: #7c919c;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+	text-decoration: none;
+}
+
+.navee_alert a.navee_trash_no_dump {
+	left: 58px;
+}

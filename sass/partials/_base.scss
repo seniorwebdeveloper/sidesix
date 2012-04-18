@@ -55,6 +55,28 @@ $show-baseline-grid-backgrounds: true;
       @include baseline-grid-background($baseline, $baseline-color);
       @include column-grid-background($total, $column, $gutter, $offset, $column-color, $gutter-color, $force-fluid); } } }
 
+@mixin logo-gradient {
+  background-color: #f49393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb1417), to(#f49393));
+  background-image: -webkit-linear-gradient(top, #eb1417, #f49393);
+  background-image: -moz-linear-gradient(top, #eb1417, #f49393);
+  background-image: -o-linear-gradient(top, #eb1417, #f49393);
+  background-image: -ms-linear-gradient(top, #eb1417, #f49393);
+  background-image: linear-gradient(top, #eb1417, #f49393);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eb1417', EndColorStr='#f49393');
+}
+
+@mixin menu-gradient {
+  background-color: #cacf6d;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+background-image: linear-gradient(top, #ccd464, #cacf6d);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
+}
+
 @mixin border-radius {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;

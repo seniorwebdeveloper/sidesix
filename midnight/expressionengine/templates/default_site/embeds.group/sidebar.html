@@ -1,0 +1,33 @@
+<section id="sidebar" class="clearfix">
+  <header><h2>The Sidebar</h2></header>
+  <div class="sidebar-items">
+    <h3>Recent Asides</h3>
+      <ul>
+        {exp:channel:entries channel="aside"  status="open" orderby="date" sort="desc" limit="5" dynamic="no"}
+            <li><a href="{title_permalink="aside/article"}">{title}</a></li>
+        {/exp:channel:entries}
+      </ul>
+  </div><!-- /recent-posts -->
+  <div class="sidebar-items">
+    <h3>Sites of Note</h3>
+    <ul>
+      <li><a href="http://daniel-avery.com">My Personal Site</a></li>
+      <li><a href="http://alistapart.com">A List Apart</a></li>
+      <li><a href="http://thepersnicketyreader.com/">The Persnickety Reader</a></li>
+      <li><a href="http://www.stuffandnonsense.co.uk/">Stuff And Nonsense</a></li>
+    </ul>
+
+    <h3>Related Entries</h3>
+        <ul>
+          {exp:channel:entries channel="aside" status="open" limit="3" related_categories_mode="yes" custom_fields="yes"}
+          {if no_results}
+            <p>There are currently no related articles.</p>
+          {/if}
+          <li>
+            <em>{entry_date format="%F %d, %Y"}</em>
+            <h4><a href="{title_permalink="aside/article"}">{title}</a></h4>
+          </li>                                  
+        {/exp:channel:entries}
+        </ul>
+  </div>
+</section>

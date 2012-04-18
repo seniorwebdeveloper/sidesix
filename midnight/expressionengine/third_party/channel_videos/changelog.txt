@@ -1,0 +1,38 @@
+Version 3.0.3
+- Added youtube:url_params=""
+- Updated Vimeo API Library
+
+Version 3.0.2
+- Added {video:switch=""} variable.
+
+Version 3.0.0
+- Redesigned Publish Field UI
+- Recoded Video Search Api
+- Updated embed codes. (Iframe versions are now being used)
+- Added Tile based UI for the Fieldtype.
+
+Version 2.4.1
+- Added support for NSM Addon Updater
+- Fixed a bug where in some case IE JS error could occur of Channel Images/Files field was on the same form
+
+Version 2.4
+- Added wmode transparent to embed code
+
+Version 2.3
+- Channel Videos is now compatible with SAEF (Safecracker)
+
+Version 2.2
+- Added ability to have multiple Channel Videos fields
+- Added field="" {exp:channel_videos:videos} // Seperate multiple fields with a PIPE "|"
+- Added field_id="" {exp:channel_videos:videos}
+- Fixed a bug where deleting and entry would not delete the videos.
+
+Version 2.1
+- Added video_id="" param
+- Added {video:url_hd}
+- Added {video:embed_code_hd}
+- Added {video:img_url_hd}
+- Fixed a bug where an PHP error would occur if entry was saved with no videos
+
+Version 2.0
+- Release

@@ -1,0 +1,108 @@
+{embed="embeds/doc_head" default_title="Aside, The Article: {title}"}
+  <body>
+       <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+        chromium.org/developers/how-tos/chrome-frame-getting-started -->
+   <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div id="container" class="clearfix">
+ {embed="embeds/masthead"}
+ {embed="embeds/nav"} 
+
+<header id="page-title" class="clearfix">
+  <h1>Aside &ndash; The Article</h1>
+</header>  
+
+<section id="recent-posts">
+  
+<article class="hentry" class="clearfix">
+    <div class="entry-content">      
+      <figure>
+          {exp:channel:entries channel="aside" limit="1" status="open"}
+          <header>
+            <h2>{title}</h2>
+          </header>
+            <time class="updated" datetime="2010=08-07T11:11:03">{entry_date format="%F %d, %Y"}</time>
+              <p class="byline author vcard">by <span class="fn">{author}</span></p>
+              <figure>
+                {exp:channel_images:images entry_id="{entry_id}"}
+                      <img class="fancybox" src="{image:url:medium}" alt="{image:title}" />
+                      <figcaption>{image:description}</figcaption>
+                {/exp:channel_images:images}
+              </figure>
+            <div class="entry-content">{aside_copy}</div>
+          {exp:channel_videos:videos entry_id="{entry_id}"}
+                <div class="videoWrapper">
+                      <h3>{video:title}</h3>
+                      {video:embed_code}
+                </div> <!-- end videoWrapper -->
+                  {/exp:channel_videos:videos}
+        {/exp:channel:entries}
+</article>
+<div class="comments">
+        <h3>There are {comment_total} comments for this entry. <a href="#leave-a-comment">Leave a comment below &raquo;</a></h3>
+        <ol class="comments-list">
+          {exp:comment:entries channel="aside"}
+          <li>
+            <div class="info">
+              <em><a href="{url}">{name}</a></em>
+              {comment_date format="%F %d, %Y"}
+            </div><!-- /end .info --> 
+            <div class="content">
+              {comment}
+            </div>        
+          </li>
+          {/exp:comment:entries}
+        </ol><!-- /end ol.comments-list -->
+        <h3 id="leave-a-comment">Leave a comment. <em>*Required</em></h3>
+        {exp:comment:form form_class="comment-form"}
+          <ul>
+            <li class="comment-name">
+              <div class="label">
+                <label for="form-name">Your Name*</label>
+              </div><!-- /end .label -->
+              <div class="input">
+                <input id="form-name" name="name" type="text" size="35" value="{name}" />
+              </div><!-- /end .input -->
+            </li><!-- /end .comment-name -->
+  
+            <li class="comment-email">
+              <div class="label">
+                <label for="form-email">Email*</label>
+              </div><!-- /end .label -->
+              <div class="input">
+                <input id="form-email" name="email" type="email" size="35" value="{email}"/>
+              </div><!-- /end .input -->
+            </li><!-- /end .comment-email -->
+  
+            <li class="comment-website">
+              <div class="label">
+                <label for="form-website">Website</label>
+              </div><!-- /end .label -->
+              <div class="input">
+                <input id="form-website" name="url" type="url" size="35" value="{url}" />
+              </div><!-- /end .input -->
+            </li><!-- /end .comment-website -->
+            
+            <li class="comment-content">
+              <div class="label">
+                <label for="form-content">Comment</label>
+              </div>
+              <div class="input">
+                <textarea id="form-content" name="comment" cols="40" rows="10" />{comment}</textarea>
+              </div>
+            </li>
+
+          </ul>
+          <input id="comment-submit" type="submit" value="Submit Comment" />
+        {/exp:comment:form}<!-- /end form.comment-form -->
+      </div><!-- /end .comments -->
+</section><!-- /recent posts -->
+
+{embed="embeds/sidebar"}
+
+<div class="clear"></div>    
+{embed="embeds/footer"}
+</div><!-- end container -->   
+{embed="embeds/scripts"}
+</body>
+</html>

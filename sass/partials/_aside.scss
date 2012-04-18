@@ -1,0 +1,63 @@
+// styles for Aside The Blog
+
+#recent-posts {
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+  @media only screen and (max-width: 768px) {
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.hentry,
+.comments {
+  width: 85%;
+  margin: 0 auto;
+  padding-left: 15%;
+  float: left;
+}
+
+.comments {
+  padding-top: 15px;
+}
+
+.updated {
+  text-align: left;
+}
+
+#sidebar {
+  width: 33%;
+  float: right;
+  border: 1px solid #bebebe;
+  margin: 0;
+  margin-right: 40px;
+  padding: 8px;
+  @include border-radius;
+  @include box-shadow;
+  background: url(../images/furley_bg.png) repeat;
+  @media only screen and (max-width: 768px) {
+    clear: both;
+    float: none;
+    width: 80%;
+    margin-right: 0;
+    margin: 35px auto;
+
+  }
+}
+
+figcaption {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-items {
+  padding: 0 0 16px 8px;
+}
+
+.sidebar-items a {
+  text-decoration: none;
+}

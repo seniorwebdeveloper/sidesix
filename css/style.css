@@ -238,8 +238,8 @@ sub {
 /* line 241, ../sass/partials/_normalize.scss */
 ul,
 ol {
-  margin-left: 0;
-  padding: 0 0 0 40px;
+  margin: 0;
+  padding: 0;
 }
 
 /* line 246, ../sass/partials/_normalize.scss */
@@ -593,11 +593,9 @@ p, ul, ol, hr, table, form, fieldset {
 /* line 118, ../sass/partials/_typography.scss */
 li {
   list-style-position: inside;
-  margin-left: 1em;
-  text-indent: -1em;
 }
 
-/* line 124, ../sass/partials/_typography.scss */
+/* line 122, ../sass/partials/_typography.scss */
 blockquote {
   margin: 1em .4em;
   border-top: 0.1em solid;
@@ -617,7 +615,7 @@ blockquote {
   border-radius: 0.25em;
 }
 
-/* line 143, ../sass/partials/_typography.scss */
+/* line 141, ../sass/partials/_typography.scss */
 cite {
   font-family: linden-hill-1, linden-hill-2, Georgia, serif;
   font-style: normal;
@@ -626,12 +624,12 @@ cite {
   font-weight: 200;
 }
 
-/* line 151, ../sass/partials/_typography.scss */
+/* line 149, ../sass/partials/_typography.scss */
 blockquote em {
   font-style: normal;
 }
 
-/* line 155, ../sass/partials/_typography.scss */
+/* line 153, ../sass/partials/_typography.scss */
 figcaption {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
   font-style: italic;
@@ -642,7 +640,7 @@ figcaption {
   text-align: center;
 }
 
-/* line 166, ../sass/partials/_typography.scss */
+/* line 164, ../sass/partials/_typography.scss */
 article > p,
 article section > p {
   font-size: 1em;
@@ -651,12 +649,12 @@ article section > p {
   margin: 1.1111em 0;
 }
 
-/* line 173, ../sass/partials/_typography.scss */
+/* line 171, ../sass/partials/_typography.scss */
 footer {
   color: #666666;
 }
 
-/* line 178, ../sass/partials/_typography.scss */
+/* line 176, ../sass/partials/_typography.scss */
 time {
   display: block;
   text-align: right;
@@ -669,9 +667,15 @@ time {
   color: #888;
 }
 
-/* line 190, ../sass/partials/_typography.scss */
+/* line 188, ../sass/partials/_typography.scss */
 time:before {
   content: '—';
+}
+
+/* line 192, ../sass/partials/_typography.scss */
+.page-left figcaption {
+  text-align: left;
+  margin-bottom: 15px;
 }
 
 /* line 3, ../sass/partials/_forms.scss */
@@ -784,204 +788,539 @@ input.placeholder-text, textarea.placeholder-text {
 }
 
 /* line 3, ../sass/partials/_nav.scss */
-nav#top-full-menu {
-  margin: 0;
-  margin-right: 2.083%;
-  margin-bottom: 15px;
-  font: 1.4em/1.4 proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
-  text-align: right;
-  padding-right: 0.833%;
-}
-@media only screen and (max-width: 768px) {
-  /* line 3, ../sass/partials/_nav.scss */
-  nav#top-full-menu {
-    margin-right: 0;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 3, ../sass/partials/_nav.scss */
-  nav#top-full-menu {
-    font-size: 1.2em;
-    margin-top: -25px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  /* line 3, ../sass/partials/_nav.scss */
-  nav#top-full-menu {
-    margin-top: -25px;
-    line-height: 1.2;
-  }
-}
-/* line 19, ../sass/partials/_nav.scss */
-nav#top-full-menu li {
-  display: inline;
-  padding: .25em;
-}
-/* line 23, ../sass/partials/_nav.scss */
-nav#top-full-menu li a {
-  margin: 0;
-  text-decoration: none;
-  border-bottom: 1px solid #df1316;
-}
-/* line 28, ../sass/partials/_nav.scss */
-nav#top-full-menu li a:last-of-type {
-  padding-right: 0;
-}
-/* line 31, ../sass/partials/_nav.scss */
-nav#top-full-menu li a:hover {
-  background: #fafa30;
-  color: #3a2f2f;
-}
-
-@media only screen and (max-width: 480px) {
-  /* line 37, ../sass/partials/_nav.scss */
-  #top-full-menu {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-/* line 44, ../sass/partials/_nav.scss */
-nav#menu-bottom {
-  width: 95%;
-  margin: 0 auto;
-  padding: 0;
-  font-size: 1.2em;
-}
-
-/* line 51, ../sass/partials/_nav.scss */
-nav#menu-bottom li {
-  padding: 12px 0;
-}
-
-/* line 55, ../sass/partials/_nav.scss */
-nav#menu-bottom li a {
-  text-decoration: none;
-  text-align: center;
-  padding: 12px 0;
-  border-bottom: 2px solid #f68025;
-}
-
-/* line 62, ../sass/partials/_nav.scss */
-nav#menu-bottom li a:hover {
-  background-color: #fafa30;
-  color: #3a2f2f;
-}
-
-/* line 2, ../sass/partials/_lightbox.scss */
-.lbTrigger {
-  /* width: 100%*/
-}
-
-/* line 7, ../sass/partials/_lightbox.scss */
-.lbOverlay {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 100;
-  background-image: url("../images/overlay.png");
-}
-
-/* line 18, ../sass/partials/_lightbox.scss */
-.lbContent {
-  position: relative;
-  top: 15%;
-  left: 10%;
-  width: 80%;
-  max-width: 800px;
-  text-align: center;
-}
-
-/* line 28, ../sass/partials/_lightbox.scss */
-.hidden {
+.menu {
   display: none;
 }
 
-/* incase an inverted custom gradient isn't specified */
-/* line 177, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class, #forrst, #twitter, #alt-top-nav {
-  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
-  background: url('/images/button_bg.png?1325196149') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-}
-/* line 165, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class::-moz-focus-inner, #forrst::-moz-focus-inner, #twitter::-moz-focus-inner, #alt-top-nav::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 168, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class:focus, #forrst:focus, #twitter:focus, #alt-top-nav:focus {
-  outline: none;
+/* line 7, ../sass/partials/_nav.scss */
+#mobile {
+  display: none;
+  visibility: hidden;
 }
 
-/* line 9, ../sass/partials/_page.scss */
+/* line 12, ../sass/partials/_nav.scss */
+#primary_nav {
+  width: 100%;
+  float: left;
+  display: block;
+}
+
+/* line 19, ../sass/partials/_nav.scss */
+#primary_nav ul,
+#mobile ul {
+  list-style: none;
+  width: 100%;
+  display: block;
+  float: left;
+  margin: 0;
+  margin-left: 0;
+  background-color: #cacf6d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+  background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: linear-gradient(top, #ccd464, #cacf6d);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
+}
+
+/* line 29, ../sass/partials/_nav.scss */
+#primary_nav li a {
+  margin: 0;
+  padding: 0 25px;
+  float: left;
+  text-align: center;
+  display: block;
+  color: #3a2f2f;
+  text-decoration: none;
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  border-right: 1px solid #9F9897;
+  border-bottom: 1px solid #9F9897;
+  background-color: #cacf6d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+  background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: linear-gradient(top, #ccd464, #cacf6d);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+/* line 55, ../sass/partials/_nav.scss */
+#primary_nav li a:hover,
+#primary_nav li a:focus,
+#mobile li a:hover,
+#mobile li a:focus {
+  color: #1c1c1c;
+  background-color: #f49393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb1417), to(#f49393));
+  background-image: -webkit-linear-gradient(top, #eb1417, #f49393);
+  background-image: -moz-linear-gradient(top, #eb1417, #f49393);
+  background-image: -o-linear-gradient(top, #eb1417, #f49393);
+  background-image: -ms-linear-gradient(top, #eb1417, #f49393);
+  background-image: linear-gradient(top, #eb1417, #f49393);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eb1417', EndColorStr='#f49393');
+}
+
+/* line 61, ../sass/partials/_nav.scss */
+#primary_nav li:last-child a {
+  border-right: none;
+}
+
+/* line 65, ../sass/partials/_nav.scss */
+#primary_nav li.top {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 70, ../sass/partials/_nav.scss */
+  ul > li.primary {
+    display: none;
+  }
+
+  /* line 74, ../sass/partials/_nav.scss */
+  #primary_nav li {
+    font-size: 0.95em;
+  }
+
+  /* line 78, ../sass/partials/_nav.scss */
+  li.menu {
+    display: inline;
+    border-right: 1px solid #dedede;
+  }
+
+  /* line 83, ../sass/partials/_nav.scss */
+  #primary_nav li:last-child a {
+    border-right: 1px solid #9F9897;
+  }
+
+  /* line 87, ../sass/partials/_nav.scss */
+  #mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  /* line 92, ../sass/partials/_nav.scss */
+  #mobile li a {
+    display: block;
+  }
+
+  /* line 96, ../sass/partials/_nav.scss */
+  #mobile li a {
+    color: #3a2f2f;
+    text-decoration: none;
+    font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    padding: 5px 0;
+    border-bottom: 1px solid #9F9897;
+    background-color: #cacf6d;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+    background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+    background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+    background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+    background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+    background-image: linear-gradient(top, #ccd464, #cacf6d);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
+  }
+}
+/* line 3, ../sass/partials/_fancybox.scss */
+.fancybox-tmp iframe, .fancybox-tmp object {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 9, ../sass/partials/_fancybox.scss */
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
+/* line 16, ../sass/partials/_fancybox.scss */
+.fancybox-outer {
+  padding: 0;
+  margin: 0;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 27, ../sass/partials/_fancybox.scss */
+.fancybox-opened {
+  z-index: 1003;
+}
+
+/* line 31, ../sass/partials/_fancybox.scss */
+.fancybox-opened .fancybox-outer {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* line 37, ../sass/partials/_fancybox.scss */
+.fancybox-inner {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  outline: none;
+  overflow: hidden;
+}
+
+/* line 47, ../sass/partials/_fancybox.scss */
+.fancybox-error {
+  color: #444;
+  font: 1em/1.4 proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+/* line 54, ../sass/partials/_fancybox.scss */
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* line 64, ../sass/partials/_fancybox.scss */
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 69, ../sass/partials/_fancybox.scss */
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -21px;
+  margin-left: -21px;
+  width: 42px;
+  height: 42px;
+  background: url("../images/fancybox_loading.gif");
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+/* line 83, ../sass/partials/_fancybox.scss */
+.fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url("../images/fancybox_sprite.png");
+}
+
+/* line 87, ../sass/partials/_fancybox.scss */
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 1004;
+}
+
+/* line 97, ../sass/partials/_fancybox.scss */
+.fancybox-prev, .fancybox-next {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  background: transparent url("../images/blank.gif");
+  z-index: 1003;
+}
+
+/* line 107, ../sass/partials/_fancybox.scss */
+.fancybox-prev {
+  left: 0;
+}
+
+/* line 111, ../sass/partials/_fancybox.scss */
+.fancybox-next {
+  right: 0;
+}
+
+/* line 115, ../sass/partials/_fancybox.scss */
+.fancybox-prev span, .fancybox-next span {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+/* line 126, ../sass/partials/_fancybox.scss */
+.fancybox-prev span {
+  background-position: 0 -36px;
+}
+
+/* line 130, ../sass/partials/_fancybox.scss */
+.fancybox-next span {
+  background-position: 0 -72px;
+}
+
+/* line 134, ../sass/partials/_fancybox.scss */
+.fancybox-prev:hover, .fancybox-next:hover {
+  visibility: visible;
+}
+
+/* line 138, ../sass/partials/_fancybox.scss */
+.fancybox-prev:hover span {
+  left: 20px;
+}
+
+/* line 142, ../sass/partials/_fancybox.scss */
+.fancybox-next:hover span {
+  left: auto;
+  right: 20px;
+}
+
+/* line 147, ../sass/partials/_fancybox.scss */
+.fancybox-tmp {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  padding: 0;
+  overflow: visible;
+  visibility: hidden;
+}
+
+/* Overlay helper */
+/* line 158, ../sass/partials/_fancybox.scss */
+#fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 1001;
+  background: #000;
+}
+
+/* Title helper */
+/* line 170, ../sass/partials/_fancybox.scss */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 0.93em/i 0.3 proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 1005;
+}
+
+/* line 178, ../sass/partials/_fancybox.scss */
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+
+/* line 182, ../sass/partials/_fancybox.scss */
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 1003;
+  text-align: center;
+}
+
+/* line 191, ../sass/partials/_fancybox.scss */
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* line 207, ../sass/partials/_fancybox.scss */
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* line 213, ../sass/partials/_fancybox.scss */
+.fancybox-title-inside-wrap {
+  margin-top: 10px;
+}
+
+/* line 217, ../sass/partials/_fancybox.scss */
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 3, ../sass/partials/_aside.scss */
+#recent-posts {
+  float: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  /* line 3, ../sass/partials/_aside.scss */
+  #recent-posts {
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* line 16, ../sass/partials/_aside.scss */
+.hentry,
+.comments {
+  width: 85%;
+  margin: 0 auto;
+  padding-left: 15%;
+  float: left;
+}
+
+/* line 23, ../sass/partials/_aside.scss */
+.comments {
+  padding-top: 15px;
+}
+
+/* line 27, ../sass/partials/_aside.scss */
+.updated {
+  text-align: left;
+}
+
+/* line 31, ../sass/partials/_aside.scss */
+#sidebar {
+  width: 33%;
+  float: right;
+  border: 1px solid #bebebe;
+  margin: 0;
+  margin-right: 40px;
+  padding: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  background: url(../images/furley_bg.png) repeat;
+}
+@media only screen and (max-width: 768px) {
+  /* line 31, ../sass/partials/_aside.scss */
+  #sidebar {
+    clear: both;
+    float: none;
+    width: 80%;
+    margin-right: 0;
+    margin: 35px auto;
+  }
+}
+
+/* line 51, ../sass/partials/_aside.scss */
+figcaption {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 57, ../sass/partials/_aside.scss */
+.sidebar-items {
+  padding: 0 0 16px 8px;
+}
+
+/* line 61, ../sass/partials/_aside.scss */
+.sidebar-items a {
+  text-decoration: none;
+}
+
+/* line 8, ../sass/partials/_page.scss */
 html {
   background: #252525;
 }
 
-/* line 13, ../sass/partials/_page.scss */
+/* line 12, ../sass/partials/_page.scss */
 body, select, input, textarea {
-  max-width: 1200px;
   margin: 0 auto;
   color: #3a2f2f;
 }
 
-/* line 19, ../sass/partials/_page.scss */
+/* line 17, ../sass/partials/_page.scss */
 a, a:active, a:visited {
   color: #f68025;
 }
 
-/* line 20, ../sass/partials/_page.scss */
+/* line 18, ../sass/partials/_page.scss */
 a:hover {
   color: #d2c72d;
 }
 
-/* line 22, ../sass/partials/_page.scss */
+/* line 20, ../sass/partials/_page.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 29, ../sass/partials/_page.scss */
+/* line 27, ../sass/partials/_page.scss */
 input:invalid, textarea:invalid {
-  -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
-  -o-border-radius: 1px;
+  -moz-border-radius: 1px;
   -ms-border-radius: 1px;
-  -khtml-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
-  -moz-box-shadow: 0 0 5px 0 red;
   -webkit-box-shadow: 0 0 5px 0 red;
-  -o-box-shadow: 0 0 5px 0 red;
+  -moz-box-shadow: 0 0 5px 0 red;
   box-shadow: 0 0 5px 0 red;
 }
 
-/* line 34, ../sass/partials/_page.scss */
+/* line 32, ../sass/partials/_page.scss */
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 36, ../sass/partials/_page.scss */
+/* line 34, ../sass/partials/_page.scss */
 ul {
   list-style: none;
 }
 
-/* line 38, ../sass/partials/_page.scss */
+/* line 36, ../sass/partials/_page.scss */
 img {
   max-width: 100%;
 }
 
 /* http://sonspring.com/journal/clearing-floats */
-/* line 43, ../sass/partials/_page.scss */
+/* line 41, ../sass/partials/_page.scss */
 .clear {
   clear: both;
   display: block;
@@ -992,7 +1331,7 @@ img {
 }
 
 /* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
-/* line 54, ../sass/partials/_page.scss */
+/* line 52, ../sass/partials/_page.scss */
 .clearfix:after {
   clear: both;
   content: ' ';
@@ -1008,7 +1347,7 @@ img {
   The following zoom:1 rule is specifically for IE6 + IE7.
   Move to separate stylesheet if invalid CSS is a problem.
 */
-/* line 70, ../sass/partials/_page.scss */
+/* line 68, ../sass/partials/_page.scss */
 * html .clearfix,
 *:first-child + html .clearfix {
   zoom: 1;
@@ -1042,42 +1381,30 @@ img {
 @media only screen and (max-width: 768px) {
   /* line 91, ../sass/partials/_page.scss */
   .page-left {
-    margin-left: 1.042%;
+    margin-left: 5.859%;
     margin-right: 1.042%;
   }
 }
 @media only screen and (max-width: 600px) {
   /* line 91, ../sass/partials/_page.scss */
   .page-left {
-    width: 55%;
+    width: 100%;
     margin: 0 auto;
   }
 }
-@media only screen and (max-width: 480px) {
-  /* line 91, ../sass/partials/_page.scss */
-  .page-left {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 320px) {
-  /* line 91, ../sass/partials/_page.scss */
-  .page-left {
-    width: 98%;
-  }
-}
 
-/* line 114, ../sass/partials/_page.scss */
+/* line 108, ../sass/partials/_page.scss */
 .four-eighty {
   display: none;
   visibility: hidden;
 }
-/* line 117, ../sass/partials/_page.scss */
+/* line 111, ../sass/partials/_page.scss */
 .four-eighty ul {
   margin: 0;
   padding: 0;
 }
 @media only screen and (max-width: 480px) {
-  /* line 114, ../sass/partials/_page.scss */
+  /* line 108, ../sass/partials/_page.scss */
   .four-eighty {
     display: block;
     visibility: visible;
@@ -1086,44 +1413,50 @@ img {
   }
 }
 
-/* line 126, ../sass/partials/_page.scss */
+/* line 120, ../sass/partials/_page.scss */
 .framed {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: white;
   -webkit-box-shadow: 0 0 20px #f8984e;
   -moz-box-shadow: 0 0 20px #f8984e;
   box-shadow: 0 0 20px #f8984e;
+  width: 90%;
+}
+@media only screen and (max-width: 600px) {
+  /* line 120, ../sass/partials/_page.scss */
+  .framed {
+    width: 50%;
+  }
 }
 
-/* line 133, ../sass/partials/_page.scss */
+/* line 131, ../sass/partials/_page.scss */
 .thumb-left,
 .thumb-right {
   padding: 10px;
   background: #3a2f2f;
   margin-bottom: 1em;
-  -moz-box-shadow: 0px 0px 5px #333333;
   -webkit-box-shadow: 0px 0px 5px #333333;
-  -o-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 140, ../sass/partials/_page.scss */
+/* line 138, ../sass/partials/_page.scss */
 .thumb-left {
   float: left;
 }
 
-/* line 144, ../sass/partials/_page.scss */
+/* line 142, ../sass/partials/_page.scss */
 .thumb-right {
   float: right;
 }
 
-/* line 148, ../sass/partials/_page.scss */
+/* line 146, ../sass/partials/_page.scss */
 .no-show {
   display: inline;
   visibility: visible;
 }
 @media only screen and (max-width: 600px) {
-  /* line 148, ../sass/partials/_page.scss */
+  /* line 146, ../sass/partials/_page.scss */
   .no-show {
     display: none;
     visibility: hidden;
@@ -1131,175 +1464,125 @@ img {
 }
 
 /* Buttons -------------------------------------------- */
-/* line 159, ../sass/partials/_page.scss */
-#forrst {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  font-size: 18px;
-  line-height: 1.2em;
-  padding: 0.3em 1em;
-  border-width: 1px;
-  background-color: #ffee00;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0ecb8), color-stop(10%, #dfd86c), color-stop(50%, #c5bb2a), color-stop(50%, #b9af28), color-stop(100%, #d6cb3e));
-  background-image: -webkit-linear-gradient(#f0ecb8, #dfd86c 10%, #c5bb2a 50%, #b9af28 50%, #d6cb3e);
-  background-image: -moz-linear-gradient(#f0ecb8, #dfd86c 10%, #c5bb2a 50%, #b9af28 50%, #d6cb3e);
-  background-image: -o-linear-gradient(#f0ecb8, #dfd86c 10%, #c5bb2a 50%, #b9af28 50%, #d6cb3e);
-  background-image: -ms-linear-gradient(#f0ecb8, #dfd86c 10%, #c5bb2a 50%, #b9af28 50%, #d6cb3e);
-  background-image: linear-gradient(#f0ecb8, #dfd86c 10%, #c5bb2a 50%, #b9af28 50%, #d6cb3e);
-  border-color: #938b20;
-  text-shadow: #807700 0px 1px 1px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0.1em 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0.1em 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0.1em 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.5) 0 0 0.1em 1px inset;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
+/* line 158, ../sass/partials/_page.scss */
+#forrst,
+#twitter {
+  font-size: 1.4em;
+  padding: 10px;
+  color: #3a2f2f;
   margin-right: 8px;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#forrst, #forrst:visited {
-  color: white;
-}
-/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#forrst:hover, #forrst:focus {
-  background-color: #f0e000;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ede9ab), color-stop(10%, #ddd45f), color-stop(50%, #b9af28), color-stop(50%, #aca325), color-stop(100%, #d3c831));
-  background-image: -webkit-linear-gradient(#ede9ab, #ddd45f 10%, #b9af28 50%, #aca325 50%, #d3c831);
-  background-image: -moz-linear-gradient(#ede9ab, #ddd45f 10%, #b9af28 50%, #aca325 50%, #d3c831);
-  background-image: -o-linear-gradient(#ede9ab, #ddd45f 10%, #b9af28 50%, #aca325 50%, #d3c831);
-  background-image: -ms-linear-gradient(#ede9ab, #ddd45f 10%, #b9af28 50%, #aca325 50%, #d3c831);
-  background-image: linear-gradient(#ede9ab, #ddd45f 10%, #b9af28 50%, #aca325 50%, #d3c831);
-  border-color: #867f1d;
-  text-shadow: #706900 0px 1px 1px;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#forrst:hover, #forrst:hover:visited, #forrst:focus, #forrst:focus:visited {
-  color: white;
-}
-/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#forrst:active {
-  background-color: #e0d100;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b9af28), color-stop(30%, #c1b729), color-stop(50%, #b0a726), color-stop(50%, #a49b23), color-stop(100%, #d4c935));
-  background-image: -webkit-linear-gradient(#b9af28, #c1b729 30%, #b0a726 50%, #a49b23 50%, #d4c935);
-  background-image: -moz-linear-gradient(#b9af28, #c1b729 30%, #b0a726 50%, #a49b23 50%, #d4c935);
-  background-image: -o-linear-gradient(#b9af28, #c1b729 30%, #b0a726 50%, #a49b23 50%, #d4c935);
-  background-image: -ms-linear-gradient(#b9af28, #c1b729 30%, #b0a726 50%, #a49b23 50%, #d4c935);
-  background-image: linear-gradient(#b9af28, #c1b729 30%, #b0a726 50%, #a49b23 50%, #d4c935);
-  border-color: #7a731a;
-  text-shadow: #615a00 0px -1px -1px;
-  -moz-box-shadow: #938b20 0 0.08em 0.2em 1px inset;
-  -webkit-box-shadow: #938b20 0 0.08em 0.2em 1px inset;
-  -o-box-shadow: #938b20 0 0.08em 0.2em 1px inset;
-  box-shadow: #938b20 0 0.08em 0.2em 1px inset;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#forrst:active, #forrst:active:visited {
-  color: white;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -webkit-transition: all 0.3s ease 0.5s;
+  -moz-transition: all 0.3s ease 0.5s;
+  -o-transition: all 0.3s ease 0.5s;
+  transition: all 0.3s ease 0.5s;
 }
 
-/* line 164, ../sass/partials/_page.scss */
+/* line 173, ../sass/partials/_page.scss */
+#forrst {
+  background-color: #cacf6d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+  background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: linear-gradient(top, #ccd464, #cacf6d);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
+}
+
+/* line 178, ../sass/partials/_page.scss */
+#forrst:hover,
+#forrst:focus {
+  background-color: #f49393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb1417), to(#f49393));
+  background-image: -webkit-linear-gradient(top, #eb1417, #f49393);
+  background-image: -moz-linear-gradient(top, #eb1417, #f49393);
+  background-image: -o-linear-gradient(top, #eb1417, #f49393);
+  background-image: -ms-linear-gradient(top, #eb1417, #f49393);
+  background-image: linear-gradient(top, #eb1417, #f49393);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eb1417', EndColorStr='#f49393');
+}
+
+/* line 182, ../sass/partials/_page.scss */
 #twitter {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  font-size: 18px;
-  line-height: 1.2em;
-  padding: 0.3em 1em;
-  border-width: 1px;
-  background-color: #a84343;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cbc8c8), color-stop(10%, #9f9999), color-stop(50%, #716b6b), color-stop(50%, #696363), color-stop(100%, #837c7c));
-  background-image: -webkit-linear-gradient(#cbc8c8, #9f9999 10%, #716b6b 50%, #696363 50%, #837c7c);
-  background-image: -moz-linear-gradient(#cbc8c8, #9f9999 10%, #716b6b 50%, #696363 50%, #837c7c);
-  background-image: -o-linear-gradient(#cbc8c8, #9f9999 10%, #716b6b 50%, #696363 50%, #837c7c);
-  background-image: -ms-linear-gradient(#cbc8c8, #9f9999 10%, #716b6b 50%, #696363 50%, #837c7c);
-  background-image: linear-gradient(#cbc8c8, #9f9999 10%, #716b6b 50%, #696363 50%, #837c7c);
-  border-color: #524d4d;
-  text-shadow: #4d1f1f 0px 1px 1px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.461) 0 0 0.1em 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.461) 0 0 0.1em 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.461) 0 0 0.1em 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.461) 0 0 0.1em 1px inset;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
+  background-color: #f49393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb1417), to(#f49393));
+  background-image: -webkit-linear-gradient(top, #eb1417, #f49393);
+  background-image: -moz-linear-gradient(top, #eb1417, #f49393);
+  background-image: -o-linear-gradient(top, #eb1417, #f49393);
+  background-image: -ms-linear-gradient(top, #eb1417, #f49393);
+  background-image: linear-gradient(top, #eb1417, #f49393);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eb1417', EndColorStr='#f49393');
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#twitter, #twitter:visited {
-  color: white;
-}
-/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#twitter:hover, #twitter:focus {
-  background-color: #9d3f3f;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4c0c0), color-stop(10%, #979191), color-stop(50%, #696363), color-stop(50%, #615c5c), color-stop(100%, #7c7474));
-  background-image: -webkit-linear-gradient(#c4c0c0, #979191 10%, #696363 50%, #615c5c 50%, #7c7474);
-  background-image: -moz-linear-gradient(#c4c0c0, #979191 10%, #696363 50%, #615c5c 50%, #7c7474);
-  background-image: -o-linear-gradient(#c4c0c0, #979191 10%, #696363 50%, #615c5c 50%, #7c7474);
-  background-image: -ms-linear-gradient(#c4c0c0, #979191 10%, #696363 50%, #615c5c 50%, #7c7474);
-  background-image: linear-gradient(#c4c0c0, #979191 10%, #696363 50%, #615c5c 50%, #7c7474);
-  border-color: #4a4545;
-  text-shadow: #421a1a 0px 1px 1px;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#twitter:hover, #twitter:hover:visited, #twitter:focus, #twitter:focus:visited {
-  color: white;
-}
-/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#twitter:active {
-  background-color: #923a3a;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #696363), color-stop(30%, #6e6868), color-stop(50%, #645e5e), color-stop(50%, #5c5757), color-stop(100%, #7e7777));
-  background-image: -webkit-linear-gradient(#696363, #6e6868 30%, #645e5e 50%, #5c5757 50%, #7e7777);
-  background-image: -moz-linear-gradient(#696363, #6e6868 30%, #645e5e 50%, #5c5757 50%, #7e7777);
-  background-image: -o-linear-gradient(#696363, #6e6868 30%, #645e5e 50%, #5c5757 50%, #7e7777);
-  background-image: -ms-linear-gradient(#696363, #6e6868 30%, #645e5e 50%, #5c5757 50%, #7e7777);
-  background-image: linear-gradient(#696363, #6e6868 30%, #645e5e 50%, #5c5757 50%, #7e7777);
-  border-color: #423e3e;
-  text-shadow: #371616 0px -1px -1px;
-  -moz-box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
-  -webkit-box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
-  -o-box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
-  box-shadow: #524d4d 0 0.08em 0.2em 1px inset;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#twitter:active, #twitter:active:visited {
-  color: white;
+
+/* line 187, ../sass/partials/_page.scss */
+#twitter:hover,
+#twitter:focus {
+  background-color: #cacf6d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ccd464), to(#cacf6d));
+  background-image: -webkit-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -moz-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -o-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: -ms-linear-gradient(top, #ccd464, #cacf6d);
+  background-image: linear-gradient(top, #ccd464, #cacf6d);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ccd464', EndColorStr='#cacf6d');
 }
 
 /* Page Structure -------------------------------- */
-/* line 170, ../sass/partials/_page.scss */
+/* line 194, ../sass/partials/_page.scss */
 body {
-  background-image: url(../images/exclusive_paper.png);
-  background-repeat: repeat;
+  background: #252525;
 }
 
-/* line 175, ../sass/partials/_page.scss */
+/* line 198, ../sass/partials/_page.scss */
 #container {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  background: url(../images/fabric_plaid.png);
 }
 
-/* line 181, ../sass/partials/_page.scss */
+/* line 206, ../sass/partials/_page.scss */
+header#page-title {
+  width: auto;
+  margin: 0;
+  margin-top: 2em;
+  margin-left: 50px;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  /* line 206, ../sass/partials/_page.scss */
+  header#page-title {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 206, ../sass/partials/_page.scss */
+  header#page-title {
+    margin-top: 1em;
+  }
+}
+
+/* line 223, ../sass/partials/_page.scss */
 #page-content {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  /* line 181, ../sass/partials/_page.scss */
+  /* line 223, ../sass/partials/_page.scss */
   #page-content {
     width: 98%;
     margin: 0;
@@ -1307,156 +1590,111 @@ body {
   }
 }
 
-/* line 193, ../sass/partials/_page.scss */
+/* line 235, ../sass/partials/_page.scss */
 #logo {
-  background: url(../images/bg-gradient.png) repeat-x;
-  position: relative;
-  display: block;
-  z-index: 2;
+  background-color: #f49393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb1417), to(#f49393));
+  background-image: -webkit-linear-gradient(top, #eb1417, #f49393);
+  background-image: -moz-linear-gradient(top, #eb1417, #f49393);
+  background-image: -o-linear-gradient(top, #eb1417, #f49393);
+  background-image: -ms-linear-gradient(top, #eb1417, #f49393);
+  background-image: linear-gradient(top, #eb1417, #f49393);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eb1417', EndColorStr='#f49393');
+  float: left;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* line 200, ../sass/partials/_page.scss */
+/* line 242, ../sass/partials/_page.scss */
 #logo-img {
   width: 25%;
-  margin: 0;
-  position: relative;
   display: block;
-}
-@media only screen and (max-width: 768px) {
-  /* line 200, ../sass/partials/_page.scss */
-  #logo-img {
-    width: 13.021%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 200, ../sass/partials/_page.scss */
-  #logo-img {
-    width: 15%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  /* line 200, ../sass/partials/_page.scss */
-  #logo-img {
-    width: 18.75%;
-  }
-}
-@media only screen and (max-width: 320px) {
-  /* line 200, ../sass/partials/_page.scss */
-  #logo-img {
-    width: 28.125%;
-  }
+  float: right;
+  padding-right: 25px;
 }
 
-/* line 218, ../sass/partials/_page.scss */
+/* line 249, ../sass/partials/_page.scss */
 #logo img {
   padding: 4px 0;
-  padding-left: 0.833%;
+}
+
+/* line 253, ../sass/partials/_page.scss */
+#logo hgroup {
+  width: 60%;
+  float: left;
+  margin: 0;
+  padding: 20px 0 0 40px;
+  text-align: left;
 }
 @media only screen and (max-width: 480px) {
-  /* line 218, ../sass/partials/_page.scss */
-  #logo img {
-    padding-left: 4.167%;
+  /* line 253, ../sass/partials/_page.scss */
+  #logo hgroup {
+    padding: 15px 0 0 15px;
+    padding-bottom: 8px;
   }
 }
 
-/* line 225, ../sass/partials/_page.scss */
-#alt-top-nav {
-  width: 80px;
-  text-align: center;
-  margin: 12px auto 6px;
-  margin-left: 41.667%;
-  -moz-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  -o-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -khtml-border-radius: 1em;
-  border-radius: 1em;
-  font-size: 1.4em;
-  line-height: 1.2em;
-  padding: 0.3em 1em;
-  border-width: 4px;
-  background-color: #ff0508;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5b7b8), color-stop(10%, #e96768), color-stop(50%, #d61e20), color-stop(50%, #c91c1e), color-stop(100%, #e33638));
-  background-image: -webkit-linear-gradient(#f5b7b8, #e96768 10%, #d61e20 50%, #c91c1e 50%, #e33638);
-  background-image: -moz-linear-gradient(#f5b7b8, #e96768 10%, #d61e20 50%, #c91c1e 50%, #e33638);
-  background-image: -o-linear-gradient(#f5b7b8, #e96768 10%, #d61e20 50%, #c91c1e 50%, #e33638);
-  background-image: -ms-linear-gradient(#f5b7b8, #e96768 10%, #d61e20 50%, #c91c1e 50%, #e33638);
-  background-image: linear-gradient(#f5b7b8, #e96768 10%, #d61e20 50%, #c91c1e 50%, #e33638);
-  border-color: #a11718;
-  text-shadow: #840001 0px 1px 1px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.51) 0 0 0.1em 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.51) 0 0 0.1em 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.51) 0 0 0.1em 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.51) 0 0 0.1em 1px inset;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
+/* line 265, ../sass/partials/_page.scss */
+#logo hgroup h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#alt-top-nav, #alt-top-nav:visited {
-  color: white;
+@media only screen and (max-width: 640px) {
+  /* line 265, ../sass/partials/_page.scss */
+  #logo hgroup h1 {
+    font-size: 2.3em;
+  }
 }
-/* line 31, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#alt-top-nav:hover, #alt-top-nav:focus {
-  background-color: #f50003;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3aaab), color-stop(10%, #e85a5b), color-stop(50%, #c91c1e), color-stop(50%, #bc1b1c), color-stop(100%, #e1282a));
-  background-image: -webkit-linear-gradient(#f3aaab, #e85a5b 10%, #c91c1e 50%, #bc1b1c 50%, #e1282a);
-  background-image: -moz-linear-gradient(#f3aaab, #e85a5b 10%, #c91c1e 50%, #bc1b1c 50%, #e1282a);
-  background-image: -o-linear-gradient(#f3aaab, #e85a5b 10%, #c91c1e 50%, #bc1b1c 50%, #e1282a);
-  background-image: -ms-linear-gradient(#f3aaab, #e85a5b 10%, #c91c1e 50%, #bc1b1c 50%, #e1282a);
-  background-image: linear-gradient(#f3aaab, #e85a5b 10%, #c91c1e 50%, #bc1b1c 50%, #e1282a);
-  border-color: #931516;
-  text-shadow: #750001 0px 1px 1px;
+@media only screen and (max-width: 480px) {
+  /* line 265, ../sass/partials/_page.scss */
+  #logo hgroup h1 {
+    font-size: 1.8em;
+  }
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#alt-top-nav:hover, #alt-top-nav:hover:visited, #alt-top-nav:focus, #alt-top-nav:focus:visited {
-  color: white;
-}
-/* line 36, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#alt-top-nav:active {
-  background-color: #e50002;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c91c1e), color-stop(30%, #d21e20), color-stop(50%, #c01b1d), color-stop(50%, #b3191b), color-stop(100%, #e12d2f));
-  background-image: -webkit-linear-gradient(#c91c1e, #d21e20 30%, #c01b1d 50%, #b3191b 50%, #e12d2f);
-  background-image: -moz-linear-gradient(#c91c1e, #d21e20 30%, #c01b1d 50%, #b3191b 50%, #e12d2f);
-  background-image: -o-linear-gradient(#c91c1e, #d21e20 30%, #c01b1d 50%, #b3191b 50%, #e12d2f);
-  background-image: -ms-linear-gradient(#c91c1e, #d21e20 30%, #c01b1d 50%, #b3191b 50%, #e12d2f);
-  background-image: linear-gradient(#c91c1e, #d21e20 30%, #c01b1d 50%, #b3191b 50%, #e12d2f);
-  border-color: #861314;
-  text-shadow: #660001 0px -1px -1px;
-  -moz-box-shadow: #a11718 0 0.08em 0.2em 1px inset;
-  -webkit-box-shadow: #a11718 0 0.08em 0.2em 1px inset;
-  -o-box-shadow: #a11718 0 0.08em 0.2em 1px inset;
-  box-shadow: #a11718 0 0.08em 0.2em 1px inset;
-}
-/* line 116, ../../../.rvm/gems/ruby-1.9.3-p0/gems/fancy-buttons-1.1.2/lib/stylesheets/_fancy-buttons.sass */
-#alt-top-nav:active, #alt-top-nav:active:visited {
-  color: white;
-}
-/* line 231, ../sass/partials/_page.scss */
-#alt-top-nav a {
-  color: #3a2f2f;
-  text-decoration: none;
-}
-@media only screen and (max-width: 320px) {
-  /* line 225, ../sass/partials/_page.scss */
-  #alt-top-nav {
-    margin-left: 31.25%;
+@media only screen and (max-width: 392px) {
+  /* line 265, ../sass/partials/_page.scss */
+  #logo hgroup h1 {
+    font-size: 1.45em;
   }
 }
 
-/* line 239, ../sass/partials/_page.scss */
+/* line 281, ../sass/partials/_page.scss */
+#logo hgroup h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  line-height: 1;
+}
+@media only screen and (max-width: 640px) {
+  /* line 281, ../sass/partials/_page.scss */
+  #logo hgroup h2 {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 281, ../sass/partials/_page.scss */
+  #logo hgroup h2 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 392px) {
+  /* line 281, ../sass/partials/_page.scss */
+  #logo hgroup h2 {
+    font-size: 0.93em;
+  }
+}
+
+/* line 298, ../sass/partials/_page.scss */
 header.styled {
   background: #f68025;
   padding: 2px;
   text-align: center;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.7);
@@ -1465,21 +1703,28 @@ header.styled {
   margin-bottom: 20px;
   color: #3a2f2f;
 }
+@media only screen and (max-width: 480px) {
+  /* line 298, ../sass/partials/_page.scss */
+  header.styled {
+    margin: 0;
+    width: 95%;
+  }
+}
 
-/* line 250, ../sass/partials/_page.scss */
+/* line 313, ../sass/partials/_page.scss */
 #page-title {
-  margin: 0;
+  margin: 45px 0 0;
   margin-left: 3.75%;
   position: relative;
 }
 @media only screen and (max-width: 768px) {
-  /* line 250, ../sass/partials/_page.scss */
+  /* line 313, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 1.563%;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 250, ../sass/partials/_page.scss */
+  /* line 313, ../sass/partials/_page.scss */
   #page-title {
     width: 90%;
     margin: 0;
@@ -1487,35 +1732,26 @@ header.styled {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 250, ../sass/partials/_page.scss */
+  /* line 313, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 8.333%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 250, ../sass/partials/_page.scss */
+  /* line 313, ../sass/partials/_page.scss */
   #page-title {
     margin-left: 7.5%;
   }
 }
 
-/* line 270, ../sass/partials/_page.scss */
+/* line 333, ../sass/partials/_page.scss */
 #page-copy-top {
   width: 50%;
   float: right;
-  margin: 0;
-  padding-right: 1.667%;
+  padding-right: 2.917%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 270, ../sass/partials/_page.scss */
-  #page-copy-top {
-    width: 52.083%;
-    padding-right: 0;
-    padding-left: 1.302%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 270, ../sass/partials/_page.scss */
+  /* line 333, ../sass/partials/_page.scss */
   #page-copy-top {
     padding-left: 0.333%;
     float: none;
@@ -1525,30 +1761,32 @@ header.styled {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 270, ../sass/partials/_page.scss */
+  /* line 333, ../sass/partials/_page.scss */
   #page-copy-top {
     padding-left: 3.125%;
   }
 }
 
-/* line 292, ../sass/partials/_page.scss */
+/* line 349, ../sass/partials/_page.scss */
 #copy-top {
-  margin: 35px 0;
+  margin: 55px auto;
 }
-@media only screen and (max-width: 600px) {
-  /* line 292, ../sass/partials/_page.scss */
+@media only screen and (max-width: 768px) {
+  /* line 349, ../sass/partials/_page.scss */
   #copy-top {
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 60%;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 292, ../sass/partials/_page.scss */
+  /* line 349, ../sass/partials/_page.scss */
   #copy-top {
-    margin: 15px 0;
+    margin: 15px auto;
+    width: 90%;
   }
 }
 
-/* line 301, ../sass/partials/_page.scss */
+/* line 361, ../sass/partials/_page.scss */
 #page-copy-bottom {
   width: 33.333%;
   float: left;
@@ -1556,30 +1794,44 @@ header.styled {
   margin-left: 3.75%;
 }
 @media only screen and (max-width: 768px) {
-  /* line 301, ../sass/partials/_page.scss */
-  #page-copy-bottom {
-    width: 42.318%;
-    margin-left: 1.042%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 301, ../sass/partials/_page.scss */
+  /* line 361, ../sass/partials/_page.scss */
   #page-copy-bottom {
     float: none;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 45px 0;
+    margin-left: 0;
     padding-right: 0;
     margin-right: 0;
   }
+  /* line 373, ../sass/partials/_page.scss */
+  #page-copy-bottom .page-left figure {
+    float: left;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 379, ../sass/partials/_page.scss */
+  #page-copy-bottom .page-left blockquote {
+    float: left;
+    width: 40%;
+    margin-left: 15px;
+  }
 }
 @media only screen and (max-width: 480px) {
-  /* line 301, ../sass/partials/_page.scss */
+  /* line 361, ../sass/partials/_page.scss */
   #page-copy-bottom {
     margin-left: 3.125%;
   }
+  /* line 387, ../sass/partials/_page.scss */
+  #page-copy-bottom .page-left blockquote {
+    margin: 0;
+    margin-left: 5px;
+    float: left;
+    width: 40%;
+  }
 }
 
-/* line 322, ../sass/partials/_page.scss */
+/* line 396, ../sass/partials/_page.scss */
 #hcard {
   width: 60%;
   padding: 10px 20px;
@@ -1592,15 +1844,40 @@ header.styled {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
 
-/* line 332, ../sass/partials/_page.scss */
+/* line 406, ../sass/partials/_page.scss */
+#sidebar header h2 {
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #bebebe;
+}
+
+/* line 412, ../sass/partials/_page.scss */
 footer {
   margin-top: 60px;
   text-align: center;
   padding-bottom: 25px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 332, ../sass/partials/_page.scss */
+  /* line 412, ../sass/partials/_page.scss */
   footer {
     margin-top: 15px;
   }
+}
+
+/* embedded videos -------------------------------------- */
+/* line 423, ../sass/partials/_page.scss */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+/* line 430, ../sass/partials/_page.scss */
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

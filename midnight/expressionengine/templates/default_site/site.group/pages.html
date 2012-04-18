@@ -1,0 +1,38 @@
+{embed="embeds/doc_head" default_title="{title}"}  
+<body id="home">
+   <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+   
+   <div id="container" class="clearfix">
+{embed="embeds/masthead"}    
+
+{embed="embeds/nav"}         
+        
+    <section id="page-copy-top">
+      <article id="copy-top">
+        {exp:channel:entries channel="pages" limit="1" dynamic="no"}
+        <header class="styled">
+          <h2>{title}</h2>
+        </header><!-- /header -->
+          {copy_top}                            
+      </article> <!-- end copy top -->
+    </section> <!-- end page copy top -->
+                
+    <section id="page-copy-bottom">
+      <figure class="page-left framed">
+        {exp:channel_images:images entry_id="{entry_id}" cover_only="yes"}
+          <a href="{image:url:large}" title="{image:title}"><img src="{image:url:medium}" alt="{image:title}" /></a>
+          <figcaption>{image:description}</figcaption>
+        {/exp:channel_images:images}
+      </figure><!-- end page-left -->  
+        {/exp:channel:entries}
+    </section><!-- !end Page Copy bottom-->
+
+    <div class="clearfix"></div>
+      
+{embed="embeds/footer"}
+     
+</div><!-- end container -->   
+{embed="embeds/scripts"}
+</body>
+</html>
+

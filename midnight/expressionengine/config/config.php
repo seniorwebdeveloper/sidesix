@@ -13,11 +13,11 @@
 
 $config['app_version'] = '240';
 $config['install_lock'] = "";
-$config['license_number'] = '0499-8191-2782-6897';
+$config['license_number'] = "0499-8191-2782-6897";
 $config['debug'] = '1';
-$config['cp_url'] = 'http://sidesix/midnight/index.php';
-$config['doc_url'] = 'http://expressionengine.com/user_guide/';
-$config['is_system_on'] = 'y';
+$config['cp_url'] = "http://sidesix/midnight/index.php";
+$config['doc_url'] = "http://expressionengine.com/user_guide/";
+$config['is_system_on'] = "y";
 $config['allow_extensions'] = 'y';
 $config['site_label'] = 'Side Six';
 $config['cookie_prefix'] = '';
@@ -48,7 +48,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------

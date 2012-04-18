@@ -1,0 +1,83 @@
+{embed="embeds/doc_head" default_title="Contact Us"}
+  <body>
+       <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+        chromium.org/developers/how-tos/chrome-frame-getting-started -->
+   <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div id="container" class="clearfix">
+ {embed="embeds/masthead"}
+ {embed="embeds/nav"} 
+
+<header id="page-title">
+  <h1>Contact Us</h1>
+</header>
+
+  <section id="page-copy-top">
+        <article id="copy-top">
+            <header class="styled">
+              <h2>How Can I Help You?</h2>
+            </header><!-- /header -->
+              <p>I love to create stuff. It's why I'm here. If you need a site built from scratch, a new look, help with usability concerns, some copy, an image, a poem&hellip;get in touch.</p> 
+
+              <p>I really enjoy creating responsive web sites that adapt to the user's device. After all, the web has left the desktop. Smart phones were predicted to out-sell laptops, desktop, and notebook computers in 2012 in the global market. They did that in the last quarter of 2010. Home usage of personal computers fell 20% between 2008 and 2010; traffic to mobile web sites tripled between 2009 and 2010 and then grew 600% in 2010. If you have a web site it has to be able to look great on a variety devices, with a variety of Internet connection speeds.</p> 
+
+              <p>So reach out and contact me. You can fill out the form below; I made it because we live in modern times and all. But, if it were me, I'd use the vCard below and call.  I like to speak with the person I might do business with; I'd like to look that person right in the eye.</p>
+
+              <div id="hcard" class="vcard">
+                   <a class="url fn" href="http://sidesix.org">Dan Avery</a>
+                   <div class="org">Side Six</div>
+                   <a class="email" href="mailto:info@sidesix.org">info@sidesix.org</a>
+                   <div class="adr">
+                    <span class="locality">Mission Viejo</span>
+                  , 
+                    <span class="region">CA</span>
+                  , 
+                    <span class="postal-code">92691</span>
+                   </div>
+                   <div class="tel">949-273-1776</div>
+              </div> <!-- end hcard -->
+
+              <h4>Use The Contact Form</h4>
+
+              <p>When describing your project please be as specific and as brief as possible. Thanks!</p>
+              <p><span class="attention"<strong>The fields marked with an "*" are required.</strong></span></p>
+
+              <div id="contact-form">
+                {exp:forms:form form_name="contact" display_error="inline"}
+
+                  <h1>{forms:label}</h1>
+                  {if forms:paged} <h3>Current Page: {forms:current_page} of {forms:total_pages}</h3>{/if}
+
+                  {if "{forms:total_form_errors}" > 0}
+                  <strong style="color:red">Sorry, the your submission contained some errors:</strong>
+                  <ul>
+                          {forms:form_errors}
+                                  <li>{forms:error}</li>
+                          {/forms:form_errors}
+                  </ul>
+                  {/if}
+
+                  {if forms:closed} FORM IS CLOSED! {/if}
+                  {if forms:no_form} NO FORM FOUND! {/if}
+
+                  {forms:fields}
+                          {forms:field}
+                  {/forms:fields}
+
+                {/exp:forms:form}
+              </div><!-- end contact form -->                             
+        </article> <!-- end copy top -->
+  </section> <!-- end page copy top -->
+                
+  <section id="page-copy-bottom">
+        <figure class="page-left framed">
+        <img src="images/dan.jpg" alt="sketch of Dan Avery" title="Dan Avery, Founder of Side Six">
+        </figure><!-- end page-left -->  
+        <figcaption>Self-Portrait: Dan Avery, Our Founder</figcaption>
+</section><!-- !end Page Copy bottom-->
+          <div class="clear"></div>    
+{embed="embeds/footer"}
+</div><!-- end container -->   
+{embed="embeds/scripts"}
+  </body>
+</html>

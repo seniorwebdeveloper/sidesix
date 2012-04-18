@@ -1,66 +1,109 @@
 // The styles for the main navigation menu
 
-nav#top-full-menu {
-	margin:0;
-	margin-right: percentage(25/1200);
-	margin-bottom: 15px;
-	font: 1.4em/1.4 $font-sans;
-	text-align: right;
-	padding-right: percentage(10/1200);
-  @media only screen and (max-width: 768px) {
-    margin-right: 0;
-  }
-  @media only screen and (max-width: 600px) {
-    font-size: 1.2em;
-    margin-top: -25px;}
-    @media only screen and (max-width: 480px) {
-      margin-top: -25px;
-      line-height: 1.2;}
-	li {
-		display: inline;
-    padding: .25em;
-	}
-	li a {
-    margin: 0;
-		text-decoration: none;
-    border-bottom: 1px solid #df1316;
-	}
-  li a:last-of-type {
-    padding-right: 0;
-  }
-	li a:hover {
-		background:  $menu-bar-hover;
-		color: $font-color;
-	}
+.menu {
+  display: none;
 }
 
-#top-full-menu {
-  @media only screen and (max-width: 480px) {
-    display: none;
-    visibility: hidden;
-  }
+#mobile {
+  display: none;
+  visibility: hidden;
 }
 
-nav#menu-bottom {
-  width: 95%;
-  margin: 0 auto;
-  padding: 0;
-  font-size: 1.2em;
+#primary_nav {
+  width: 100%;
+  float: left;
+  display: block;
 }
 
-nav#menu-bottom li {
-  padding: 12px 0;
+#primary_nav ul,
+#mobile ul {
+  list-style: none;
+  width: 100%;
+  display:block;
+  float: left;
+  margin: 0;
+  margin-left: 0;
+  @include menu-gradient;
 }
 
-nav#menu-bottom li a {
-  text-decoration: none;
+#primary_nav li a {
+  margin: 0;
+  padding: 0 25px;
+  float: left;
   text-align: center;
-  padding: 12px 0;
-  border-bottom: 2px solid $header-bg;
-}
-
-nav#menu-bottom li a:hover {
-  background-color:$menu-bar-hover;
+  display: block;
   color: $font-color;
+  text-decoration: none;
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  border-right: 1px solid #9F9897;
+  border-bottom: 1px solid #9F9897;
+  @include menu-gradient;
+
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
+#primary_nav li a:hover,
+#primary_nav li a:focus,
+#mobile li a:hover, 
+#mobile li a:focus {
+    color: #1c1c1c;
+    @include logo-gradient;
+}
+
+
+#primary_nav li:last-child a {
+  border-right: none;
+}
+
+#primary_nav li.top {
+  display:none;
+}
+
+@media only screen and (max-width: 480px) {
+  ul > li.primary {
+    display: none;
+  }
+
+  #primary_nav li {
+    font-size: 0.95em;
+  }
+
+  li.menu{
+    display: inline;
+    border-right: 1px solid #dedede;
+  }
+
+  #primary_nav li:last-child a {
+    border-right: 1px solid #9F9897;
+  }
+
+  #mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  #mobile li a {
+    display: block;
+  }
+
+  #mobile li a {
+    color: $font-color;
+  text-decoration: none;
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  height: 2em;
+  padding: 5px 0;
+  border-bottom: 1px solid #9F9897;
+  @include menu-gradient;
+  }
+
+}

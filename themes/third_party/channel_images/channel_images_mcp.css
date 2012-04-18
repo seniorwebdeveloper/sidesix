@@ -1,0 +1,16 @@
+
+* *+html .clearfix{min-height: 1%;}
+.clearfix:after{clear:both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0;}
+
+.hidden {display:none}
+
+
+.CI_IMAGES {margin:20px 0 0 0;}
+.CI_IMAGES .Image {display:block; float:left; margin:0 2px 10px; background-color:#C5D9FF; border:1px solid #7FAAFF; color:#000;padding:2px 2px 2px 20px;}
+.CI_IMAGES .Queued {background:#C5D9FF url(img/queue.png) no-repeat 2px 2px;}
+.CI_IMAGES .Uploading {background:#EFDE2C url(img/spinner.gif) no-repeat 2px 2px;}
+.CI_IMAGES .Done {background:#68EF1D url(img/success.png) no-repeat 2px 2px;}
+.CI_IMAGES .Error {background:#EF1D25 url(img/delete.png) no-repeat 2px 2px;}
+
+.CI_IMAGES .ci_start_resize {height:16px; padding:0 0 0 20px; margin:0 0 10px; display:block; background:url(img/test.png) no-repeat;}
+
