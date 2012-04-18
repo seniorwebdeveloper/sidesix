@@ -1,0 +1,54 @@
+{embed="embeds/doc_head" default_title="Aside, The Blog" default_description="Aside is the Side Six blog; we write about web issues and creativity."}
+  <body>
+       <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+        chromium.org/developers/how-tos/chrome-frame-getting-started -->
+   <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div id="container" class="clearfix">
+ {embed="embeds/masthead"}
+ {embed="embeds/nav"} 
+
+<header id="page-title" class="clearfix">
+  <h1>Aside &ndash; The Blog</h1>
+</header>  
+
+<section id="recent-posts">
+  
+<article class="hentry" class="clearfix">
+    <div class="entry-content">      
+      <figure>
+          {exp:channel:entries channel="aside" limit="7" status="open" orderby="date" sort="desc" paginate="bottom"}
+          <header>
+            <h2><a href="{url_title_path='aside/article'}">{title}</a></h2>
+          </header>
+            <time class="updated" datetime="2010=08-07T11:11:03">{entry_date format="%F %d, %Y"}</time>
+              <p class="byline author vcard">by <span class="fn">{author}</span></p>
+              <figure>
+                {exp:channel_images:images entry_id="{entry_id}"}
+                      <img class="fancybox" src="{image:url:medium}" alt="{image:title}" />
+                      <figcaption>{image:description}</figcaption>
+                {/exp:channel_images:images}
+              </figure>
+            <div class="entry-content">{aside_excerpt}</div>
+            <p><a href="{url_title_path='aside/article'}" class="continue">Continue reading &raquo;</a></p>
+          {exp:channel_videos:videos entry_id="{entry_id}"}
+                <div class="videoWrapper">
+                      <h3>{video:title}</h3>
+                      {video:embed_code}
+                </div> <!-- end videoWrapper -->
+                  {/exp:channel_videos:videos}
+            {paginate}
+            Page {current_page} of {total_pages} pages {pagination_links}
+            {/paginate}
+        {/exp:channel:entries}
+</article>
+</section><!-- /recent posts -->
+
+{embed="embeds/sidebar"}
+
+<div class="clear"></div>    
+{embed="embeds/footer"}
+</div><!-- end container -->   
+{embed="embeds/scripts"}
+</body>
+</html>

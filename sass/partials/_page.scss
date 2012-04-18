@@ -1,5 +1,4 @@
 @import "compass/css3";
-@import "fancy-buttons";
 
 //-----------------------------------------------
 // The following html5-boilerplate styles should
@@ -11,7 +10,6 @@ html {
 }
 
 body, select, input, textarea {
-  max-width: 1200px;
   margin: 0 auto;
   color: $font-color;  
 }
@@ -76,6 +74,8 @@ img {
 // Add your own custom styles below
 //-----------------------------------
 
+
+
 /* Classes ---------------------------------------*/
 
 .highlight {
@@ -96,18 +96,12 @@ img {
       margin-left: percentage(10/1024);
     }
     @media only screen and (max-width: 768px) {
-      margin-left: percentage(8/768);
+      margin-left: percentage(45/768);
       margin-right: percentage(8/768);
     }
     @media only screen and (max-width: 600px) {
-     width: 55%;
+     width:100%;
      margin: 0 auto; 
-    }
-    @media only screen and (max-width: 480px) {
-      width: 80%;
-    }
-    @media only screen and (max-width: 320px) {
-      width: 98%;
     }
 }
 
@@ -127,6 +121,10 @@ img {
   border: $main-border;
   background: white;
   @include box-shadow-color;
+  width: 90%;
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+  }
 }
 
 .thumb-left,
@@ -156,26 +154,70 @@ img {
 
 /* Buttons -------------------------------------------- */
 
-#forrst {
-  @include fancy-button(#d2c72d);
+#forrst,
+#twitter {  
+  font-size: 1.4em;
+  padding: 10px;
+  color: $font-color;
   margin-right: 8px;
+  text-decoration: none;
+  @include border-radius;
+  @include box-shadow;
+
+  -webkit-transition: all 0.3s ease 0.5s; 
+  -moz-transition: all 0.3s ease 0.5s; 
+  -o-transition: all 0.3s ease 0.5s; 
+  transition: all 0.3s ease 0.5s;
+}
+
+#forrst {
+  @include menu-gradient;
+}
+
+#forrst:hover,
+#forrst:focus {
+  @include logo-gradient;
 }
 
 #twitter {
-  @include fancy-button(#797272);
+  @include logo-gradient;
 }
+
+#twitter:hover,
+#twitter:focus {
+  @include menu-gradient;
+}
+
 
 /* Page Structure -------------------------------- */
 
 body {
-    background-image: url(../images/exclusive_paper.png);
-    background-repeat: repeat;
+  background: #252525;
 }
 
 #container {
-    max-width: $full-width;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    background: url(../images/fabric_plaid.png);
+}
+
+header#page-title {
+  width: auto;
+  margin: 0;
+  margin-top: 2em;
+  margin-left: 50px;
+  text-align: left;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2em;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-top: 1em;
+  }
 }
 
 #page-content {
@@ -191,50 +233,67 @@ body {
 }
 
 #logo {
-    background: url(../images/bg-gradient.png) repeat-x;
-    position: relative;
-    display: block;
-    z-index: 2;
+    @include logo-gradient;
+    float: left;
+    width: 100%;
+    max-width: 1200px;
 }
 
 #logo-img {
   width: 25%;
-  margin: 0;
-  position: relative;
   display: block;
-    @media only screen and (max-width: 768px)
-      {width: percentage(100/768);}
-      @media only screen and (max-width: 600px) {
-        width: percentage(90/600);
-      }
-      @media only screen and (max-width: 480px) {
-        width: percentage(90/480);
-      }
-      @media only screen and (max-width: 320px) {
-        width: percentage(90/320);
-      }
+  float: right;
+  padding-right: 25px;
 }
 
 #logo img {
   padding: 4px 0;
-  padding-left: percentage(10/1200);
-  @media only screen and (max-width: 480px) {
-    padding-left: percentage(20/480);}
 }
 
-#alt-top-nav {
-	width: 80px;
-	text-align: center;
-	margin: 12px auto 6px;
-	margin-left: percentage(200/480);
-	@include fancy-button (#e02426, 1.4em, 1em, 4px);
-        a {
-          color: $font-color;;
-          text-decoration: none;}
-          @media only screen and (max-width: 320px) {
-            margin-left: percentage(100/320);
-          }
+#logo hgroup {
+  width: 60%;
+  float: left;
+  margin: 0;
+  padding: 20px 0 0 40px;
+  text-align: left;
+  @media only screen and (max-width: 480px) {
+    padding: 15px 0 0 15px;
+    padding-bottom: 8px;
+  }
 }
+
+#logo hgroup h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  @media only screen and (max-width: 640px) {
+    font-size: 2.3em;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 1.8em;
+  }
+  @media only screen and (max-width: 392px) {
+    font-size: 1.45em;
+  }
+}
+
+#logo hgroup h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  line-height: 1;
+    @media only screen and (max-width: 640px) {
+    font-size: 1.6em;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 1.2em;
+  }
+  @media only screen and (max-width: 392px) {
+    font-size: 0.93em;
+  }
+}
+
 
 header.styled {
     background: $header-bg;
@@ -245,10 +304,14 @@ header.styled {
     text-shadow: $header-text-shadow;
     margin-bottom: 20px;
     color: $header-font-color;
+    @media only screen and (max-width: 480px) {
+      margin: 0;
+      width: 95%;
+    }
 }
 
 #page-title {
-    margin: 0;
+    margin: 45px 0 0;
     margin-left: percentage(45/1200);
     position: relative;
     @media only screen and (max-width: 768px) {
@@ -270,14 +333,8 @@ header.styled {
 #page-copy-top {
     width: percentage( 600/1200);
     float: right;
-    margin: 0;
-    padding-right: percentage(20/1200);
+    padding-right: percentage(35/1200);
     @media only screen and (max-width: 768px) {
-      width: percentage(400/768);
-      padding-right: 0;
-      padding-left: percentage(10/768);
-    }
-    @media only screen and (max-width: 600px) {
       padding-left: percentage(2/600);
       float: none;
       width: 95%;
@@ -290,12 +347,15 @@ header.styled {
 }
 
 #copy-top {
-    margin: 35px 0;
-    @media only screen and (max-width: 600px) {
-      margin: 20px 0;
+    margin: 55px auto;
+    @media only screen and (max-width: 768px) {
+      margin: 20px auto;
+      width: 60%;
     }
     @media only screen and (max-width: 480px) {
-      margin: 15px 0}
+      margin: 15px auto;
+      width: 90%;
+    }
 }
 
 #page-copy-bottom {
@@ -304,18 +364,32 @@ header.styled {
     margin: 45px 0;
     margin-left: percentage(45/1200);
     @media only screen and (max-width: 768px) {
-      width: percentage(325/768);
-      margin-left: percentage(8/768);
-    }
-    @media only screen and (max-width: 600px) {
       float: none;
-      width: 95%;
-      margin: 0 auto; 
+      width: 100%;
+      margin: 45px 0;
+      margin-left: 0; 
       padding-right: 0;
       margin-right: 0;
+        .page-left figure {
+          float: left;
+          width: 40%;
+          margin: 0;
+          padding: 0;
+        }
+        .page-left blockquote {
+          float: left;
+          width: 40%;
+          margin-left: 15px;
+        }
     }
       @media only screen and (max-width: 480px) {
       margin-left: percentage(15/480);
+      .page-left blockquote {
+        margin: 0;
+        margin-left: 5px;
+        float: left;
+        width: 40%;
+      }
     }
 }
 
@@ -329,6 +403,12 @@ header.styled {
     font-family: $font-sans;
 }
 
+#sidebar header h2 {
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #bebebe;
+}
+
 footer {
     margin-top: 60px;
     text-align: center;
@@ -336,4 +416,21 @@ footer {
     @media only screen and (max-width: 480px) {
       margin-top: 15px;
     }
+}
+
+/* embedded videos -------------------------------------- */
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; //ratio of 16:9
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

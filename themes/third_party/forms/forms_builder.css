@@ -1,0 +1,107 @@
+.Forms {border:0; background:none}
+.Forms .hidden {display:none}
+.Forms .cfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.Forms .cfix {display:inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .Forms .cfix { height:1%; }
+.Forms .cfix {display:block; }
+/* end clearfix */
+
+
+/* TABS: jQuery UI Reset! */
+.Forms .Tabs {padding:0; margin:0; background:none; border:0; border-radius:0;}
+.Forms .Tabs li {background:none; padding:0; margin:0; border:0; border-radius:0;}
+.Forms .Tabs li a {background:none; padding:0; margin:0; border:0; border-radius:0;}
+.Forms .ui-tabs-panel {padding:10px 5px;}
+
+/* TABS: Normal Style */
+.Forms .Tabs {border-bottom:1px solid #B8B8B8;}
+.Forms .Tabs li {margin-left:5px; margin-bottom: -1px; height:22px; background:url(img/tab_inactive_bg.gif) repeat-x; border:1px solid #B8B8B8; border-top-left-radius:2px; border-top-right-radius:2px; line-height:22px;}
+.Forms .Tabs li a {color:#646464; padding:0 5px; font-size:11px; font-weight:bold; float:left; text-decoration:none; outline:none;}
+.Forms .Tabs li.ui-tabs-selected {border-bottom:none;}
+.Forms .Tabs li.ui-tabs-selected a {color:#B22447;}
+.Forms .TabsHolder {background:#FFFFFF; border-bottom:1px solid #B8B8B8; border-left:1px solid #B8B8B8; border-right:1px solid #B8B8B8;}
+
+/* FORM STAGE */
+.Forms .FormStage {width:69%; float:left; margin:0 10px 0 0; min-height:150px; padding:0 0 30px 2%;}
+.Forms .FormStage .FirstDrop {font-size:20px; padding:10px; border:3px dotted #000; margin:20px 0; width:80%;}
+.Forms .FormStage .FormElem {margin:0 0 10px; width:85%; padding:2px 0 10px; border:1px solid #fff; cursor:move}
+.Forms .FormStage .FormElem .topbar {height:15px; padding:1px 10px 6px 10px; border-bottom:1px solid #fff;}
+.Forms .FormStage .FormElem .topbar h6 {display:none; float:left; font-size:12px; line-height:1.5}
+.Forms .FormStage .FormElem .actions {display:none; float:right;}
+.Forms .FormStage .FormElem .actions a {float:left; padding:0 0 0 20px; margin:0 8px 0 0; height:16px; display:block; outline:0; text-decoration:none;}
+.Forms .FormStage .FormElem .actions .settings {background:url(img/gear.png) no-repeat;}
+.Forms .FormStage .FormElem .actions .del {background:url(img/delete.png) no-repeat;}
+.Forms .FormStage .FormElem .inner {padding:0 10px;}
+.Forms .FormStage .FormElem .inner .req label.dform_label {padding:0 0 0 20px; background:url(img/required.png) no-repeat;}
+.Forms .FormStage .FormElem .inner .EditElementValues {display:block; padding:0 0 0 20px; font-weight:bold; background: url(img/edit.png) no-repeat; text-decoration:none; float:right; margin:3px 0 0 0;}
+.Forms .FormStage .FormElem:hover {background:#F5F5F5; border-radius:5px; border:1px solid #CCC;}
+.Forms .FormStage .FormElem:hover .actions {display:block;}
+.Forms .FormStage .FormElem:hover .topbar {border-bottom:1px solid #B8B8B8; background:#fff url(img/thead_bg.png) repeat-x; text-shadow:0 1px #fff;}
+.Forms .FormStage .FormElem:hover .topbar h6 {display:block;}
+.Forms .FormStage .ElemSettings .stable {width:100%;}
+.Forms .FormStage .ElemSettings .stable th {font-size:12px; color:#505050 !important; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; line-height:13px; border:1px solid #B8B8B8 !important; text-align:left;}
+.Forms .FormStage .ElemSettings .stable td {padding:7px 10px; background:#fff; border:1px solid #e3e3e3; opacity:1}
+.Forms .FormStage .ElemSettings .SaveSettings {display:block; padding:3px 8px; margin:10px 0 0 0; font-size:13px; background:#fff url(img/thead_bg.png) repeat-x 0 1px; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))); background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)); text-shadow:0 1px #fff;  border:1px solid #b6c0c2; border-radius:3px; text-decoration:none; text-align:center; cursor:pointer; float:left;}
+.Forms .FormStage .ElemSettings .SavingSettings {padding:0 0 0 20px; margin:13px 0 0 10px; background:url(img/spinner.gif) no-repeat; float:left;}
+
+.Forms .FormStage select {padding:5px;}
+
+.Forms .FormStage .HiddenVal {display:none}
+.Forms .FormStage .ElemValues {display:none; padding:10px 0}
+.Forms .FormStage .ElemSettings {display:none; padding:15px 20px; cursor:default}
+
+/* RIGHT PANEL/FORM TOOLS */
+.Forms .RightPanel {width:27%; float:left; background:#F5F5F5; border-bottom-left-radius:6px; border-bottom-right-radius:6px;}
+.Forms .FormTools h6 {padding:0 10px; font-size:14px; background:url(img/tab_inactive_bg.gif) repeat-x; border:1px solid #B8B8B8; border-top-left-radius:2px; border-top-right-radius:2px; line-height:22px;}
+.Forms .FormTools h6 .ToolTip {margin-left:3px; position:relative; top:3px;}
+.Forms .FormTools .abody {border:1px solid #8EA1AD;}
+.Forms .FormTools img {margin:0 5px 0 0; position:relative; top:3px;}
+.Forms .FormTools a {height:16px; width:40%; margin:5px; float:left; cursor:move; font-size:12px; color:#505050 !important; border:1px solid transparent; border-radius:4px 4px 4px 4px; display:block; padding:2px 5px 5px 5px; text-decoration:none;}
+.Forms .FormTools a:hover {background:#C5C5C5 url(img/acc_link_bg.png) repeat; border:1px solid #aaa; box-shadow:1px 1px 3px #999; cursor:move; border-radius:2px 2px 2px 2px; color:#000;}
+.Forms .FormTools a .elem {display:none}
+.Forms .draggingfield {font-size:12px; padding:4px 6px; background:#C5C5C5 url(img/acc_link_bg.png) repeat; border:1px solid #aaa; box-shadow:1px 1px 3px #999; cursor:move; border-radius:2px 2px 2px 2px; color:#000;}
+.Forms .draggingfield img {position:relative; top:3px;}
+.Forms .draggingfield .elem {display:none}
+
+/*.FormsField h3 {color:#37444D; font-size:17px; margin:5px 15px 10px 10px; font-family:Helvetica,Arial,sans-serif;} */
+
+/* Forms Bar */
+.Forms .formbar {position:relative; padding:7px 15px; margin-bottom:18px; color:#404040; background-color:#eedc94; background-repeat:repeat-x; background-image:-khtml-gradient(linear, left top, left bottom, from(#fceec1), to(#eedc94)); background-image:-moz-linear-gradient(top, #fceec1, #eedc94); background-image:-ms-linear-gradient(top, #fceec1, #eedc94); background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fceec1), color-stop(100%, #eedc94)); background-image:-webkit-linear-gradient(top, #fceec1, #eedc94); background-image:-o-linear-gradient(top, #fceec1, #eedc94); background-image:linear-gradient(top, #fceec1, #eedc94); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceec1', endColorstr='#eedc94', GradientType=0); text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25); border-color:#eedc94 #eedc94 #e4c652; border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); text-shadow:0 1px 0 rgba(255, 255, 255, 0.5); border-width:1px; border-style:solid; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.25); -moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.25); box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.25);}
+.Forms .formbar h3 {float:left; margin:0 20px 0 0 !important;}
+.Forms .formbar ul {}
+.Forms .formbar ul li {float:left; margin:0 10px 0 0;}
+
+/* ToolTip */
+.Forms .ToolTip {text-indent:-9999px; width:16px; height:16px; background:url(img/help.png); display:inline-block;}
+
+/* FORMS FORM */
+.Forms .FormsForm fieldset {background:#FCFEFF; border:1px solid #DFEFFC; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; padding:10px;}
+.Forms .FormsForm fieldset legend {font-size:15px; font-style:italic;}
+.Forms .FormsForm .elem {height:30px; margin-bottom:5px;}
+.Forms .FormsForm .elem label {float:left; padding:0 0 0 5px; width:18%; margin:0 1% 0 0; height:30px; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px;}
+.Forms .FormsForm .elem:hover label {background:#DFEFFC}
+.Forms .FormsForm .elem div {float:left; width:78%;}
+.Forms .FormsForm .elem div input {border:1px solid #ccc; padding:5px;}
+.Forms .FormsForm .elem div input:focus {background:#FFFFF5;}
+.Forms .FormsForm .elem div select {padding:3px; border:1px solid #ccc;}
+.Forms .FormsForm .elem div textarea {padding:3px; border:1px solid #ccc;}
+.Forms .FormsForm .elem div input:focus, #fbody .FormsForm .elem div textarea:focus {outline:0; border-color:rgba(82, 168, 236, 0.8); -webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6); -moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6); box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);}
+
+/* CHOICES */
+.Forms .AddChoice {text-indent:-9999px; width:16px; height:16px; background:url(img/add.png); display:inline-block;}
+.Forms .RemoveChoice {text-indent:-9999px; width:16px; height:16px; background:url(img/remove.png); display:inline-block;}
+#FormsChoices {}
+#FormsChoices .top {padding:10px 10px 5px; border-bottom:1px solid #ccc; margin-bottom:10px;}
+#FormsChoices .wrapper {height:400px;}
+#FormsChoices .wrapper .left {width:40%; float:left; height:350px; overflow:scroll;}
+#FormsChoices .wrapper .left a {display:block; padding:5px;}
+#FormsChoices .wrapper .left a:hover {background:#FDF5D9; text-decoration:none}
+#FormsChoices .wrapper .left a span {display:none;}
+#FormsChoices .wrapper .middle {width:8%; height:350px; float:left; background:url(img/forward.png) no-repeat center center;}
+#FormsChoices .wrapper .right {width:50%; height:350px; float:left;}
+#FormsChoices .wrapper .right textarea {height:350px; width:100%;}
+#FormsChoices .wrapper .right small {color:grey}
+
+.FormsBtn {cursor:pointer; display:inline-block; background-color:#0064cd; background-repeat:repeat-x; background-image:-khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd)); background-image:-moz-linear-gradient(top, #049cdb, #0064cd); background-image:-ms-linear-gradient(top, #049cdb, #0064cd); background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd)); background-image:-webkit-linear-gradient(top, #049cdb, #0064cd); background-image:-o-linear-gradient(top, #049cdb, #0064cd); background-image:linear-gradient(top, #049cdb, #0064cd); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); padding:5px 14px 6px; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25); color:#fff; font-size:13px; line-height:normal; border:1px solid #ccc; border-bottom-color:#bbb; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-transition:0.1s linear all; -moz-transition:0.1s linear all; -ms-transition:0.1s linear all; -o-transition:0.1s linear all; transition:0.1s linear all; border-color:#0064cd #0064cd #003f81; border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);}
+.FormsBtn:hover {background-position:0 -15px; text-decoration:none;}

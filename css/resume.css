@@ -238,8 +238,8 @@ sub {
 /* line 241, ../sass/partials/_normalize.scss */
 ul,
 ol {
-  margin-left: 0;
-  padding: 0 0 0 40px;
+  margin: 0;
+  padding: 0;
 }
 
 /* line 246, ../sass/partials/_normalize.scss */
@@ -593,11 +593,9 @@ p, ul, ol, hr, table, form, fieldset {
 /* line 118, ../sass/partials/_typography.scss */
 li {
   list-style-position: inside;
-  margin-left: 1em;
-  text-indent: -1em;
 }
 
-/* line 124, ../sass/partials/_typography.scss */
+/* line 122, ../sass/partials/_typography.scss */
 blockquote {
   margin: 1em .4em;
   border-top: 0.1em solid;
@@ -617,7 +615,7 @@ blockquote {
   border-radius: 0.25em;
 }
 
-/* line 143, ../sass/partials/_typography.scss */
+/* line 141, ../sass/partials/_typography.scss */
 cite {
   font-family: linden-hill-1, linden-hill-2, Georgia, serif;
   font-style: normal;
@@ -626,12 +624,12 @@ cite {
   font-weight: 200;
 }
 
-/* line 151, ../sass/partials/_typography.scss */
+/* line 149, ../sass/partials/_typography.scss */
 blockquote em {
   font-style: normal;
 }
 
-/* line 155, ../sass/partials/_typography.scss */
+/* line 153, ../sass/partials/_typography.scss */
 figcaption {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
   font-style: italic;
@@ -642,7 +640,7 @@ figcaption {
   text-align: center;
 }
 
-/* line 166, ../sass/partials/_typography.scss */
+/* line 164, ../sass/partials/_typography.scss */
 article > p,
 article section > p {
   font-size: 1em;
@@ -651,12 +649,12 @@ article section > p {
   margin: 1.1111em 0;
 }
 
-/* line 173, ../sass/partials/_typography.scss */
+/* line 171, ../sass/partials/_typography.scss */
 footer {
   color: #666666;
 }
 
-/* line 178, ../sass/partials/_typography.scss */
+/* line 176, ../sass/partials/_typography.scss */
 time {
   display: block;
   text-align: right;
@@ -669,9 +667,15 @@ time {
   color: #888;
 }
 
-/* line 190, ../sass/partials/_typography.scss */
+/* line 188, ../sass/partials/_typography.scss */
 time:before {
   content: '—';
+}
+
+/* line 192, ../sass/partials/_typography.scss */
+.page-left figcaption {
+  text-align: left;
+  margin-bottom: 15px;
 }
 
 /* line 16, ../sass/resume.scss */

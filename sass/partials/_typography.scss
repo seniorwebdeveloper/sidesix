@@ -117,8 +117,6 @@ p, ul, ol, hr, table, form, fieldset {
 
 li {
 	list-style-position: inside;
-	margin-left: 1em;
-	text-indent: -1em;
 }
 
 blockquote {
@@ -189,4 +187,9 @@ time {
 
 time:before {
 	content: '—';
+}
+
+.page-left figcaption {
+  text-align: left;
+  margin-bottom: 15px;
 }
