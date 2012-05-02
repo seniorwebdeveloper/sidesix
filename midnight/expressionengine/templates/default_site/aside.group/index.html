@@ -28,15 +28,15 @@
                       <img class="fancybox" src="{image:url:medium}" alt="{image:title}" />
                       <figcaption>{image:description}</figcaption>
                 {/exp:channel_images:images}
+                {exp:channel_videos:videos entry_id="{entry_id}"}
+                      <div class="videoWrapper">
+                            <h3>{video:title}</h3>
+                            {video:embed_code}
+                      </div> <!-- end videoWrapper -->
+                {/exp:channel_videos:videos}
               </figure>
             <div class="entry-content">{aside_excerpt}</div>
             <p><a href="{url_title_path='aside/article'}" class="continue">Continue reading &raquo;</a></p>
-          {exp:channel_videos:videos entry_id="{entry_id}"}
-                <div class="videoWrapper">
-                      <h3>{video:title}</h3>
-                      {video:embed_code}
-                </div> <!-- end videoWrapper -->
-                  {/exp:channel_videos:videos}
             {paginate}
             Page {current_page} of {total_pages} pages {pagination_links}
             {/paginate}

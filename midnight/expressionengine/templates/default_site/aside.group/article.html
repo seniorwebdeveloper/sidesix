@@ -29,13 +29,16 @@
                       <figcaption>{image:description}</figcaption>
                 {/exp:channel_images:images}
               </figure>
+              {exp:channel_videos:videos entry_id="{entry_id}"}
+                    <div class="videoWrapper">
+                          <h3>{video:title}</h3>
+                          {video:embed_code}
+                    </div> <!-- end videoWrapper -->
+              {/exp:channel_videos:videos}
             <div class="entry-content">{aside_copy}</div>
-          {exp:channel_videos:videos entry_id="{entry_id}"}
-                <div class="videoWrapper">
-                      <h3>{video:title}</h3>
-                      {video:embed_code}
-                </div> <!-- end videoWrapper -->
-                  {/exp:channel_videos:videos}
+              {exp:socialeesta:tweet url="{title_permalink='blog/entry'}" type="html5" via="side_six" text="{title}" count_position="none"}
+              {exp:socialeesta:like href="{pages_url}" type="iframe" action="recommend" color="light" layout="button_count"}
+              {exp:socialeesta:plusone size="medium" annotation="bubble" href="{site_url}"}
         {/exp:channel:entries}
 </article>
 <div class="comments">
@@ -104,5 +107,6 @@
 {embed="embeds/footer"}
 </div><!-- end container -->   
 {embed="embeds/scripts"}
+
 </body>
 </html>
