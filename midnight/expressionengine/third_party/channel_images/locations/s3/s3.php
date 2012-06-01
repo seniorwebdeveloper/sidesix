@@ -40,10 +40,11 @@ class CI_Location_s3 extends Image_Location
 
 		foreach  ($objects as $file)
 		{
-			$this->S3->batch()->delete_object($this->lsettings['bucket'], $file);
+			//$this->S3->batch()->delete_object($this->lsettings['bucket'], $file);
+			$this->S3->delete_object($this->lsettings['bucket'], $file);
 		}
 
-		$responses = $this->S3->batch()->send();
+		//$responses = $this->S3->batch()->send();
 
 		return TRUE;
 	}

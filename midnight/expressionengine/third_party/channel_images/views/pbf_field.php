@@ -1,12 +1,10 @@
-<?php if ($dupe_field == TRUE): ?>
-<span style="font-weight:bold; color:red;"> <?=lang('ci:dupe_field')?> </span>
-<input name="field_id_<?=$field_id?>[skip]" type="hidden" value="y" />
-<?php elseif ($missing_settings == TRUE): ?>
+<?php if ($missing_settings == TRUE): ?>
 <span style="font-weight:bold; color:red;"> <?=lang('ci:missing_settings')?> </span>
-<input name="field_id_<?=$field_id?>[skip]" type="hidden" value="y" />
+<input name="<?=$field_name?>[skip]" type="hidden" value="y" />
 <?php else: ?>
 
-<div class="CIField" id="ChannelImages<?=$field_id?>" rel="<?=$field_id?>">
+<div class="CIField" id="ChannelImages_<?=$field_id?>" data-fieldid="<?=$field_id?>">
+<div class="CIDragDrop" id="CIDragDrop_<?=$field_id?>"><p><?=lang('ci:drophere')?></p></div>
 <?php if ($this->config->item('is_site_on') != 'y'):?><p style="color:red; font-weight:bold;"><?=lang('ci:site_is_offline')?></p><?php endif;?>
 
 <div class="TopActions"></div>
@@ -14,7 +12,7 @@
 	<thead>
 		<tr>
 			<th colspan="99" class="top_actions">
-				<div class="block UploadImages"><?=lang('ci:upload_images')?><em id="ChannelImagesSelect"></em></div>
+				<div class="block UploadImages"><?=lang('ci:upload_images')?><em id="ChannelImagesSelect_<?=$field_id?>"></em></div>
 				<?php if ($settings['show_stored_images'] == 'yes'):?><div class="block StoredImages"><?=lang('ci:stored_images')?></div><?php endif;?>
 				<div class="block">&nbsp;</div>
 				<div class="block_long">
@@ -107,7 +105,6 @@
 		</tr>
 	</thead>
 	<tbody class="AssignedImages">
-	<?=$assigned_images?>
 	<?php if ($total_images < 1):?><tr class="NoImages"><td colspan="99"><?=lang('ci:no_images')?></td></tr><?php endif;?>
 	</tbody>
 	<tfoot>
@@ -117,10 +114,23 @@
 	</tfoot>
 </table>
 
-	<input name="field_id_<?=$field_id?>[key]" type="hidden" value="<?=$temp_key?>"/>
-	<input type="hidden" class="CI_Data" value='{"key":<?=$temp_key?>, "field_id":<?=$field_id?>, "site_id":<?=$site_id?>, "image_limit":<?=$settings['image_limit']?>, "jeditable_event": "<?=$settings['jeditable_event']?>", "mouseenter2edit": "<span><?=lang('ci:hover2edit')?></span>", "click2edit": "<span><?=lang('ci:click2edit')?></span>", "submitwait": "<?=lang('ci:submitwait')?>", "imglimitreached": "<?=lang('ci:img_limit_reached')?>"}'/>
+	<input name="<?=$field_name?>[key]" type="hidden" value="<?=$temp_key?>" class="temp_key"/>
+	
+	<?php if ($crossdomain == TRUE): ?>
+	<span style="font-weight:bold; color:red;"> <?=lang('ci:crossdomain_detect')?> (<?=$current_domain?> vs <?=$act_domain?>)</span>
+	<?php endif;?>
 
+	<?php if (isset($actions) == TRUE):?>
 	<div class="PerImageActionHolder hidden"><?=base64_encode($this->load->view('pbf_per_image_action', array(), TRUE))?></div>
+	<?php endif;?>
 </div>
 
 <?php endif; ?>
+
+<script type="text/javascript">
+var ChannelImages = ChannelImages ? ChannelImages : new Object();
+ChannelImages.Fields = ChannelImages.Fields ? ChannelImages.Fields : new Object();
+ChannelImages.Fields.Field_<?=$field_id?> = <?=$field_json?>;
+</script>
+
+<?php if ($js_templates === TRUE):?> <?=$this->load->view('pbf/js_templates');?> <?php endif;?>

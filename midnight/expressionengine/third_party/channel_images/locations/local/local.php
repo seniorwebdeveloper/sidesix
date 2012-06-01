@@ -222,13 +222,13 @@ class CI_Location_local extends Image_Location
 	{
 		$location = array();
 
-		if (isset($this->EE->session->cache['UploadPrefs'][$location_id]) == FALSE)
+		if (isset($this->EE->session->cache['upload_prefs'][$location_id]) === FALSE)
 		{
 			$location = $this->EE->image_helper->get_upload_preferences(1, $location_id, TRUE);
 		}
 		else
 		{
-			$location = $this->EE->session->cache['UploadPrefs'][$location_id];
+			$location = $this->EE->session->cache['upload_prefs'][$location_id];
 		}
 
 		// Relative path?

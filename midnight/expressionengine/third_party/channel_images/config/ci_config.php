@@ -27,6 +27,7 @@ $config['ci_defaults']['stored_images_by_author'] = 'no';
 $config['ci_defaults']['stored_images_search_type'] = 'entry';
 $config['ci_defaults']['jeditable_event'] = 'click';
 $config['ci_defaults']['image_limit'] = '';
+$config['ci_defaults']['hybrid_upload'] = 'yes';
 $config['ci_defaults']['allow_per_image_action'] = 'no';
 $config['ci_defaults']['locations']['local']['location'] = 0;
 $config['ci_defaults']['locations']['s3']['key'] = '';
@@ -40,6 +41,7 @@ $config['ci_defaults']['locations']['cloudfiles']['username'] = '';
 $config['ci_defaults']['locations']['cloudfiles']['api'] = '';
 $config['ci_defaults']['locations']['cloudfiles']['container'] = '';
 $config['ci_defaults']['locations']['cloudfiles']['region'] = 'us';
+$config['ci_defaults']['locations']['cloudfiles']['cdn_uri'] = '';
 
 
 // Upload Locations
@@ -64,9 +66,9 @@ $config['ci_cloudfiles_regions']['us']	= 'US_AUTHURL';
 $config['ci_cloudfiles_regions']['uk']	= 'UK_AUTHURL';
 
 // Default Actions
-$config['ci_default_action_groups'][1] = array(	'group_name' => 'small', 'wysiwyg' => TRUE,
+$config['ci_default_action_groups'][1] = array(	'group_name' => 'small', 'wysiwyg' => 'yes',
 												'actions' => array(	'resize_adaptive' => array('width' => 100, 'height' => 100, 'quality' => 80, 'upsizing' => 'no')));
-$config['ci_default_action_groups'][2] = array(	'group_name' => 'medium', 'wysiwyg' => TRUE,
+$config['ci_default_action_groups'][2] = array(	'group_name' => 'medium', 'wysiwyg' => 'yes',
 												'actions' => array('resize_adaptive' => array('width' => 450, 'height' => 300, 'quality' => 75, 'upsizing' => 'no')));
-$config['ci_default_action_groups'][3] = array(	'group_name' => 'large', 'wysiwyg' => TRUE,
+$config['ci_default_action_groups'][3] = array(	'group_name' => 'large', 'wysiwyg' => 'yes',
 												'actions' => array('resize_adaptive' => array('width' => 800, 'height' => 600, 'quality' => 75, 'upsizing' => 'no')));

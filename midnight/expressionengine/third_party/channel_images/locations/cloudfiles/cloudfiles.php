@@ -144,13 +144,23 @@ class CI_Location_cloudfiles extends Image_Location
 
 	public function parse_image_url($dir, $filename)
 	{
-		$this->init();
-		$this->CF_CONT = $this->CF_CONN->get_container($this->lsettings['container']);
+		$cdn_uri = (isset($this->lsettings['cdn_uri']) == TRUE && $this->lsettings['cdn_uri'] != FALSE) ? $this->lsettings['cdn_uri'] : FALSE;
+
+		if (isset($this->CF_CONT) == FALSE && $cdn_uri == FALSE)
+		{
+			$this->init();
+			$this->CF_CONT = $this->CF_CONN->get_container($this->lsettings['container']);
+		}
+
+		if ($cdn_uri) $first_url = $cdn_uri;
+		else $first_url = $this->CF_CONT->cdn_uri;
+
+		if ($dir !== FALSE) $dir .= '/';
+		else $dir = '';
 
 		try
 		{
-			$OBJECT = $this->CF_CONT->get_object($dir.'/'.$filename);
-			$url = $OBJECT->public_uri();
+			$url = $first_url.'/'.$dir.$filename;
 		}
 		catch (NoSuchObjectException $e)
 		{
@@ -250,7 +260,7 @@ class CI_Location_cloudfiles extends Image_Location
 
 	private function init()
 	{
-		if (isset($this->CF) == TRUE)
+		if (isset($this->CF_CONN) == TRUE)
 		{
 			return TRUE;
 		}

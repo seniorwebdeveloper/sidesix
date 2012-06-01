@@ -31,14 +31,15 @@ $lang = array(
 'ci:column_mapping'	=>	'Column Mapping',
 'ci:dont_transfer'	=>	'Do Not Transfer',
 'ci:import_entries'	=>	'Entries to Process',
+
 //----------------------------------------
 // FIELDTYPE
 //----------------------------------------
 
 // Actions
 'ci:upload_actions'	=>	'Upload Actions',
-'ci:click2edit'	=>	'Click to edit..',
-'ci:hover2edit'	=>	'Hover to edit..',
+'ci:click2edit'	=>	'<span>Click to edit..</span>',
+'ci:hover2edit'	=>	'<span>Hover to edit..</span>',
 'ci:wysiwyg'	=>	'WYSIWYG',
 'ci:small_prev'	=>	'Small Preview',
 'ci:big_prev'	=>	'Big Preview',
@@ -48,6 +49,9 @@ $lang = array(
 'ci:add_action'	=>	'Add an Action',
 'ci:settings'	=>	'Settings',
 'ci:add_action_group'=>	'Add New Size',
+'ci:no_actions'	=>	'No actions have yet been defined',
+'ci:show_settings'=>	'Show Settings',
+'ci:hide_settings'=>	'Hide Settings',
 
 
 'ci:loc_settings'	=>	'Upload Location Settings',
@@ -88,6 +92,7 @@ $lang = array(
 'ci:cloudfiles:region'		=>	'Region',
 'ci:cloudfiles:region:us'	=>	'United States',
 'ci:cloudfiles:region:uk'	=>	'United Kingdom (London)',
+'ci:cloudfiles:cdn_uri'		=>	'CDN URI Override',
 
 'ci:fieldtype_settings'	=>	'Fieldtype Settings',
 'ci:categories'	=>	'Categories',
@@ -108,6 +113,8 @@ $lang = array(
 'ci:image_limit_exp'=>	'Limit the amount of images a user can upload to this field. Leave empty to allow unlimited images.',
 'ci:act_url'		=>	'ACT URL',
 'ci:act_url:exp'	=>	'This URL is going to be used for all AJAX calls and image uploads',
+'ci:hybrid_upload'       => 'Hybrid Upload',
+'ci:hybrid_upload_exp'   =>	'Enabling this option will turn on HTML 5 uploading, otherwise Flash uploading will occur.',
 
 // Field Columns
 'ci:field_columns'		=>	'Field Columns',
@@ -140,8 +147,21 @@ $lang = array(
 'ci:no_images'		=>	'No images have yet been uploaded.',
 'ci:site_is_offline'=>	'Site is OFFLINE! Uploading images will/might not work.',
 'ci:image_remain'	=>	'Images Remaining:',
-'ci:img_limit_reached'=>'ERROR: Image Limit Reached',
-'ci:submitwait'		=>	'You have uploaded image(s), those images are now being send to their final destination. This can take a while depending on the amount of images..',
+'ci:crossdomain_detect' =>	'CROSSDOMAIN: The current domain does not mach the ACT URL domain. Upload may fail due crossdomain restrictions.',
+'ci:drophere'           =>	'Drop Your Files Here....',
+
+'ci:json:click2edit'		=> '<span>Click to edit..</span>',
+'ci:json:mouseenter2edit'	=> '<span>Hover to edit..</span>',
+'ci:json:file_limit_reached'=> 'ERROR: File Limit Reached',
+'ci:json:xhr_reponse_error'	=> "Server response was not as expected, probably a PHP error. <a href='#' class='OpenError'>OPEN ERROR</a>",
+'ci:json:xhr_status_error'	=> "Upload request failed, no HTTP 200 Return Code! <a href='#' class='OpenError'>OPEN ERROR</a>",
+'ci:json:del_file'			=> 'Are you sure you want to delete this file?',
+'ci:json:unlink_file'		=> 'Are you sure you want to unlink this file?',
+'ci:json:linked_force_del'	=> "This file is linked with other entries, are you sure you want to delete it? \n The other references will also be deleted!",
+'ci:json:submitwait'		=> 'You have uploaded file(s), those files are now being send to their final destination. This can take a while depending on the amount of files..',
+
+'ci:add_image'		=>	'Add Image',
+'ci:caption_text'	=>	'Image Caption:',
 
 // Stored Images
 'ci:last'			=>	'Last',

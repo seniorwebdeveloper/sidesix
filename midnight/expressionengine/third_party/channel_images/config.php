@@ -15,7 +15,7 @@ if ( ! defined('CHANNEL_IMAGES_NAME'))
 {
 	define('CHANNEL_IMAGES_NAME',         'Channel Images');
 	define('CHANNEL_IMAGES_CLASS_NAME',   'channel_images');
-	define('CHANNEL_IMAGES_VERSION',      '5.1.7');
+	define('CHANNEL_IMAGES_VERSION',      '5.2.0');
 }
 
 $config['name'] 	= CHANNEL_IMAGES_NAME;

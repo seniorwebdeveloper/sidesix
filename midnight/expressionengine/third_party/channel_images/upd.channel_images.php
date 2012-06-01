@@ -100,6 +100,7 @@ class Channel_images_upd
 			'field_id'		=> array('type' => 'MEDIUMINT',	'unsigned' => TRUE, 'default' => 0),
 			'channel_id'	=> array('type' => 'TINYINT',	'unsigned' => TRUE, 'default' => 0),
 			'member_id'		=> array('type' => 'INT',		'unsigned' => TRUE, 'default' => 0),
+			'is_draft'		=> array('type' => 'TINYINT',	'unsigned' => TRUE, 'default' => 0),
 			'link_image_id'	=> array('type' => 'INT',		'unsigned' => TRUE, 'default' => 0),
 			'link_entry_id'	=> array('type' => 'INT',		'unsigned' => TRUE, 'default' => 0),
 			'link_channel_id'=> array('type' => 'INT',		'unsigned' => TRUE, 'default' => 0),

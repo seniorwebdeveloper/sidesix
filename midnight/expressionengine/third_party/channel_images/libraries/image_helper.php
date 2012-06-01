@@ -38,6 +38,7 @@ class Image_helper
 		// Make the map
 		if (($temp = directory_map(PATH_THIRD.'channel_images/actions/', 2)) !== FALSE)
 		{
+			ksort($temp);
 			// Loop over all fields
 			foreach ($temp as $classname => $files)
 			{
@@ -149,7 +150,9 @@ class Image_helper
 		if (version_compare(APP_VER, '2.4', '>='))
 		{
 			$this->EE->load->model('file_upload_preferences_model');
-			return $this->EE->file_upload_preferences_model->get_file_upload_preferences($group_id, $id, $ignore_site_id);
+			$row = $this->EE->file_upload_preferences_model->get_file_upload_preferences($group_id, $id, $ignore_site_id);
+			$this->EE->session->cache['upload_prefs'][$id] = $row;
+			return $row;
 		}
 
 		if (version_compare(APP_VER, '2.1.5', '>='))
@@ -208,7 +211,9 @@ class Image_helper
 		// If an $id was passed, just return that directory's preferences
 		if ( ! empty($id))
 		{
-			return $result->row_array();
+			$result = $result->row_array();
+			$this->EE->session->cache['upload_prefs'][$id] = $result;
+			return $result;
 		}
 
 		// Use upload destination ID as key for row for easy traversing
@@ -218,7 +223,7 @@ class Image_helper
 			$return_array[$row['id']] = $row;
 		}
 
-		$this->EE->session->cache['UploadPrefs'][$id] = $return_array;
+		$this->EE->session->cache['upload_prefs'][$id] = $return_array;
 
 		return $return_array;
 	}
@@ -382,6 +387,22 @@ class Image_helper
 		}
 
 		return;
+	}
+
+	// ********************************************************************************* //
+
+	public function decode_json($obj)
+	{
+		if (function_exists('json_decode') === FALSE)
+		{
+			if (class_exists('Services_JSON') === FALSE) include 'JSON.php';
+			$JSON = new Services_JSON();
+			return $JSON->decode($obj);
+		}
+		else
+		{
+			return json_decode($obj);
+		}
 	}
 
 	// ********************************************************************************* //

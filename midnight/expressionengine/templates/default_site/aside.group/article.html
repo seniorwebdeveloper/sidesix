@@ -3,6 +3,14 @@
        <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
         chromium.org/developers/how-tos/chrome-frame-getting-started -->
    <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=377827192266332";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="container" class="clearfix">
  {embed="embeds/masthead"}
@@ -36,9 +44,10 @@
                     </div> <!-- end videoWrapper -->
               {/exp:channel_videos:videos}
             <div class="entry-content">{aside_copy}</div>
-              {exp:socialeesta:tweet url="{title_permalink='blog/entry'}" type="html5" via="side_six" text="{title}" count_position="none"}
-              {exp:socialeesta:like href="{pages_url}" type="iframe" action="recommend" color="light" layout="button_count"}
+              {exp:socialeesta:tweet url="{title_permalink='blog/entry'}" type="html5" via="side_six" text="{title}" count_position="none"} <br>
               {exp:socialeesta:plusone size="medium" annotation="bubble" href="{site_url}"}
+             <div class="fb-like" data-send="true" data-width="450" data-show-faces="true" data-font="lucida grande"></div>            
+              
         {/exp:channel:entries}
 </article>
 <div class="comments">

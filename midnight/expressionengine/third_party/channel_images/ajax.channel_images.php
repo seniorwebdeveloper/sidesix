@@ -59,9 +59,8 @@ class Channel_Images_AJAX
 		// Standard Vars
 		// -----------------------------------------
 		$o = array('success' => 'no', 'body' => '');
-		$channel_id = $this->EE->input->post('channel_id');
-		$field_id = $this->EE->input->post('field_id');
-		$key = $this->EE->input->post('key');
+		$field_id = $this->EE->input->get_post('field_id');
+		$key = $this->EE->input->get_post('key');
 
 		// -----------------------------------------
 		// Is our $_FILES empty? Commonly when EE does not like the mime-type
@@ -106,7 +105,7 @@ class Channel_Images_AJAX
 		// -----------------------------------------
 		// Temp Dir to run Actions
 		// -----------------------------------------
-		$temp_dir = APPPATH.'cache/channel_images/'.$key.'/';
+		$temp_dir = APPPATH.'cache/channel_images/field_'.$field_id.'/'.$key.'/';
 
 		if (@is_dir($temp_dir) === FALSE)
    		{
@@ -151,6 +150,9 @@ class Channel_Images_AJAX
     	//$filename = $original_filename2;ß
 
     	$filename = $this->ascii_string($original_filename);
+
+    	// Filesize
+    	$filesize = $_FILES['channel_images_file']['size'];
 
 		// -----------------------------------------
 		// Move File
@@ -255,46 +257,27 @@ class Channel_Images_AJAX
 			$big_img_filename = str_replace($extension, "__{$settings['big_preview']}{$extension}", $filename);
 		}
 
-
-		// Create the URL's
-		$image['small_img_url'] = "{$preview_url}&amp;fid=0&amp;d={$key}&amp;f={$small_img_filename}";
-		$image['big_img_url'] = "{$preview_url}&amp;fid=0&amp;d={$key}&amp;f={$big_img_filename}";
-
-
 		// -----------------------------------------
 		// Output
 		// -----------------------------------------
-
-		// Add settings to Image
-		$image['settings'] = $settings;
-		if (isset($image['settings']['columns']) == FALSE) $image['settings']['columns'] = $this->EE->config->item('ci_columns');
-
+		$image['success'] = 'yes';
     	$image['title'] = ucfirst(str_replace('_', ' ', str_replace($extension, '', $filename)));
     	$image['url_title'] = url_title(trim(strtolower($image['title'])));
     	$image['description'] = '';
-    	$image['image_id'] = 0;
+    	$image['image_id'] = (string)0;
     	$image['category'] = '';
     	$image['cifield_1'] = '';
     	$image['cifield_2'] = '';
     	$image['cifield_3'] = '';
     	$image['cifield_4'] = '';
     	$image['cifield_5'] = '';
-    	$image['cover'] = 0;
     	$image['filename'] = $filename;
-    	$image['linked'] = FALSE;
+		$image['filesize'] = (string)$filesize;
+		$image['small_img_url'] = "{$preview_url}&amp;fid={$field_id}&amp;d={$key}&amp;temp_dir=yes&amp;f={$small_img_filename}";
+		$image['big_img_url'] = "{$preview_url}&amp;fid={$field_id}&amp;d={$key}&amp;temp_dir=yes&amp;f={$big_img_filename}";
 
-		$o['body'] = $this->EE->load->view('pbf_field_single_image', $image, TRUE);
-		$o['title'] = $image['title'];
-		$o['url_title'] = $image['url_title'];
-    	$o['filename'] = $filename;
-    	$o['field_id'] = $field_id;
-
-		$o['success'] = 'yes';
-
-    	$out = trim($this->EE->image_helper->generate_json($o));
-
+    	$out = trim($this->EE->image_helper->generate_json($image));
 		exit( $out );
-
 	}
 
 	// ********************************************************************************* //
@@ -488,7 +471,7 @@ class Channel_Images_AJAX
 		// Init
 		$LOC = new $location_class($location_settings);
 
-		$temp_dir = APPPATH.'cache/channel_images/'.$akey.'/';
+		$temp_dir = APPPATH.'cache/channel_images/field_'.$field_id.'/'.$akey.'/';
 
 		// -----------------------------------------
 		// Saving?
@@ -503,7 +486,7 @@ class Channel_Images_AJAX
 			}
 			else
 			{
-				copy($temp_dir.$filename, APPPATH.'cache/channel_images/'.$key.'/'.$filename);
+				copy($temp_dir.$filename, APPPATH.'cache/channel_images/field_'.$field_id.'/'.$key.'/'.$filename);
 			}
 
 			@unlink($temp_dir.$filename);
@@ -529,8 +512,10 @@ class Channel_Images_AJAX
 		}
 		else
 		{
-			copy(APPPATH.'cache/channel_images/'.$key.'/'.$filename, $temp_dir.$filename);
+			copy(APPPATH.'cache/channel_images/field_'.$field_id.'/'.$key.'/'.$filename, $temp_dir.$filename);
 		}
+
+		@chmod($temp_dir.$filename, 0777);
 
 		// -----------------------------------------
 		// Load Action
@@ -552,7 +537,7 @@ class Channel_Images_AJAX
 		// -----------------------------------------
 		if ($stage == 'preview')
 		{
-			$img_url = $preview_url . '&amp;fid=0&amp;d=' . $akey . '&amp;f=' . $filename . '&amp;random=' . rand(100, 99999);
+			$img_url = $preview_url . '&amp;temp_dir=yes&amp;fid='.$field_id.'&amp;d=' . $akey . '&amp;f=' . $filename . '&amp;random=' . rand(100, 99999);
 			echo '<img src="' . $img_url . '" />';
 			exit();
 		}
@@ -710,6 +695,7 @@ class Channel_Images_AJAX
 		$this->EE->load->helper('form');
 
 		$image_id = $this->EE->input->get('image_id');
+		$field_id = $this->EE->input->get('field_id');
 
 		// Get Image Info
 		$query = $this->EE->db->select('*')->from('exp_channel_images')->where('image_id', $image_id)->get();
@@ -738,35 +724,108 @@ class Channel_Images_AJAX
 		// Preview URL
 		$preview_url = $this->EE->image_helper->get_router_url('url', 'simple_image_url');
 
-		$image->linked = TRUE; // Display Unlink icon ;)
-
-		// We need a good field_id to continue
-		$image->field_id = $this->EE->channel_images_model->get_field_id($image);
-
-		// Get settings for that field..
-		$image->settings = $this->EE->channel_images_model->get_field_settings($image->field_id);
-
-		$out = '<div class="img">';
-
 		$filename_small = str_replace('.'.$image->extension, "__{$settings['small_preview']}.{$image->extension}", $image->filename);
 		$filename_big = str_replace('.'.$image->extension, "__{$settings['big_preview']}.{$image->extension}", $image->filename);
 
 		$image->small_img_url = $preview_url . '&amp;fid=' . $image->field_id . '&amp;d=' . $image->entry_id . '&amp;f=' . $filename_small;
 		$image->big_img_url = $preview_url . '&amp;fid=' . $image->field_id . '&amp;d=' . $image->entry_id . '&amp;f=' . $filename_big;
 
-		// Add Master Field Settings
-		$image->settings = $settings;
-
-		$image->image_id_hidden = $image->image_id;
+		$image->link_image_id = $image->image_id;
 		$image->image_id = 0;
 		$image->cover = 0;
+		$image->field_id = $field_id;
 
-		$o = array();
-		$o['tr'] = base64_encode($this->EE->load->view('pbf_field_single_image', $image, TRUE));
-		$o['img'] = $image;
-		exit( $this->EE->image_helper->generate_json($o) );
+		exit( $this->EE->image_helper->generate_json($image) );
+	}
 
-		exit();
+	// ********************************************************************************* //
+
+	public function refresh_images()
+	{
+		$out = array('success' => 'no', 'images'=>array());
+
+		$field_id = $this->EE->input->post('field_id');
+		$entry_id = $this->EE->input->post('entry_id');
+
+		if ($field_id == FALSE OR $entry_id == FALSE)
+		{
+			exit( $this->EE->image_helper->generate_json($out) );
+		}
+
+		$settings = $this->EE->channel_images_model->get_field_settings($field_id);
+		$settings = $settings['channel_images'];
+
+		$this->EE->db->select('*');
+		$this->EE->db->from('exp_channel_images');
+		$this->EE->db->where('field_id', $field_id);
+		$this->EE->db->where('entry_id', $entry_id);
+		$this->EE->db->where('is_draft', (($this->EE->input->post('draft') == 'yes') ? 1 : 0)  );
+		$this->EE->db->order_by('image_order', 'ASC');
+		$query = $this->EE->db->get();
+
+		// -----------------------------------------
+		// Which Previews?
+		// -----------------------------------------
+		if (isset($settings['small_preview']) == FALSE OR $settings['small_preview'] == FALSE)
+		{
+			$temp = reset($settings['action_groups']);
+			$settings['small_preview'] = $temp['group_name'];
+		}
+
+		if (isset($settings['big_preview']) == FALSE OR $settings['big_preview'] == FALSE)
+		{
+			$temp = reset($settings['action_groups']);
+			$settings['big_preview'] = $temp['group_name'];
+		}
+
+		// Preview URL
+		$preview_url = $this->EE->image_helper->get_router_url('url', 'simple_image_url');
+
+		foreach ($query->result() as $image)
+		{
+			// We need a good field_id to continue
+			$image->field_id = $this->EE->channel_images_model->get_field_id($image);
+
+			// Is it a linked image?
+			// Then we need to "fake" the channel_id/field_id
+			if ($image->link_image_id >= 1)
+			{
+				$image->entry_id = $image->link_entry_id;
+				$image->field_id = $image->link_field_id;
+				$image->channel_id = $image->link_channel_id;
+			}
+
+			// Just in case lets try to get the field_id again
+			$image->field_id = $this->EE->channel_images_model->get_field_id($image);
+
+			// Get settings for that field..
+			$temp_settings = $this->EE->channel_images_model->get_field_settings($image->field_id);
+
+			$act_img_url = "{$preview_url}&amp;fid={$image->field_id}&amp;d={$image->entry_id}&amp;f=";
+			if ( empty($settings['action_groups']) == FALSE && (isset($settings['no_sizes']) == FALSE OR $settings['no_sizes'] != 'yes') )
+			{
+				// Display SIzes URL
+				$image->small_img_url = $act_img_url . str_replace('.'.$image->extension, "__{$settings['small_preview']}.{$image->extension}", $image->filename);
+				$image->big_img_url = $act_img_url .str_replace('.'.$image->extension, "__{$settings['big_preview']}.{$image->extension}", $image->filename);
+			}
+			else
+			{
+				// Display SIzes URL
+				$image->small_img_url = $act_img_url . $image->filename;
+				$image->big_img_url = $act_img_url .$image->filename;
+			}
+
+			// ReAssign Field ID (WE NEED THIS)
+			$image->field_id = $field_id;
+
+			$out['images'][] = $image;
+
+			unset($image);
+		}
+
+		$out['success'] = 'yes';
+
+		exit( $this->EE->image_helper->generate_json($out) );
 	}
 
 	// ********************************************************************************* //

@@ -10,7 +10,39 @@
 {embed="embeds/nav"}         
 <header id="page-title" class="clearfix">
   <h1>The Side Six Portfolio</h1>
-</header>     
+</header> 
+
+  <section class="full-width clearfix">
+    <article class="responsive-design">
+      <hgroup>
+        <h2>Our Latest Work</h2>
+          <h3>A Responsive Site</h3>
+      </hgroup>
+      <p>
+        A "responsive" site is one that responds to fit the screen on any modern device. The site changes based on where the design "breaks." I measure the width at the break point and then write a cascading style sheet rule for that size. This way, you have one site that will fit any device that is currently on the market and it will also fit any device that will be on the market next week, next month, next year. The last point is key because we don't know what those devices will be like, what the size of them will be, what the screen's resolution will be. All anyone knows is that some of them will be as wildly popular as the iPhone and iPad are today, and that they will have a screen. That screen will have dimensions. That is a given. So programming a site to fit any screen's dimension is the smartest way to go. That way you have one site to maintain, instead of multiple mobile sites that have been built to accomodate the popular devices today that may be irrelevant two or three years from now.
+      </p>
+
+      <p>
+        Take a look at the three screenshots below of our lastest work.  Notice how the layout of the site flows to accomdate the screens of an iPhone, an iPad, and a desktop computer. Check out the site on your own devices. You can find the site here. 
+      </p>
+
+      <figure id="iphone-ss">
+        <img src="http://sidesix/images/frank-iphone.jpg" alt="an image of a website on an iPhone" title="the iPhone version of Frank Ury's Campaign Web Site">
+        <figcaption>The iPhone Version</figure>
+      </figure>
+
+       <figure id="ipad-ss">
+        <img src="http://sidesix/images/frank-ipad.jpg" alt="an image of a website on an iPad" title="the iPad version of Frank Ury's Campaign Web Site">
+        <figcaption>The iPad Version</figure>
+      </figure>
+
+       <figure id="computer-ss">
+        <img src="http://sidesix/images/frank-computer.jpg" alt="an image of a website on a desktop computer" title="the desktop version of Frank Ury's Campaign Web Site">
+        <figcaption>The Desktop Version</figure>
+      </figure>
+    </article><!-- / responsive-design-->      
+  </section><!-- / full-width -->    
+
     <section id="page-copy-top">
       <article id="copy-top">
           {exp:channel:entries channel="portfolio" limit="12" dynamic="no"}

@@ -88,6 +88,74 @@ img {
   font-size: 115%;
 }
 
+.full-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.responsive-design {
+  width: 80%;
+  margin: 35px auto;
+}
+
+.responsive-design hgroup h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-design hgroup h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-design p {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 25px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+    @media only screen and (max-width: 600px) {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    width: 80%;
+    }
+    @media only screen and (max-width: 480px) {
+      width: auto;
+    }
+}
+
+.responsive-design figure {
+  margin: 15px 0;
+}
+.responsive-design figure#iphone-ss {
+  float: left;
+  @media only screen and (max-width: 1001px) {
+    float: none;
+    width: auto;
+    margin: 15px auto;
+    text-align:center;
+  }
+}
+
+.responsive-design figure#ipad-ss {
+  float: right;
+  @media only screen and (max-width: 1001px) {
+    float: none;
+    width: auto;
+    margin: 15px auto;
+    text-align:center;
+  }
+}
+
+.responsive-design figure#desktop-ss {
+    float: none;
+    width: auto;
+    margin: 15px auto;
+    text-align:center;
+}
+
 .page-left {
     width: $content-width;
     margin-left: percentage(45/1200);
@@ -236,18 +304,17 @@ header#page-title {
     @include logo-gradient;
     float: left;
     width: 100%;
-    max-width: 1200px;
 }
 
 #logo-img {
-  width: 25%;
+  width: 30%;
   display: block;
   float: right;
-  padding-right: 25px;
 }
 
 #logo img {
   padding: 4px 0;
+  margin: 0;
 }
 
 #logo hgroup {
